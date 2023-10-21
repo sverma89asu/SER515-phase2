@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Viresh\ASU SER\Fall 2023_ASU\SER 515\Trial\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1210658807.index
+4264046534.index
