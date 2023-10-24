@@ -30,6 +30,7 @@ import java.awt.Color;
 import java.awt.Component;
 
 import javax.swing.JComboBox;
+import java.awt.Button;
 
 public class Create_A_Simulation
 {
@@ -40,7 +41,6 @@ public class Create_A_Simulation
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
-	private JTextField textField_6;
 
 	public static void main(String[] args)
 	{
@@ -211,7 +211,8 @@ public class Create_A_Simulation
         frame.getContentPane().add(lblNewLabel_9);
         
         JComboBox<String> comboBox = new JComboBox();
-        //comboBox.setUI(new ColoredArrowComboBoxUI());
+        comboBox.setUI(new NoBorderComboBoxUI());
+        comboBox.setUI(new BasicComboBoxUI());
         comboBox.setBounds(353, 426, 300, 25);
         frame.getContentPane().add(comboBox);
         
@@ -223,6 +224,7 @@ public class Create_A_Simulation
         comboBox.setBackground(Color.decode("#f0ebd8"));
         comboBox.setForeground(Color.BLACK);
         comboBox.setFocusable(false);
+
         comboBox.setBorder(bottomBorder);
         
         comboBox.addActionListener(new ActionListener() {
@@ -230,8 +232,38 @@ public class Create_A_Simulation
             public void actionPerformed(ActionEvent e) {
             }
         });
-                
         
+		JLabel lblNewLabel_10 = new JLabel("or");
+		lblNewLabel_10.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		lblNewLabel_10.setBounds(364, 458, 13, 17);
+		frame.getContentPane().add(lblNewLabel_10);
+		
+		RoundButton btnNewButton_3 = new RoundButton("Add Custom Stories");
+		btnNewButton_3.setForeground(Color.WHITE);
+		btnNewButton_3.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		btnNewButton_3.setBackground(Color.decode("#3e5c76"));
+		btnNewButton_3.setFocusPainted(false);
+		btnNewButton_3.setBorderPainted(false);
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_3.setBounds(293, 490, 162, 45);
+		frame.getContentPane().add(btnNewButton_3);
+		
+		RoundButton btnNewButton_4 = new RoundButton("Continue");
+		btnNewButton_4.setForeground(Color.WHITE);
+		btnNewButton_4.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		btnNewButton_4.setBackground(Color.decode("#026e0d"));
+		btnNewButton_4.setFocusPainted(false);
+		btnNewButton_4.setBorderPainted(false);
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton_4.setBounds(303, 630, 142, 40);
+		frame.getContentPane().add(btnNewButton_4);
+                
         JPanel panel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -245,6 +277,12 @@ public class Create_A_Simulation
                 Graphics2D g2d = (Graphics2D) g;
                 g2d.setStroke(new BasicStroke(1));
                 g2d.drawLine(x1, y1, x2, y2);
+                
+                int x3 = 266;
+                int y3 = 567;
+                int x4 = 466;
+                int y4 = 567;
+                g2d.drawLine(x3, y3, x4, y4);
             }
         };
         panel.setBounds(0, 0, frame.getWidth(), frame.getHeight());
@@ -323,6 +361,20 @@ class RoundButton extends JButton {
             return false;
         }
         return super.contains(x, y);
+    }
+}
+
+class NoBorderComboBoxUI extends BasicComboBoxUI {
+    @Override
+    protected ComboPopup createPopup() {
+        BasicComboPopup popup = new BasicComboPopup(comboBox) {
+            @Override
+            protected JScrollPane createScroller() {
+                return new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+            }
+        };
+        popup.getAccessibleContext().setAccessibleParent(comboBox);
+        return popup;
     }
 }
 }
