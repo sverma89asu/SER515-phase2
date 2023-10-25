@@ -1,4 +1,4 @@
-/*package engine;
+package engine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class ScrumSimulator {
     
     // Run sprints
     for (int i = 0; i < numSprints; i++) {
-      Sprint sprint = new Sprint(sprintDuration, velocity);
+      Sprint sprint = new Sprint(sprintDuration, velocity, teamSize);
       sprint.selectUserStories(backlog);
       sprint.run();
       sprints.add(sprint);
@@ -52,22 +52,11 @@ public class ScrumSimulator {
   }
   
   public static void main(String[] args) {
-    ScrumSimulator simulator = new ScrumSimulator(5, 2, 20, 5); 
-    simulator.simulate();
-    simulator.printMetrics();
+    Backlog backlog = new Backlog();
+    backlog.generateUserStories();
+    backlog.displayUserStories();
   }
 
 }
 
-class Sprint {
 
-  // Sprint logic
-
-}
-
-class Backlog {
-  
-  // Backlog logic
-  
-}
-*/

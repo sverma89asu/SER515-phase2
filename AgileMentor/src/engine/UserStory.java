@@ -14,6 +14,21 @@ public class UserStory {
     this.businessValue = businessValue;
   }
 
+  public void displayDetails() {
+    System.out.println("ID: " + id);
+    System.out.println("Title: " + title);
+    System.out.println("Story Points: " + storyPoints);
+    System.out.println("Business Value: " + businessValue);
+  }
+
+  public int getBusinessValue() {
+    return businessValue;
+  }
+
+  public int getStoryPoints() {
+    return storyPoints;
+  }
+
   // Getters and setters 
 
 }

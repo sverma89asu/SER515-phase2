@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JScrollPane;
-import javax.swing.JToolBar;
 import javax.swing.JTextField;
 
 public class UI {
