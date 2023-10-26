@@ -1,4 +1,4 @@
-package com.example.springboot;
+package scrum_sim_packages;
 
 // This tells Hibernate to make a table out of this class
 public class User {
@@ -9,7 +9,7 @@ public class User {
   
   private String password;
   
-  private String create_time;
+  private String role;
 
   public String getName() {
     return username;
@@ -28,11 +28,11 @@ public class User {
   }
   
   public String getTime() {
-	    return create_time;
+	    return role;
 	  }
 
-  public void setTime(String create_time) {
-	    this.create_time = create_time;
+  public void setTime(String role) {
+	    this.role = role;
 	  }
 
   public String getPassword() {

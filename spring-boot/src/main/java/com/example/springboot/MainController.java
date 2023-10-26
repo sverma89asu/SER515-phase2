@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import scrum_sim_packages.User;
+
 @Controller // This means that this class is a Controller
 @RequestMapping(path="sql10.freemysqlhosting.net") // This means URL's start with /demo (after Application path)
 public class MainController {
