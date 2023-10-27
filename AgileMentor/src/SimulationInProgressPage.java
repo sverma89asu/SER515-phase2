@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -67,18 +68,10 @@ public class SimulationInProgressPage extends JFrame {
 		String sprintDuration = frontendcalltoCAS.sprintDuration;
 		System.out.println(sprintDuration);
 		
+		System.out.println("From backend");
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-		System.out.println("From Backend SIP");
-		String sessionNameBE = backendcalltoSIPBE.sessionName;
-		System.out.println(sessionNameBE);
-		String noOfsprintsBE = backendcalltoSIPBE.noOfsprints;
-		System.out.println(noOfsprintsBE);
-		String noOfteamMembersBE = backendcalltoSIPBE.noOfteamMembers;
-		System.out.println(noOfteamMembersBE);
-		String sprintVelocityBE = backendcalltoSIPBE.sprintVelocity;
-		System.out.println(sprintVelocityBE);
-		String sprintDurationBE = backendcalltoSIPBE.sprintDuration;
-		System.out.println(sprintDurationBE);
+		ArrayList<String> arr = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
+		System.out.println(arr);
 		
 		frame = new JFrame();
 		frame.setVisible(true);
