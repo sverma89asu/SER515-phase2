@@ -2,6 +2,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.BorderFactory;
 import javax.swing.border.MatteBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.plaf.basic.BasicComboBoxUI;
 import javax.swing.plaf.basic.BasicComboPopup;
 import javax.swing.plaf.basic.ComboPopup;
@@ -34,49 +36,13 @@ public class Create_A_Simulation
 	private JTextField textField_3;
 	private JTextField textField_4;
 	private JTextField textField_5;
+	public static String sessionName;
+	public static String noOfsprints;
+	public static String noOfteamMembers;
+	public static String sprintVelocity;
+	public static String sprintDuration;
+	
 	private SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-
-	
-	
-	public JTextField getTextField_1() {
-		return textField_1;
-	}
-
-	public void setTextField_1(JTextField textField_1) {
-		this.textField_1 = textField_1;
-	}
-
-	public JTextField getTextField_2() {
-		return textField_2;
-	}
-
-	public void setTextField_2(JTextField textField_2) {
-		this.textField_2 = textField_2;
-	}
-
-	public JTextField getTextField_3() {
-		return textField_3;
-	}
-
-	public void setTextField_3(JTextField textField_3) {
-		this.textField_3 = textField_3;
-	}
-
-	public JTextField getTextField_4() {
-		return textField_4;
-	}
-
-	public void setTextField_4(JTextField textField_4) {
-		this.textField_4 = textField_4;
-	}
-
-	public JTextField getTextField_5() {
-		return textField_5;
-	}
-
-	public void setTextField_5(JTextField textField_5) {
-		this.textField_5 = textField_5;
-	}
 
 	public static void main(String[] args)
 	{
@@ -158,6 +124,26 @@ public class Create_A_Simulation
 		textField_1.setBounds(228, 109, 295, 25);
 		textField_1.setColumns(10);
 		frame.getContentPane().add(textField_1);
+		textField_1.getDocument().addDocumentListener(new DocumentListener() {
+			public void insertUpdate(DocumentEvent e) {
+//					System.out.println("In Text field");
+				sessionName = textField_1.getText();
+					System.out.println(sessionName);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+//				System.out.println("In removeUpdate field");
+				sessionName = textField_1.getText();
+				System.out.println(sessionName);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel_3 = new JLabel("Set Configuration:");
 		lblNewLabel_3.setFont(new Font("SansSerif", Font.PLAIN, 20));
@@ -197,7 +183,26 @@ public class Create_A_Simulation
 		textField_2.setColumns(5);
 		frame.getContentPane().add(textField_2);
 		//addValidationToTextField(textField2);
-		
+		textField_2.getDocument().addDocumentListener(new DocumentListener() {
+			public void insertUpdate(DocumentEvent e) {
+//					System.out.println("In Text field");
+				noOfsprints = textField_2.getText();
+					System.out.println(noOfsprints);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+//				System.out.println("In removeUpdate field");
+				noOfsprints = textField_2.getText();
+				System.out.println(noOfsprints);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel_6 = new JLabel("Number of team members");
 		lblNewLabel_6.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -213,6 +218,26 @@ public class Create_A_Simulation
 		textField_3.setBounds(470, 275, 40, 25);
 		textField_3.setColumns(5);
 		frame.getContentPane().add(textField_3);
+		textField_3.getDocument().addDocumentListener(new DocumentListener() {
+			public void insertUpdate(DocumentEvent e) {
+//					System.out.println("In Text field");
+				noOfteamMembers = textField_3.getText();
+					System.out.println(noOfteamMembers);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+//				System.out.println("In removeUpdate field");
+				noOfteamMembers = textField_3.getText();
+				System.out.println(noOfteamMembers);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel_7 = new JLabel("Sprint Velocity");
 		lblNewLabel_7.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -228,6 +253,26 @@ public class Create_A_Simulation
 		textField_4.setBounds(470, 309, 40, 25);
 		textField_4.setColumns(5);
 		frame.getContentPane().add(textField_4);
+		textField_4.getDocument().addDocumentListener(new DocumentListener() {
+			public void insertUpdate(DocumentEvent e) {
+//					System.out.println("In Text field");
+				sprintVelocity = textField_4.getText();
+					System.out.println(sprintVelocity);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+//				System.out.println("In removeUpdate field");
+				sprintVelocity = textField_4.getText();
+				System.out.println(sprintVelocity);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel_8 = new JLabel("Sprint Duration");
 		lblNewLabel_8.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -243,6 +288,26 @@ public class Create_A_Simulation
 		textField_5.setBounds(470, 340, 40, 25);
 		textField_5.setColumns(5);
 		frame.getContentPane().add(textField_5);
+		textField_5.getDocument().addDocumentListener(new DocumentListener() {
+			public void insertUpdate(DocumentEvent e) {
+//					System.out.println("In Text field");
+				sprintDuration = textField_5.getText();
+					System.out.println(sprintDuration);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+//				System.out.println("In removeUpdate field");
+				sprintDuration = textField_5.getText();
+				System.out.println(sprintDuration);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
         JLabel lblNewLabel_9 = new JLabel("Choose a development scenario");
         lblNewLabel_9.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -299,11 +364,11 @@ public class Create_A_Simulation
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				
 		        SwingUtilities.invokeLater(new Runnable() {
 		            public void run() {
+		            	
 		            	SimulationInProgressPage SimulationInProgressPage = new SimulationInProgressPage();
-		                SimulationInProgressPage.setVisible(true);
+		                SimulationInProgressPage.setVisible(true);	             
 		            }
 		        });
 			}

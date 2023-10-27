@@ -18,7 +18,16 @@ public class SimulationInProgressPage extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
-	
+	public static String sessionName;
+	public static String noOfsprints;
+	public static String noOfteamMembers;
+	public static String sprintVelocity;
+	public static String sprintDuration;
+	public static String sessionNameBE;
+	public static String noOfsprintsBE;
+	public static String noOfteamMembersBE;
+	public static String sprintVelocityBE;
+	public static String sprintDurationBE;
 
 	/**
 	 * Launch the application.
@@ -46,9 +55,30 @@ public class SimulationInProgressPage extends JFrame {
 	private void initialize()
 	{
 		Create_A_Simulation frontendcalltoCAS = new Create_A_Simulation();
-		String no_of_sprints = frontendcalltoCAS.getTextField_2().getText();
-		System.out.println(no_of_sprints);
+		System.out.println("In SIP");
+		String sessionName = frontendcalltoCAS.sessionName;
+		System.out.println(sessionName);
+		String noOfsprints = frontendcalltoCAS.noOfsprints;
+		System.out.println(noOfsprints);
+		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
+		System.out.println(noOfteamMembers);
+		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
+		System.out.println(sprintVelocity);
+		String sprintDuration = frontendcalltoCAS.sprintDuration;
+		System.out.println(sprintDuration);
 		
+		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
+		System.out.println("From Backend SIP");
+		String sessionNameBE = backendcalltoSIPBE.sessionName;
+		System.out.println(sessionNameBE);
+		String noOfsprintsBE = backendcalltoSIPBE.noOfsprints;
+		System.out.println(noOfsprintsBE);
+		String noOfteamMembersBE = backendcalltoSIPBE.noOfteamMembers;
+		System.out.println(noOfteamMembersBE);
+		String sprintVelocityBE = backendcalltoSIPBE.sprintVelocity;
+		System.out.println(sprintVelocityBE);
+		String sprintDurationBE = backendcalltoSIPBE.sprintDuration;
+		System.out.println(sprintDurationBE);
 		
 		frame = new JFrame();
 		frame.setVisible(true);
