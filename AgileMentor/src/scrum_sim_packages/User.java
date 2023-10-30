@@ -1,4 +1,8 @@
-package scrum_sim_packages;
+package AgileMentor.src.scrum_sim_packages;
+
+import org.json.simple.JSONObject;
+
+import java.util.HashMap;
 
 // This tells Hibernate to make a table out of this class
 public class User {
@@ -10,6 +14,24 @@ public class User {
   private String password;
   
   private String role;
+
+  public User(String username, String email, String password, String role) {
+      this.username = username;
+      this.email = email;
+      this.password = password;
+      this.role = role;
+  }
+
+  public JSONObject toJSON() {
+      JSONObject jsonObject = new JSONObject();
+      HashMap<String, Object> userMap = new HashMap<>();
+      userMap.put("username", username);
+      userMap.put("email", email);
+      userMap.put("password", password);
+      userMap.put("role", role);
+      jsonObject.putAll(userMap);
+      return jsonObject;
+  }
 
   public String getName() {
     return username;
@@ -38,9 +60,9 @@ public class User {
   public String getPassword() {
 		    return password;
 		  }
-  
+
   public void setPassword(String password) {
 		    this.password = password;
 		  }
-	  
+
 }
