@@ -2,6 +2,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.BorderFactory;
 import javax.swing.border.MatteBorder;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.plaf.basic.BasicComboBoxUI;
 import javax.swing.plaf.basic.BasicComboPopup;
 import javax.swing.plaf.basic.ComboPopup;
@@ -29,6 +31,13 @@ public class CreateSimulation
 {
 
 	private JFrame frame;
+	public static String sessionName;
+	public static String noOfsprints;
+	public static String noOfteamMembers;
+	public static String sprintVelocity;
+	public static String sprintDuration;
+	
+	private SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
 	
 	public static void main(String[] args)
 	{
@@ -63,9 +72,9 @@ public class CreateSimulation
 	private void initialize()
 	{
 		frame = new JFrame();
-		frame.setBounds(350, 120, 754, 719); // Size of frame
+		frame.setBounds(350, 120, 754, 719);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new SpringLayout()); // Use SpringLayout
+		frame.getContentPane().setLayout(new SpringLayout());
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().setBackground(Color.decode("#f0ebd8"));
 		frame.setResizable(false);
@@ -80,11 +89,12 @@ public class CreateSimulation
 		btnNewButton1.setFocusPainted(false);
 		btnNewButton1.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 				
-				//NewScreen LoginPage = new NewScreen(); // New Frame (NewScreen)
-				//LoginPage.setVisible(true);
+				scrum_display1 display1 = new scrum_display1(); // Open Viresh login file
+				display1.setVisible(true);
+				
 			}
 		});
 		btnNewButton1.setBounds(40, 22, 120, 40);
@@ -111,6 +121,26 @@ public class CreateSimulation
 		textField1.setBounds(228, 109, 295, 25);
 		textField1.setColumns(10);
 		frame.getContentPane().add(textField1);
+		textField1.getDocument().addDocumentListener(new DocumentListener() {
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				sessionName = textField1.getText();
+				System.out.println(sessionName);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				sessionName = textField1.getText();
+				System.out.println(sessionName);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel3 = new JLabel("Set Configuration:");
 		lblNewLabel3.setFont(new Font("SansSerif", Font.PLAIN, 20));
@@ -151,6 +181,25 @@ public class CreateSimulation
 		textField2.setColumns(5);
 		frame.getContentPane().add(textField2);
 		//addValidationToTextField(textField2);
+		textField2.getDocument().addDocumentListener(new DocumentListener() {
+			public void insertUpdate(DocumentEvent e) {
+				noOfsprints = textField2.getText();
+				System.out.println(noOfsprints);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				noOfsprints = textField2.getText();
+				System.out.println(noOfsprints);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel6 = new JLabel("Number of team members");
 		lblNewLabel6.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -166,6 +215,26 @@ public class CreateSimulation
 		textField3.setBounds(470, 275, 40, 25);
 		textField3.setColumns(5);
 		frame.getContentPane().add(textField3);
+		textField3.getDocument().addDocumentListener(new DocumentListener() {
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				noOfteamMembers = textField3.getText();
+				System.out.println(noOfteamMembers);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				noOfteamMembers = textField3.getText();
+				System.out.println(noOfteamMembers);				
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel7 = new JLabel("Sprint Velocity");
 		lblNewLabel7.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -181,6 +250,26 @@ public class CreateSimulation
 		textField4.setBounds(470, 309, 40, 25);
 		textField4.setColumns(5);
 		frame.getContentPane().add(textField4);
+		textField4.getDocument().addDocumentListener(new DocumentListener() {
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				sprintVelocity = textField4.getText();
+				System.out.println(sprintVelocity);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				sprintVelocity = textField4.getText();
+				System.out.println(sprintVelocity);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		JLabel lblNewLabel8 = new JLabel("Sprint Duration");
 		lblNewLabel8.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -196,6 +285,26 @@ public class CreateSimulation
 		textField5.setBounds(470, 340, 40, 25);
 		textField5.setColumns(5);
 		frame.getContentPane().add(textField5);
+		textField5.getDocument().addDocumentListener(new DocumentListener() {
+			@Override
+			public void insertUpdate(DocumentEvent e) {
+				sprintDuration = textField5.getText();
+				System.out.println(sprintDuration);
+			}
+
+			@Override
+			public void removeUpdate(DocumentEvent e) {
+				sprintDuration = textField5.getText();
+				System.out.println(sprintDuration);
+			}
+
+			@Override
+			public void changedUpdate(DocumentEvent e)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
         JLabel lblNewLabel9 = new JLabel("Choose a development scenario");
         lblNewLabel9.setFont(new Font("SansSerif", Font.PLAIN, 13));
