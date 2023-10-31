@@ -58,6 +58,7 @@ public class scrum_display1 extends JFrame {
 		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		getContentPane().setLayout(gridBagLayout);
+		getContentPane().setBackground(Color.decode("#f0ebd8"));
 		
 		JLabel lblNewLabel = new JLabel("Agile Tutor");
 		lblNewLabel.setHorizontalTextPosition(SwingConstants.CENTER);
@@ -67,7 +68,7 @@ public class scrum_display1 extends JFrame {
 		lblNewLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 		lblNewLabel.setMinimumSize(new Dimension(250, 100));
 		lblNewLabel.setMaximumSize(new Dimension(300, 100));
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
+		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 24));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.anchor = GridBagConstraints.NORTH;
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
@@ -76,7 +77,7 @@ public class scrum_display1 extends JFrame {
 		getContentPane().add(lblNewLabel, gbc_lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Sign In");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 18));
+		lblNewLabel_1.setFont(new Font("SansSerif", Font.BOLD, 18));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_1.gridx = 3;
@@ -125,6 +126,9 @@ public class scrum_display1 extends JFrame {
 		textField_1.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Sign In");
+		btnNewButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		btnNewButton.setBackground(Color.decode("#3e5c76"));
+		btnNewButton.setForeground(Color.WHITE);
 		btnNewButton.setMinimumSize(new Dimension(100, 21));
 		btnNewButton.setMaximumSize(new Dimension(100, 21));
 		btnNewButton.setPreferredSize(new Dimension(100, 21));
