@@ -1,4 +1,4 @@
-package scrum_sim_packages;
+package AgileMentor.src.scrum_sim_packages;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
