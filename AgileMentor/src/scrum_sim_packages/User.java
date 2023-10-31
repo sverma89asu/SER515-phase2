@@ -4,7 +4,6 @@ import org.json.simple.JSONObject;
 
 import java.util.HashMap;
 
-// This tells Hibernate to make a table out of this class
 public class User {
 
   private String username;
