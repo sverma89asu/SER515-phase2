@@ -1,5 +1,6 @@
 package AgileMentor.src.CreateSimulation;
 
+import AgileMentor.src.SimulationInProgressPage;
 import AgileMentor.src.scrum_sim_packages.scrum_display1;
 
 import java.awt.EventQueue;
@@ -369,8 +370,8 @@ public class CreateSimulation
 		        SwingUtilities.invokeLater(new Runnable() {
 		        	@Override
 		            public void run() {
-		            	//SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
-		                //simulationInProgressPage.setVisible(true);
+		            	SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
+		                simulationInProgressPage.setVisible(true);
 		            }
 		        });
 			}

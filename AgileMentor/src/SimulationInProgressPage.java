@@ -1,3 +1,8 @@
+package AgileMentor.src;
+
+import AgileMentor.src.CreateSimulation.CreateSimulation;
+import AgileMentor.src.scrum_sim_packages.scrum_display1;
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -55,7 +60,7 @@ public class SimulationInProgressPage extends JFrame {
 	
 	private void initialize()
 	{
-		Create_A_Simulation frontendcalltoCAS = new Create_A_Simulation();
+		CreateSimulation frontendcalltoCAS = new CreateSimulation();
 		System.out.println("In SIP");
 		String sessionName = frontendcalltoCAS.sessionName;
 		System.out.println(sessionName);
@@ -92,8 +97,8 @@ public class SimulationInProgressPage extends JFrame {
 		signOutButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 				frame.dispose();
-				
-				LoginPage LoginPage = new LoginPage(); // New Frame (NewScreen)
+
+				scrum_display1 LoginPage = new scrum_display1(); // New Frame (NewScreen)
 				LoginPage.setVisible(true);
 				
 			}
