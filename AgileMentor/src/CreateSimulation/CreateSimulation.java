@@ -1,3 +1,7 @@
+package AgileMentor.src.CreateSimulation;
+
+import AgileMentor.src.scrum_sim_packages.scrum_display1;
+
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.BorderFactory;
@@ -30,14 +34,14 @@ import javax.swing.SpringLayout;
 public class CreateSimulation
 {
 
-	private JFrame frame;
+	public JFrame frame;
 	public static String sessionName;
 	public static String noOfsprints;
 	public static String noOfteamMembers;
 	public static String sprintVelocity;
 	public static String sprintDuration;
 	
-	private SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
+	//private SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
 	
 	public static void main(String[] args)
 	{
@@ -93,7 +97,7 @@ public class CreateSimulation
 				frame.dispose();
 				
 				scrum_display1 display1 = new scrum_display1(); // Open Viresh login file
-				display1.setVisible(true);
+				display1.frame.setVisible(true);
 				
 			}
 		});
@@ -365,8 +369,8 @@ public class CreateSimulation
 		        SwingUtilities.invokeLater(new Runnable() {
 		        	@Override
 		            public void run() {
-		            	SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
-		                simulationInProgressPage.setVisible(true);
+		            	//SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
+		                //simulationInProgressPage.setVisible(true);
 		            }
 		        });
 			}

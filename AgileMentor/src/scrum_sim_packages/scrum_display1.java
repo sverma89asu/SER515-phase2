@@ -1,5 +1,7 @@
 package AgileMentor.src.scrum_sim_packages;
 
+import AgileMentor.src.CreateSimulation.CreateSimulation;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -32,7 +34,7 @@ public class scrum_display1 extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField;
 
-	private JFrame frame;
+	public JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -154,6 +156,16 @@ public class scrum_display1 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Database db = new Database();
 				if(db.authenticate(username, password)) {
+					SwingUtilities.invokeLater(new Runnable() {
+						@Override
+						public void run() {
+							CreateSimulation frame = new CreateSimulation();
+							frame.frame.setVisible(true);
+							//contentPane.setVisible(false);
+							//SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
+							//simulationInProgressPage.setVisible(true);
+						}
+					});
 					System.out.println("success!");
 					frame.dispose();
 				}
