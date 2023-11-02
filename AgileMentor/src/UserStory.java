@@ -1,4 +1,4 @@
-package AgileMentor.src.scrum_sim_packages;
+package AgileMentor.src;
 
 import org.json.simple.JSONObject;
 
@@ -17,7 +17,7 @@ public class UserStory {
 
     private int businessValue;
 
-    public User(int id, String name, String description, int storyPoints, int businessValue) {
+    public UserStory(int id, String name, String description, int storyPoints, int businessValue) {
         this.id = id;
         this.name = name;
         this.description = description;
