@@ -1,5 +1,6 @@
 package AgileMentor.src.CreateSimulation;
 
+import AgileMentor.src.SimulationInProgressPage;
 import AgileMentor.src.scrum_sim_packages.scrum_display1;
 
 import java.awt.EventQueue;
@@ -184,7 +185,6 @@ public class CreateSimulation
 		textField2.setBounds(470, 241, 40, 25);
 		textField2.setColumns(5);
 		frame.getContentPane().add(textField2);
-		//addValidationToTextField(textField2);
 		textField2.getDocument().addDocumentListener(new DocumentListener() {
 			public void insertUpdate(DocumentEvent e) {
 				noOfsprints = textField2.getText();
@@ -369,8 +369,8 @@ public class CreateSimulation
 		        SwingUtilities.invokeLater(new Runnable() {
 		        	@Override
 		            public void run() {
-		            	//SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
-		                //simulationInProgressPage.setVisible(true);
+		            	SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
+		                simulationInProgressPage.setVisible(true);
 		            }
 		        });
 			}
@@ -406,40 +406,6 @@ public class CreateSimulation
         panel.setLayout(new SpringLayout());
 
     }
-	
-	/*
-	public void addValidationToTextField(JTextField textField) {
-	    textField.getDocument().addDocumentListener(new DocumentListener() {
-	        @Override
-	        public void insertUpdate(DocumentEvent e) {
-	            validateInput(textField);
-	        }
-
-	        @Override
-	        public void removeUpdate(DocumentEvent e) {
-	            validateInput(textField);
-	        }
-
-	        @Override
-	        public void changedUpdate(DocumentEvent e) {
-	            validateInput(textField);
-	        }
-	    });
-	}
-
-	public void validateInput(JTextField textField) {
-	    String text = textField.getText();
-	    try {
-	        int number = Integer.parseInt(text);
-	        if (number < 0 || number > 999) {
-	            textField.setText("");
-	        }
-	    } catch (NumberFormatException ex) {
-	        textField.setText("");
-	    }
-	}
-}
-*/
 
 class RoundButton extends JButton {
     public RoundButton(String label) {
