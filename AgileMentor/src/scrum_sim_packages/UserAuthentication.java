@@ -4,9 +4,10 @@ public class UserAuthentication {
     public static void main(String[] args) {
         Database database = new Database();
 
-        // Add some sample users to the fake database
-        //database.addUser(new User("user1", "user1@example.com", "password1", "user"));
-        //database.addUser(new User("user2", "user2@example.com", "password2", "user"));
+       
+        database.addUser(new User("user1", "user1@example.com", "password1", "user"));
+        database.addUser(new User("user2", "user2@example.com", "password2", "user"));
+
         // Add more users as needed...
 
         // Authenticate a user
