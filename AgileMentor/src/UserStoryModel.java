@@ -11,7 +11,7 @@ import java.util.*;
 
 public class UserStoryModel {
     private static final String DB_FILE = "UserStories.json";
-    public List<UserStory> getUserStories() {
+    public static List<UserStory> getUserStories() {
         List<UserStory> userStories = new List<UserStory>() {
             @Override
             public int size() {
