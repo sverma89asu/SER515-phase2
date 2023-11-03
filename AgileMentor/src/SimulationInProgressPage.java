@@ -2,6 +2,7 @@ package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
 import AgileMentor.src.scrum_sim_packages.scrum_display1;
+import AgileMentor.src.SimulationInProgressBackEnd;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -15,9 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
-import javax.swing.border.EmptyBorder;
 import javax.swing.ImageIcon;
 
 public class SimulationInProgressPage extends JFrame {
@@ -206,11 +205,63 @@ public class SimulationInProgressPage extends JFrame {
 		});
 		randomEventsButton.setBounds(506, 158, 224, 50);
 		frame.getContentPane().add(randomEventsButton);
-		
-		
-		
-		
-		
+
+		/*
+		JPanel containerPanel = new JPanel();
+		containerPanel.setBorder(null);
+		containerPanel.setBounds(144, 245, 438, 301);
+		containerPanel.setOpaque(false);
+		frame.getContentPane().add(containerPanel);
+		containerPanel.setLayout(null);
+
+		int numberOfPanels = Integer.parseInt(noOfsprints);
+		int panelY = 0; // 추가
+
+		for (int i=0; i < numberOfPanels; i++) {
+			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 274);
+		    //SprintDetailsPage sprintPanel = new SprintDetailsPage();
+		    containerPanel.add(sprintPanel);
+		    panelY += 274; // 다음 패널의 Y 좌표 조정
+		}
+
+		containerPanel.setVisible(true);
+		*/
+
+		JPanel containerPanel = new JPanel();
+		containerPanel.setBorder(null);
+		containerPanel.setBounds(144, 245, 438, 301);
+		containerPanel.setOpaque(false);
+		frame.getContentPane().add(containerPanel);
+		containerPanel.setLayout(null);
+
+		int numberOfPanels = Integer.parseInt(noOfsprints);
+		int panelY = 0; // 추가
+
+		//for (int i=0; i < numberOfPanels; i++) {
+
+		SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 274);
+		//SprintDetailsPage sprintPanel = new SprintDetailsPage();
+		containerPanel.add(sprintPanel);
+		panelY += 274; // 다음 패널의 Y 좌표 조정
+		//}
+
+		//containerPanel.setVisible(true);
+
+//		JPanel panel = new JPanel();
+//		panel.setBorder(null);
+//		panel.setBackground(new Color(240, 235, 216));
+//		panel.setBounds(144, 300, 509, 274);
+//		panel.setLayout(null);
+//
+//		int numberOfPanels = Integer.parseInt(noOfsprints);
+//
+//		for (int i = 0; i < numberOfPanels; i++) {
+//			SprintDetailsPage SprintPanel = new SprintDetailsPage(); // Create an instance of your custom panel
+//			panel.add(SprintPanel); // Add the panel to the main container
+//        }
+//
+//		panel.setVisible(true);
 
 	}
 }
+
