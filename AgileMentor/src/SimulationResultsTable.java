@@ -13,6 +13,13 @@ public class SimulationResultsTable extends JFrame {
     JTable table;
     JButton refreshButton;
 
+    int day_int = 0;
+    int ran_num = 0;
+
+    float rem_bv_int = 8.0f;
+    float rem_sp_int=7.0f;
+
+
     SimulationResultsTable() {
 
         JFrame frame = new JFrame();
@@ -31,8 +38,8 @@ public class SimulationResultsTable extends JFrame {
         lblNewLabel.setBounds(226, 24, 305, 43);
         frame.getContentPane().add(lblNewLabel);
 
-        Object[][] data = {{"1", "US17", "Progress", "10", "10", "8"}, {"1", "US18", "Progress", "5", "8", "4"}, {"1", "US19", "Progress", "1", "8", "4"}};
-        String[] columnNames = {"Day", "Stories Selected", "Progress/Blocker", "Remaining Storypoints (1)", "Remaining Storypoints (2)", "Remaining Business Value"};
+        Object[][] data = {{"1", "US17", "Progress", "10", "8"}, {"1", "US18", "Progress", "8", "7"}, {"1", "US19", "Blocker", "8", "7"}};
+        String[] columnNames = {"Day", "Stories Selected", "Progress/Blocker", "Remaining Storypoints", "Remaining Business Value"};
 
         DefaultTableModel model = new DefaultTableModel(data, columnNames);
 
@@ -48,7 +55,7 @@ public class SimulationResultsTable extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 Random randomNum = new Random();
-                int day_int = randomNum.nextInt(10);
+                day_int = day_int + 1;
                 String day = Integer.toString(day_int);
                 int us_int = randomNum.nextInt(50);
                 String us_selected = "US" + Integer.toString(us_int);
@@ -57,14 +64,18 @@ public class SimulationResultsTable extends JFrame {
                 ActionCards.add("Blocker");
                 int action_cards_int = randomNum.nextInt(2);
                 String action_card = ActionCards.get(action_cards_int);
-                int rem_sp_1_int = randomNum.nextInt(10);
-                String rem_sp_1 = Integer.toString(rem_sp_1_int);
-                int rem_sp_2_int = randomNum.nextInt(10);
-                String rem_sp_2 = Integer.toString(rem_sp_1_int);
-                int rem_bp_int = randomNum.nextInt(10);
-                String rem_bp = Integer.toString(rem_bp_int);
+                if (action_card.equals("Progress"))
+                {
+                    ran_num = randomNum.nextInt(101);
+                    rem_bv_int = rem_bv_int * (1-(float)(ran_num)/((float)100));
+                    rem_sp_int = rem_sp_int * (1-(float)(ran_num)/((float)100));
 
-                Object[] newRow = {day, us_selected, action_card, rem_sp_1, rem_sp_2, rem_bp};
+                }
+
+                String rem_bv = String.valueOf(rem_bv_int);
+                String rem_sp = String.valueOf(rem_sp_int);
+
+                Object[] newRow = {day, us_selected, action_card,rem_bv, rem_sp};
 
                 model.addRow(newRow);
 

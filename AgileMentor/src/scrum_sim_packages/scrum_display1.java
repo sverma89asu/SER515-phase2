@@ -83,7 +83,7 @@ public class scrum_display1 extends JFrame {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Username");
-		lblNewLabel_2.setBounds(212, 168, 71, 19);
+		lblNewLabel_2.setBounds(212, 168, 100, 19);
 		lblNewLabel_2.setFont(new Font("SansSerif", Font.PLAIN, 16));
 		lblNewLabel_2.setVerticalTextPosition(SwingConstants.BOTTOM);
 		lblNewLabel_2.setVerticalAlignment(SwingConstants.BOTTOM);
