@@ -371,12 +371,12 @@ public class CreateSimulation
 		        	@Override
 		            public void run() {
 		            	SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
-		                simulationInProgressPage.setVisible(true);
+		                simulationInProgressPage.frame.setVisible(true);
 		            }
 		        });
 			}
 		});
-				
+
 		btnNewButton4.setBounds(303, 630, 142, 40);
 		frame.getContentPane().add(btnNewButton4);
                 
