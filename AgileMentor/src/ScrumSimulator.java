@@ -1,4 +1,6 @@
-package engine;
+package AgileMentor.src;
+
+import AgileMentor.src.Scrum.ProductBacklog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +23,12 @@ public class ScrumSimulator {
 
   public void simulate() {
     // Generate backlog
-    Backlog backlog = new Backlog();
-    backlog.generateUserStories();
+    ProductBacklog productbacklog = new ProductBacklog();
+    productbacklog.generateUserStories();
     
     // Run sprints
     for (int i = 0; i < numSprints; i++) {
-      Sprint sprint = new Sprint(sprintDuration, velocity, teamSize);
-      sprint.selectUserStories(backlog);
+      Sprint sprint = new Sprint(sprintDuration, velocity, teamSize, productbacklog);
       sprint.run();
       sprints.add(sprint);
     }
@@ -51,11 +52,11 @@ public class ScrumSimulator {
     // Print burndown chart for each sprint
   }
   
-  public static void main(String[] args) {
+  /*public static void main(String[] args) {
     Backlog backlog = new Backlog();
     backlog.generateUserStories();
     backlog.displayUserStories();
-  }
+  }*/
 
 }
 

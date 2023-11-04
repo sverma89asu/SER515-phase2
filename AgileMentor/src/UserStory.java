@@ -24,7 +24,13 @@ public class UserStory {
         this.storyPoints = storyPoints;
         this.businessValue = businessValue;
     }
-
+    public void displayDetails() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Story Points: " + storyPoints);
+        System.out.println("Description: " + description);
+        System.out.println("Business Value: " + businessValue);
+    }
     public int getId() {
         return id;
     }
