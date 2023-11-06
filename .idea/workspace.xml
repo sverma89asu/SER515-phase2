@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Cleaned up directory (removed springboot code)">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/sprint-1" />
+        <entry key="$PROJECT_DIR$" value="feature/sprint-2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "US-22",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/code/515/SER515-phase2",
     "node.js.detected.package.eslint": "true",
@@ -110,6 +107,7 @@
       <updated>1699051888767</updated>
       <workItem from="1699051890524" duration="10718000" />
       <workItem from="1699223617979" duration="306000" />
+      <workItem from="1699306005334" duration="1222000" />
     </task>
     <task id="LOCAL-00003" summary="Started working on Sprint logic">
       <option name="closed" value="true" />
@@ -140,6 +138,7 @@
     <MESSAGE value="Added product backlog class" />
     <MESSAGE value="Started working on Sprint logic" />
     <MESSAGE value="Cleaned up directory (removed springboot code)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up directory (removed springboot code)" />
+    <MESSAGE value="Cleaned up directory pt2 (removed eclipse code)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up directory pt2 (removed eclipse code)" />
   </component>
 </project>
