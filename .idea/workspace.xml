@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 Task 60 (Scenario Backend)">
+    <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-29 (View Simulation Results after Simulation Completion)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AgileMentor/src/SimulationInProgressBackEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/SimulationInProgressBackEnd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="US-22" />
+        <entry key="$PROJECT_DIR$" value="US-29" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Task-60",
+    "git-widget-placeholder": "Task-54",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/code/515/SER515-phase2",
     "node.js.detected.package.eslint": "true",
@@ -108,7 +107,7 @@
       <updated>1699051888767</updated>
       <workItem from="1699051890524" duration="10718000" />
       <workItem from="1699223617979" duration="306000" />
-      <workItem from="1699306005334" duration="2199000" />
+      <workItem from="1699306005334" duration="3001000" />
     </task>
     <task id="LOCAL-00003" summary="Started working on Sprint logic">
       <option name="closed" value="true" />
@@ -142,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699307759522</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created new branch for User Story-29 (View Simulation Results after Simulation Completion)">
+      <option name="closed" value="true" />
+      <created>1699308513830</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699308513830</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +165,7 @@
     <MESSAGE value="Cleaned up directory pt2 (removed eclipse code)" />
     <MESSAGE value="Created new branch for User Story-22 (Download Scenario Data)" />
     <MESSAGE value="Created new branch for User Story-22 Task 60 (Scenario Backend)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new branch for User Story-22 Task 60 (Scenario Backend)" />
+    <MESSAGE value="Created new branch for User Story-29 (View Simulation Results after Simulation Completion)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new branch for User Story-29 (View Simulation Results after Simulation Completion)" />
   </component>
 </project>
