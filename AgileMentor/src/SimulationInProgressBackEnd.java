@@ -21,7 +21,25 @@ public class SimulationInProgressBackEnd
 	
 	public static void main(String[] args)
 	{
+		
+	}
 
+	static ArrayList<UserStory> removeSprintStoriesFromProductBacklog(ArrayList<UserStory>productBacklog, ArrayList<UserStory>sprintBacklog){
+		int itr = 0;
+		boolean isChanged = false;
+		while(itr < productBacklog.size()){
+			isChanged = false;
+			for(UserStory us: sprintBacklog) {
+				if (productBacklog.get(itr).getId() == us.getId()) {
+					productBacklog.remove(itr);
+					isChanged = true;
+				}
+			}
+			if(!isChanged){
+				itr++;
+			}
+		}
+		return productBacklog;
 	}
 	// Prints the items which are put
 	// in a knapsack of capacity W
@@ -53,7 +71,7 @@ public class SimulationInProgressBackEnd
 			else {
 
 				// This item is included.
-				System.out.println(pb.get(i-1).getDescription());
+				System.out.println(pb.get(i-1).getName());
 				sprintBacklog.add(pb.get(i-1));
 
 				// Since this weight is included its
@@ -71,7 +89,10 @@ public class SimulationInProgressBackEnd
 		SimulationSession simulationSession = new SimulationSession(sessionName, parseLong(sprintVelocity), parseLong(sprintDuration), parseLong(noOfsprints), parseLong(noOfteamMembers), sprints);
 		for(int i = 0; i < parseLong(noOfsprints); i++){
 			ArrayList<UserStory> sprintBacklog = printknapSack((int) simulationSession.getVelocity(), productBacklog, productBacklog.size());
-
+			productBacklog = removeSprintStoriesFromProductBacklog(productBacklog, sprintBacklog);
+			for(UserStory us: productBacklog){
+				System.out.println(us.getName());
+			}
 		}
 
 //		ArrayList<UserStory> sprintBacklog = printknapSack(simulationSession.getVelocity(), productBacklog, productBacklog.size());
