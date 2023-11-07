@@ -15,7 +15,7 @@ import javax.swing.*;
 import java.awt.Dimension;
 
 public class SimulationInProgressPage extends JFrame {
-	
+
 	private static final long serialVersionUID = 1L;
 	public JFrame frame;
 	public static String sessionName;
