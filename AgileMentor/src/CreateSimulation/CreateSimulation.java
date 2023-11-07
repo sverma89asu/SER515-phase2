@@ -1,7 +1,7 @@
 package AgileMentor.src.CreateSimulation;
 
 import AgileMentor.src.SimulationInProgressPage;
-import AgileMentor.src.scrum_sim_packages.scrum_display1;
+import AgileMentor.src.scrum_sim_packages.LoginPage;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -97,7 +97,7 @@ public class CreateSimulation
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 				
-				scrum_display1 display1 = new scrum_display1(); // Open Viresh login file
+				LoginPage display1 = new LoginPage(); // Open Viresh login file
 				display1.frame.setVisible(true);
 				
 			}

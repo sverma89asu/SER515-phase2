@@ -1,8 +1,7 @@
 package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
-import AgileMentor.src.scrum_sim_packages.scrum_display1;
-import AgileMentor.src.SimulationInProgressBackEnd;
+import AgileMentor.src.scrum_sim_packages.LoginPage;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -93,7 +92,7 @@ public class SimulationInProgressPage extends JFrame {
 			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 				frame.dispose();
 
-				scrum_display1 LoginPage = new scrum_display1(); // New Frame (NewScreen)
+				LoginPage LoginPage = new LoginPage(); // New Frame (NewScreen)
 				LoginPage.setVisible(true);
 
 			}
