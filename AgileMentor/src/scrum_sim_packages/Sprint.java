@@ -44,12 +44,15 @@ public class Sprint {
     private Backlog sprintBacklog;
     private ArrayList<StandupDay> standupDays;
 
-    public Sprint(Backlog productBacklog, Backlog sprintBacklog, ArrayList<StandupDay> standupDays) {
+    public Sprint(long expectedBV, double expectedSP, long actualBV, double actualSP, Backlog productBacklog, Backlog sprintBacklog, ArrayList<StandupDay> standupDays) {
+        this.expectedBV = expectedBV;
+        this.expectedSP = expectedSP;
+        this.actualBV = actualBV;
+        this.actualSP = actualSP;
         this.productBacklog = productBacklog;
         this.sprintBacklog = sprintBacklog;
         this.standupDays = standupDays;
     }
-
     public Backlog getProductBacklog() {
         return productBacklog;
     }
