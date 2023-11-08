@@ -102,7 +102,7 @@ public class SimulationInProgressPage extends JFrame {
 		signOutButton.setBounds(40, 22, 120, 40);
 		frame.getContentPane().add(signOutButton);
 
-		JLabel lblNewLabel = new JLabel("Simulation in Progress");
+		JLabel lblNewLabel = new JLabel("Simulation Results");
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
