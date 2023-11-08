@@ -1,6 +1,7 @@
 package AgileMentor.src.Helpers;
 
 import AgileMentor.src.scrum_sim_packages.SimulationSession;
+import AgileMentor.src.scrum_sim_packages.Sprint;
 import com.opencsv.CSVWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -52,7 +53,8 @@ public class ExportToCSV {
         return fieldValues;
     }
     public static void main(String[] args) {
-        SimulationSession session = new SimulationSession("Example Session", 10, 14, 5, 6);
+        ArrayList<Sprint> sprints = new ArrayList<>();
+        SimulationSession session = new SimulationSession("Example Session", 10, 14, 5, 6, sprints);
         String csvFilePath = "output.csv";
         convertToCSV(session, csvFilePath);
     }
