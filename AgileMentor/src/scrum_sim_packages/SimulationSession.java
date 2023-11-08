@@ -8,15 +8,15 @@ public class SimulationSession {
     private long sprintDuration;
     private long numberOfSprints;
     private long teamSize;
-    private ArrayList<Sprint> sprints;
+    //private ArrayList<Sprint> sprints;
 
-    public SimulationSession(String name, long velocity, long sprintDuration, long numberOfSprints, long teamSize, ArrayList<Sprint> sprints) {
+    public SimulationSession(String name, long velocity, long sprintDuration, long numberOfSprints, long teamSize) {
         this.name = name;
         this.velocity = velocity;
         this.sprintDuration = sprintDuration;
         this.numberOfSprints = numberOfSprints;
         this.teamSize = teamSize;
-        this.sprints = sprints;
+        //this.sprints = sprints;
     }
 
     public String getName() {
@@ -59,11 +59,7 @@ public class SimulationSession {
         this.teamSize = teamSize;
     }
 
-    public ArrayList<Sprint> getSprints() {
-        return sprints;
-    }
+    //public ArrayList<Sprint> getSprints() {return sprints;}
 
-    public void setSprints(ArrayList<Sprint> sprints) {
-        this.sprints = sprints;
-    }
+    //public void setSprints(ArrayList<Sprint> sprints) {this.sprints = sprints;}
 }
