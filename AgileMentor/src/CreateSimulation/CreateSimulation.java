@@ -92,7 +92,7 @@ public class CreateSimulation
 		btnNewButton1.setContentAreaFilled(false);
 		btnNewButton1.setBorderPainted(false); // Hide border
 		btnNewButton1.setFocusPainted(false);
-		btnNewButton1.addActionListener(new ActionListener() {
+		btnNewButton1.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
