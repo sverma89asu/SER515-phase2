@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 Task 60 (Scenario Backend)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgileMentor/src/CreateSimulation/CreateSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/CreateSimulation/CreateSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgileMentor/src/SimulationInProgressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/SimulationInProgressPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "US29__Task64",
+    "git-widget-placeholder": "US29__Task63",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/code/515/SER515-phase2",
     "node.js.detected.package.eslint": "true",
@@ -112,6 +112,7 @@
       <workItem from="1699306005334" duration="2199000" />
       <workItem from="1699402365383" duration="18000" />
       <workItem from="1699402447892" duration="275000" />
+      <workItem from="1699472072687" duration="1171000" />
     </task>
     <task id="LOCAL-00003" summary="Started working on Sprint logic">
       <option name="closed" value="true" />
