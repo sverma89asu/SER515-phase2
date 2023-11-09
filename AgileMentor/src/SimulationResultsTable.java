@@ -1,32 +1,12 @@
 package AgileMentor.src;
 
-import AgileMentor.src.scrum_sim_packages.LoginPage;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-/*
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Random;
- */
 
 public class SimulationResultsTable extends JFrame {
 
     JTable table;
-    /*
-    JButton refreshButton;
-
-    int day_int = 0;
-    int ran_num = 0;
-
-    float rem_bv_int = 8.0f;
-    float rem_sp_int=7.0f;
-     */
-
 
     SimulationResultsTable() {
 
@@ -118,11 +98,5 @@ public class SimulationResultsTable extends JFrame {
         containerPanel.add(new JPanel());
         frame.getContentPane().add(containerPanel);
         containerPanel.validate();
-
-        //containerPanel.add(new JScrollPane(table));
-        //containerPanel.add(new JPanel());
-        //containerPanel.add(refreshButton);
-        //frame.getContentPane().add(containerPanel);
-        //containerPanel.validate();
     }
 }
