@@ -49,6 +49,14 @@
         </dependency>
     </dependencies>
 	<build>
+		<resources>
+			<resource>
+				<directory>AgileMentor.src.scrum_sim_packages</directory>
+				<includes>
+					<include>AgileMentor.src.scrum_sim_packages.LoginPage</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<!-- Other plugins may already be present here -->
 			<plugin>
