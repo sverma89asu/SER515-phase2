@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Cleaned up directory (removed springboot code)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AgileMentor/src/CreateSimulation/CreateSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/CreateSimulation/CreateSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgileMentor/src/SimulationResultsTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/SimulationResultsTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +114,8 @@
       <updated>1699051888767</updated>
       <workItem from="1699051890524" duration="10718000" />
       <workItem from="1699223617979" duration="306000" />
-      <workItem from="1699567537564" duration="1971000" />
+      <workItem from="1699567537564" duration="2716000" />
+      <workItem from="1699570881054" duration="2488000" />
     </task>
     <task id="LOCAL-00003" summary="Started working on Sprint logic">
       <option name="closed" value="true" />
