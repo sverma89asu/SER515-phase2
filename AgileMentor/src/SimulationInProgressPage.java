@@ -92,10 +92,10 @@ public class SimulationInProgressPage extends JFrame {
 		signOutButton.setMaximumSize(new Dimension(100, 21));
 		signOutButton.setPreferredSize(new Dimension(100, 21));
 		signOutButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 
-				scrum_display1 LoginPage = new scrum_display1(); // New Frame (NewScreen)
+				scrum_display1 LoginPage = new scrum_display1();
 				LoginPage.setVisible(true);
 
 			}
@@ -112,8 +112,8 @@ public class SimulationInProgressPage extends JFrame {
 		goBack.setMaximumSize(new Dimension(100, 21));
 		goBack.setPreferredSize(new Dimension(100, 21));
 		goBack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-				CreateSimulation createSimulation = new CreateSimulation(); // New Frame (NewScreen)
+			public void actionPerformed(ActionEvent e) {
+				CreateSimulation createSimulation = new CreateSimulation();
 				createSimulation.frame.setVisible(true);
 				frame.dispose();
 			}
