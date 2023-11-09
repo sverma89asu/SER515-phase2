@@ -4,7 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
     <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Added Functionality to export Session details to csv">
       <change beforePath="$PROJECT_DIR$/AgileMentor/src/Helpers/ExportToCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/Helpers/ExportToCSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/SimulationSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/SimulationSession.java" afterDir="false" />
