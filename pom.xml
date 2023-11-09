@@ -63,7 +63,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>AgileMentor.src.scrum_sim_packages.scrum_display1</mainClass>
+					<mainClass>AgileMentor.src.scrum_sim_packages.LoginPage</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
