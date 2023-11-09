@@ -36,6 +36,8 @@ public class scrum_display1 extends JFrame {
 
 	public JFrame frame;
 
+	public static String loggedInUser;
+
 	/**
 	 * Launch the application.
 	 */
@@ -159,6 +161,7 @@ public class scrum_display1 extends JFrame {
 					SwingUtilities.invokeLater(new Runnable() {
 						@Override
 						public void run() {
+							loggedInUser=username;
 							CreateSimulation frame = new CreateSimulation();
 							frame.frame.setVisible(true);
 							//contentPane.setVisible(false);
