@@ -54,7 +54,7 @@ public class SimulationResultsTable extends JFrame {
                 return false;
             }
         };
-
+        
         table = new JTable(model);
         setLayout(new GridLayout(3, 2));
 
