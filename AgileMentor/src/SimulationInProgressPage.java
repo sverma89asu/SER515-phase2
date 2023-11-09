@@ -183,23 +183,23 @@ public class SimulationInProgressPage extends JFrame {
 		rewindButton.setBounds(359, 158, 70, 50);
 		frame.getContentPane().add(rewindButton);
 
-		JButton randomEventsButton = new JButton("Add Random Event");
-		randomEventsButton.setBackground(new Color(62, 92, 118));
-		randomEventsButton.setIcon(null);
-		randomEventsButton.setForeground(Color.decode("#f0ebd8"));
-		randomEventsButton.setFont(new Font("SansSerif", Font.PLAIN, 15));
-		randomEventsButton.setOpaque(true); // Transparent color
-		randomEventsButton.setContentAreaFilled(true);
-		randomEventsButton.setBorderPainted(false); // Hide border
-		randomEventsButton.setFocusPainted(false);
-		randomEventsButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-
-
-			}
-		});
-		randomEventsButton.setBounds(506, 158, 224, 50);
-		frame.getContentPane().add(randomEventsButton);
+//		JButton randomEventsButton = new JButton("Add Random Event");
+//		randomEventsButton.setBackground(new Color(62, 92, 118));
+//		randomEventsButton.setIcon(null);
+//		randomEventsButton.setForeground(Color.decode("#f0ebd8"));
+//		randomEventsButton.setFont(new Font("SansSerif", Font.PLAIN, 15));
+//		randomEventsButton.setOpaque(true); // Transparent color
+//		randomEventsButton.setContentAreaFilled(true);
+//		randomEventsButton.setBorderPainted(false); // Hide border
+//		randomEventsButton.setFocusPainted(false);
+//		randomEventsButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		randomEventsButton.setBounds(506, 158, 224, 50);
+//		frame.getContentPane().add(randomEventsButton);
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(144, 245, 438, 400);
