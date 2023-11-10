@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 Task 60 (Scenario Backend)">
-      <change afterPath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/SaveButtonReaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_11_2023_3_05_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_11_2023_3_05_pm__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgileMentor/src/tests/ExportTOJSONTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgileMentor/src/Helpers/ExportToJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/Helpers/ExportToJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <recent name="D:\code\515\SER515-phase2" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ExportTOJSONTests.testFileSaveALL">
     <configuration name="SimulationInProgressPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AgileMentor.src.SimulationInProgressPage" />
       <module name="spring-boot" />
@@ -105,8 +106,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExportTOJSONTests.testFileSaveALL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AgileMentor.src.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AgileMentor.src.tests" />
+      <option name="MAIN_CLASS_NAME" value="AgileMentor.src.tests.ExportTOJSONTests" />
+      <option name="METHOD_NAME" value="testFileSaveALL" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ExportTOJSONTests.testFileSaveALL" />
         <item itemvalue="Application.SimulationInProgressPage" />
       </list>
     </recent_temporary>
