@@ -2,18 +2,12 @@ package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
 import AgileMentor.src.scrum_sim_packages.scrum_display1;
-import AgileMentor.src.SimulationInProgressBackEnd;
 
-import java.awt.Color;
-import java.awt.EventQueue;
-import java.awt.Font;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
-import javax.swing.*;
-
-import java.awt.Dimension;
 
 public class SimulationInProgressPage extends JFrame {
 	
@@ -108,9 +102,8 @@ public class SimulationInProgressPage extends JFrame {
 		lblNewLabel.setBounds(221, 16, 305, 43);
 		frame.getContentPane().add(lblNewLabel);
 
-		JButton saveButton = new JButton("");
-		saveButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-save-material-rounded\\icons8-save-48.png"));
-		saveButton.setForeground(Color.RED);
+		Icon icon = new ImageIcon(getClass().getResource("..//src//Assets//icons8-save-48.png"));
+		JButton saveButton = new JButton(icon);
 		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		saveButton.setOpaque(true); // Transparent color
 		saveButton.setContentAreaFilled(false);
@@ -119,28 +112,29 @@ public class SimulationInProgressPage extends JFrame {
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 
-
 			}
 		});
-		saveButton.setBounds(536, 22, 76, 50);
+		saveButton.setBounds(536, 75, 76, 50);
 		frame.getContentPane().add(saveButton);
 
-		JButton homeButton = new JButton("");
-		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
-		homeButton.setForeground(Color.RED);
-		homeButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		homeButton.setOpaque(true); // Transparent color
-		homeButton.setContentAreaFilled(false);
-		homeButton.setBorderPainted(false); // Hide border
-		homeButton.setFocusPainted(false);
-		homeButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 
+//		JButton homeButton = new JButton("");
+//		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
+//		homeButton.setForeground(Color.RED);
+//		homeButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		homeButton.setOpaque(true); // Transparent color
+//		homeButton.setContentAreaFilled(false);
+//		homeButton.setBorderPainted(false); // Hide border
+//		homeButton.setFocusPainted(false);
+//		homeButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		homeButton.setBounds(608, 22, 70, 50);
+//		frame.getContentPane().add(homeButton);
 
-			}
-		});
-		homeButton.setBounds(608, 22, 70, 50);
-		frame.getContentPane().add(homeButton);
 
 //		JProgressBar progressBar = new JProgressBar();
 //		progressBar.setBounds(144, 119, 438, 28);
@@ -150,39 +144,41 @@ public class SimulationInProgressPage extends JFrame {
 //		progressBar.setStringPainted(true);
 //		frame.getContentPane().add(progressBar);
 
-		JButton playButton = new JButton("");
-		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
-		playButton.setForeground(Color.RED);
-		playButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		playButton.setOpaque(true); // Transparent color
-		playButton.setContentAreaFilled(false);
-		playButton.setBorderPainted(false); // Hide border
-		playButton.setFocusPainted(false);
-		playButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 
+//		JButton playButton = new JButton("");
+//		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
+//		playButton.setForeground(Color.RED);
+//		playButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		playButton.setOpaque(true); // Transparent color
+//		playButton.setContentAreaFilled(false);
+//		playButton.setBorderPainted(false); // Hide border
+//		playButton.setFocusPainted(false);
+//		playButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		playButton.setBounds(279, 158, 70, 50);
+//		frame.getContentPane().add(playButton);
 
-			}
-		});
-		playButton.setBounds(279, 158, 70, 50);
-		frame.getContentPane().add(playButton);
+//		JButton rewindButton = new JButton("");
+//		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
+//		rewindButton.setForeground(Color.RED);
+//		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		rewindButton.setOpaque(true); // Transparent color
+//		rewindButton.setContentAreaFilled(false);
+//		rewindButton.setBorderPainted(false); // Hide border
+//		rewindButton.setFocusPainted(false);
+//		rewindButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		rewindButton.setBounds(359, 158, 70, 50);
+//		frame.getContentPane().add(rewindButton);
 
-		JButton rewindButton = new JButton("");
-		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
-		rewindButton.setForeground(Color.RED);
-		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		rewindButton.setOpaque(true); // Transparent color
-		rewindButton.setContentAreaFilled(false);
-		rewindButton.setBorderPainted(false); // Hide border
-		rewindButton.setFocusPainted(false);
-		rewindButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-
-
-			}
-		});
-		rewindButton.setBounds(359, 158, 70, 50);
-		frame.getContentPane().add(rewindButton);
 
 //		JButton randomEventsButton = new JButton("Add Random Event");
 //		randomEventsButton.setBackground(new Color(62, 92, 118));
