@@ -117,6 +117,7 @@ public class SimulationInProgressPage extends JFrame {
 		saveButton.setBounds(536, 75, 76, 50);
 		frame.getContentPane().add(saveButton);
 
+
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
 //		homeButton.setForeground(Color.RED);
@@ -134,6 +135,7 @@ public class SimulationInProgressPage extends JFrame {
 //		homeButton.setBounds(608, 22, 70, 50);
 //		frame.getContentPane().add(homeButton);
 
+
 //		JProgressBar progressBar = new JProgressBar();
 //		progressBar.setBounds(144, 119, 438, 28);
 //		progressBar.setForeground(new Color(2, 110, 13));
@@ -141,6 +143,7 @@ public class SimulationInProgressPage extends JFrame {
 //		progressBar.setValue(0);
 //		progressBar.setStringPainted(true);
 //		frame.getContentPane().add(progressBar);
+
 
 //		JButton playButton = new JButton("");
 //		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
@@ -175,6 +178,7 @@ public class SimulationInProgressPage extends JFrame {
 //		});
 //		rewindButton.setBounds(359, 158, 70, 50);
 //		frame.getContentPane().add(rewindButton);
+
 
 //		JButton randomEventsButton = new JButton("Add Random Event");
 //		randomEventsButton.setBackground(new Color(62, 92, 118));
