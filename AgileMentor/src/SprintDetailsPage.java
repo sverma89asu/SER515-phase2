@@ -1,7 +1,5 @@
 package AgileMentor.src;
 
-import AgileMentor.src.scrum_sim_packages.scrum_display1;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
