@@ -18,7 +18,6 @@ public class SimulationResultsTable extends JFrame {
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
         JLabel lblNewLabel = new JLabel("Simulation Results");
         lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 32));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -40,7 +39,6 @@ public class SimulationResultsTable extends JFrame {
                 return false;
             }
         };
-
         DefaultTableModel model2 = new DefaultTableModel(data2, columnNames2) {
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -54,7 +52,7 @@ public class SimulationResultsTable extends JFrame {
                 return false;
             }
         };
-        
+
         table = new JTable(model);
         setLayout(new GridLayout(3, 2));
 
