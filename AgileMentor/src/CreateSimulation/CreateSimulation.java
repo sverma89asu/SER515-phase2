@@ -389,7 +389,6 @@ public class CreateSimulation
 		}
 	}
 }
-*/
 
 	class RoundButton extends JButton {
 		public RoundButton(String label) {
@@ -443,4 +442,3 @@ public class CreateSimulation
 			return popup;
 		}
 	}
-}
