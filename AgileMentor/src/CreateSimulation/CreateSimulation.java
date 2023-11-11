@@ -42,8 +42,6 @@ public class CreateSimulation
 	public static String sprintVelocity;
 	public static String sprintDuration;
 
-	//private SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-
 	public static void main(String[] args)
 	{
 		EventQueue.invokeLater(new Runnable()
@@ -92,12 +90,13 @@ public class CreateSimulation
 		btnNewButton1.setContentAreaFilled(false);
 		btnNewButton1.setBorderPainted(false); // Hide border
 		btnNewButton1.setFocusPainted(false);
-		btnNewButton1.addActionListener(new ActionListener() {	
+		btnNewButton1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 
-				LoginPage display1 = new LoginPage(); // Open Viresh login file
+
+				LoginPage display1 = new LoginPage();
 				display1.frame.setVisible(true);
 
 			}
@@ -152,27 +151,6 @@ public class CreateSimulation
 		lblNewLabel3.setBounds(380, 182, 210, 34);
 		frame.getContentPane().add(lblNewLabel3);
 
-		/*
-		JLabel lblNewLabel4 = new JLabel("or");
-		lblNewLabel4.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		lblNewLabel4.setBounds(380, 190, 13, 17);
-		frame.getContentPane().add(lblNewLabel4);
-
-		RoundButton btnNewButton2 = new RoundButton("Import Configuration");
-		btnNewButton2.setForeground(Color.WHITE);
-		btnNewButton2.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		btnNewButton2.setBackground(Color.decode("#3e5c76"));
-		btnNewButton2.setFocusPainted(false);
-		btnNewButton2.setBorderPainted(false);
-		btnNewButton2.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton2.setBounds(460, 176, 162, 45);
-		frame.getContentPane().add(btnNewButton2);
-		*/
-
 		JLabel lblNewLabel5 = new JLabel("Number of Sprints");
 		lblNewLabel5.setFont(new Font("SansSerif", Font.PLAIN, 13));
 		lblNewLabel5.setBounds(295, 246, 120, 18);
@@ -187,7 +165,6 @@ public class CreateSimulation
 		textField2.setBounds(545, 241, 40, 25);
 		textField2.setColumns(5);
 		frame.getContentPane().add(textField2);
-		//addValidationToTextField(textField2);
 		textField2.getDocument().addDocumentListener(new DocumentListener() {
 			public void insertUpdate(DocumentEvent e) {
 				noOfsprints = textField2.getText();
@@ -313,53 +290,6 @@ public class CreateSimulation
 			}
 		});
 
-		/*
-        JLabel lblNewLabel9 = new JLabel("Choose a development scenario");
-        lblNewLabel9.setFont(new Font("SansSerif", Font.PLAIN, 13));
-        lblNewLabel9.setBounds(117, 426, 200, 18);
-        frame.getContentPane().add(lblNewLabel9);
-
-        JComboBox<String> comboBox = new JComboBox();
-        comboBox.setUI(new NoBorderComboBoxUI());
-        comboBox.setUI(new BasicComboBoxUI());
-        comboBox.setBounds(353, 426, 300, 25);
-        frame.getContentPane().add(comboBox);
-
-        comboBox.addItem("Tea Game");
-        comboBox.addItem("Coffee Game");
-        comboBox.addItem("Pizza Game");
-
-        comboBox.setFont(new Font("SansSerif", Font.PLAIN, 13));
-        comboBox.setBackground(Color.decode("#f0ebd8"));
-        comboBox.setForeground(Color.BLACK);
-        comboBox.setFocusable(false);
-        comboBox.setBorder(bottomBorder);
-        comboBox.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            }
-        });
-
-		JLabel lblNewLabel10 = new JLabel("or");
-		lblNewLabel10.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		lblNewLabel10.setBounds(364, 458, 13, 17);
-		frame.getContentPane().add(lblNewLabel10);
-
-		RoundButton btnNewButton3 = new RoundButton("Add Custom Stories");
-		btnNewButton3.setForeground(Color.WHITE);
-		btnNewButton3.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		btnNewButton3.setBackground(Color.decode("#3e5c76"));
-		btnNewButton3.setFocusPainted(false);
-		btnNewButton3.setBorderPainted(false);
-		btnNewButton3.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton3.setBounds(293, 490, 162, 45);
-		frame.getContentPane().add(btnNewButton3);
-		 */
-
 		RoundButton btnNewButton4 = new RoundButton("Continue");
 		btnNewButton4.setForeground(Color.WHITE);
 		btnNewButton4.setFont(new Font("SansSerif", Font.PLAIN, 13));
@@ -398,56 +328,13 @@ public class CreateSimulation
 
 				g2d.setStroke(new BasicStroke(1));
 				g2d.drawLine(x1, y1, x2, y2);
-                /*
-                int x3 = 266;
-                int y3 = 567;
-                int x4 = 466;
-                int y4 = 567;
-                g2d.drawLine(x3, y3, x4, y4);
-
-                 */
 			}
 		};
 		panel.setBounds(0, 0, frame.getWidth(), frame.getHeight());
 		panel.setBackground(Color.decode("#f0ebd8"));
 		frame.getContentPane().add(panel);
 		panel.setLayout(new SpringLayout());
-
 	}
-
-	/*
-	public void addValidationToTextField(JTextField textField) {
-	    textField.getDocument().addDocumentListener(new DocumentListener() {
-	        @Override
-	        public void insertUpdate(DocumentEvent e) {
-	            validateInput(textField);
-	        }
-
-	        @Override
-	        public void removeUpdate(DocumentEvent e) {
-	            validateInput(textField);
-	        }
-
-	        @Override
-	        public void changedUpdate(DocumentEvent e) {
-	            validateInput(textField);
-	        }
-	    });
-	}
-
-	public void validateInput(JTextField textField) {
-	    String text = textField.getText();
-	    try {
-	        int number = Integer.parseInt(text);
-	        if (number < 0 || number > 999) {
-	            textField.setText("");
-	        }
-	    } catch (NumberFormatException ex) {
-	        textField.setText("");
-	    }
-	}
-}
-*/
 
 	class RoundButton extends JButton {
 		public RoundButton(String label) {
@@ -500,5 +387,58 @@ public class CreateSimulation
 			popup.getAccessibleContext().setAccessibleParent(comboBox);
 			return popup;
 		}
+	}
+}
+
+class RoundButton extends JButton {
+	public RoundButton(String label) {
+		super(label);
+		setContentAreaFilled(false);
+		setFocusPainted(false);
+		setBorderPainted(false);
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		if (getModel().isArmed()) {
+			g.setColor(Color.gray);
+		} else {
+			g.setColor(getBackground());
+		}
+		g.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
+		super.paintComponent(g);
+	}
+
+	@Override
+	protected void paintBorder(Graphics g) {
+		g.setColor(getForeground());
+		g.drawRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
+	}
+
+	protected Shape getShape() {
+		RoundRectangle2D shape = new RoundRectangle2D.Float(0, 0, getWidth(), getHeight(), 10, 10);
+		return shape;
+	}
+
+	@Override
+	public boolean contains(int x, int y) {
+		if (getShape() == null || !getShape().contains(x, y)) {
+			return false;
+		}
+		return super.contains(x, y);
+	}
+}
+
+class NoBorderComboBoxUI extends BasicComboBoxUI {
+	@Override
+	protected ComboPopup createPopup() {
+		BasicComboPopup popup = new BasicComboPopup(comboBox) {
+			@Override
+			protected JScrollPane createScroller() {
+				return new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+			}
+		};
+		popup.getAccessibleContext().setAccessibleParent(comboBox);
+		return popup;
 	}
 }
