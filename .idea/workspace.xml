@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 Task 60 (Scenario Backend)">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_11_2023_3_05_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_11_2023_3_05_pm__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/DownloadButtonReaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AgileMentor/src/CreateSimulation/CreateSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/CreateSimulation/CreateSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AgileMentor/src/SimulationResultsTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/SimulationResultsTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "US29__Task71",
+    "git-widget-placeholder": "US29__Task69",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/code/515/SER515-phase2",
     "node.js.detected.package.eslint": "true",
