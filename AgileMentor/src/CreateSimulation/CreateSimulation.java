@@ -95,7 +95,6 @@ public class CreateSimulation
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
 
-
 				LoginPage display1 = new LoginPage();
 				display1.frame.setVisible(true);
 
