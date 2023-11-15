@@ -23,7 +23,7 @@ public class ExportToJSON {
         new SaveButtonReaction(SaveSession(fileName, session),0);
     }
     public static boolean SaveSession(String fileName, SimulationSession session){
-        String path_fileName="AgileMentor/src/Database/"+fileName+".json";
+        String pathFileName="AgileMentor/src/Database/"+fileName+".json";
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         try {
@@ -31,7 +31,7 @@ public class ExportToJSON {
                 throw new Exception("File name not defined");
             }
             ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
-            objectWriter.writeValue(new File(path_fileName), session);
+            objectWriter.writeValue(new File(pathFileName), session);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
