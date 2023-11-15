@@ -118,6 +118,29 @@ public class SimulationInProgressPage extends JFrame {
 		frame.getContentPane().add(saveButton);
 
 
+
+			}
+		});
+		playButton.setBounds(279, 158, 70, 50);
+		frame.getContentPane().add(playButton);
+
+		JButton rewindButton = new JButton("");
+		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
+		rewindButton.setForeground(Color.RED);
+		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		rewindButton.setOpaque(true); // Transparent color
+		rewindButton.setContentAreaFilled(false);
+		rewindButton.setBorderPainted(false); // Hide border
+		rewindButton.setFocusPainted(false);
+		rewindButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+
+
+			}
+		});
+		rewindButton.setBounds(359, 158, 70, 50);
+		frame.getContentPane().add(rewindButton);
+
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
 //		homeButton.setForeground(Color.RED);
@@ -178,6 +201,7 @@ public class SimulationInProgressPage extends JFrame {
 //		});
 //		rewindButton.setBounds(359, 158, 70, 50);
 //		frame.getContentPane().add(rewindButton);
+
 
 
 //		JButton randomEventsButton = new JButton("Add Random Event");
