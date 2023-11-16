@@ -1,0 +1,109 @@
+Index: AgileMentor/src/SimulationInProgressBackEnd.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package AgileMentor.src;\r\n\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class SimulationInProgressBackEnd\r\n{\r\n\r\n\tpublic static String sessionName;\r\n\tpublic static String noOfsprints;\r\n\tpublic static String noOfteamMembers;\r\n\tpublic static String sprintVelocity;\r\n\tpublic static String sprintDuration;\t\r\n\t\r\n\tpublic static void main(String[] args)\r\n\t{\r\n\t\t\r\n\t}\r\n\t\r\n\tpublic ArrayList<String> calcSimulationParameters(String sessionName,String noOfsprints,String noOfteamMembers,String sprintVelocity,String sprintDuration)\r\n\t{\r\n\t\tString sessionNameBE = sessionName;\r\n\t\tString noOfsprintsBE = noOfsprints;\r\n\t\tString noOfteamMembersBE = noOfteamMembers;\r\n\t\tString sprintVelocityBE = sprintVelocity;\r\n\t\tString sprintDurationBE = sprintDuration;\r\n\t\tArrayList<String> sprintParametersBE = new ArrayList<String>();\r\n\t\tsprintParametersBE.add(sessionName);\r\n\t\tsprintParametersBE.add(noOfsprintsBE);\r\n\t\tsprintParametersBE.add(noOfteamMembersBE);\r\n\t\tsprintParametersBE.add(sprintVelocityBE);\r\n\t\tsprintParametersBE.add(sprintDurationBE);\r\n\t\treturn sprintParametersBE ;\r\n\t\t\r\n\t\t\r\n\t}\r\n\t\r\n\t//SimulationInProgressPage frontendcalltoSIPP = new SimulationInProgressPage();\r\n//\tSystem.out.println(\"In SIPBE\");\r\n//\tString sessionName = frontendcalltoSIPP.sessionName;\r\n//\tSystem.out.println(sessionName);\r\n//\tString noOfsprints = frontendcalltoSIPP.noOfsprints;\r\n//\tSystem.out.println(noOfsprints);\r\n//\tString noOfteamMembers = frontendcalltoSIPP.noOfteamMembers;\r\n//\tSystem.out.println(noOfteamMembers);\r\n//\tString sprintVelocity = frontendcalltoSIPP.sprintVelocity;\r\n//\tSystem.out.println(sprintVelocity);\r\n//\tString sprintDuration = frontendcalltoSIPP.sprintDuration;\r\n//\tSystem.out.println(sprintDuration);\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/AgileMentor/src/SimulationInProgressBackEnd.java b/AgileMentor/src/SimulationInProgressBackEnd.java
+--- a/AgileMentor/src/SimulationInProgressBackEnd.java	(revision eafb40b0ca7d81442143f791047f7d00b999b3c6)
++++ b/AgileMentor/src/SimulationInProgressBackEnd.java	(date 1699308219706)
+@@ -31,21 +31,7 @@
+ 		sprintParametersBE.add(sprintVelocityBE);
+ 		sprintParametersBE.add(sprintDurationBE);
+ 		return sprintParametersBE ;
+-		
+-		
++
+ 	}
+-	
+-	//SimulationInProgressPage frontendcalltoSIPP = new SimulationInProgressPage();
+-//	System.out.println("In SIPBE");
+-//	String sessionName = frontendcalltoSIPP.sessionName;
+-//	System.out.println(sessionName);
+-//	String noOfsprints = frontendcalltoSIPP.noOfsprints;
+-//	System.out.println(noOfsprints);
+-//	String noOfteamMembers = frontendcalltoSIPP.noOfteamMembers;
+-//	System.out.println(noOfteamMembers);
+-//	String sprintVelocity = frontendcalltoSIPP.sprintVelocity;
+-//	System.out.println(sprintVelocity);
+-//	String sprintDuration = frontendcalltoSIPP.sprintDuration;
+-//	System.out.println(sprintDuration);
+ 
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c3b454ad-8acf-45cf-acb5-b83edd223d96\" name=\"Changes\" comment=\"Created new branch for User Story-22 (Download Scenario Data)\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"feature/sprint-2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;kkartik12&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"ac957376-71f3-4c60-8684-261c45041943\" />\r\n        <option name=\"url\" value=\"https://github.com/sverma89asu/SER515-phase2.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2XgXqgOcsm08nDJbK2pIAimh3Sk\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"git-widget-placeholder\": \"US-22\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"D:/code/515/SER515-phase2\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.importing\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\code\\515\\SER515-phase2\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"Created product backlog class\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699046529359</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699046529360</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Added product backlog class\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699047419262</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699047419262</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c3b454ad-8acf-45cf-acb5-b83edd223d96\" name=\"Changes\" comment=\"Added product backlog class\" />\r\n      <created>1699051888767</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699051888767</updated>\r\n      <workItem from=\"1699051890524\" duration=\"10718000\" />\r\n      <workItem from=\"1699223617979\" duration=\"306000\" />\r\n      <workItem from=\"1699306005334\" duration=\"1551000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Started working on Sprint logic\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699056137665</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699056137665</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Cleaned up directory (removed springboot code)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699225552671</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699225552671</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Created new branch for User Story-22 (Download Scenario Data)\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699307553949</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699307553949</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <MESSAGE value=\"Created product backlog class\" />\r\n    <MESSAGE value=\"Added product backlog class\" />\r\n    <MESSAGE value=\"Started working on Sprint logic\" />\r\n    <MESSAGE value=\"Cleaned up directory (removed springboot code)\" />\r\n    <MESSAGE value=\"Cleaned up directory pt2 (removed eclipse code)\" />\r\n    <MESSAGE value=\"Created new branch for User Story-22 (Download Scenario Data)\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Created new branch for User Story-22 (Download Scenario Data)\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision eafb40b0ca7d81442143f791047f7d00b999b3c6)
++++ b/.idea/workspace.xml	(date 1699308216129)
+@@ -4,7 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 (Download Scenario Data)" />
++    <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 Task 60 (Scenario Backend)">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/AgileMentor/src/SimulationInProgressBackEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/SimulationInProgressBackEnd.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -20,7 +23,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="feature/sprint-2" />
++        <entry key="$PROJECT_DIR$" value="US-22" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -60,7 +63,7 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "WebServerToolWindowFactoryState": "false",
+-    "git-widget-placeholder": "US-22",
++    "git-widget-placeholder": "Task-60",
+     "ignore.virus.scanning.warn.message": "true",
+     "last_opened_file_path": "D:/code/515/SER515-phase2",
+     "node.js.detected.package.eslint": "true",
+@@ -105,7 +108,7 @@
+       <updated>1699051888767</updated>
+       <workItem from="1699051890524" duration="10718000" />
+       <workItem from="1699223617979" duration="306000" />
+-      <workItem from="1699306005334" duration="1551000" />
++      <workItem from="1699306005334" duration="2199000" />
+     </task>
+     <task id="LOCAL-00003" summary="Started working on Sprint logic">
+       <option name="closed" value="true" />
+@@ -131,7 +134,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1699307553949</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="Created new branch for User Story-22 Task 60 (Scenario Backend)">
++      <option name="closed" value="true" />
++      <created>1699307759522</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1699307759522</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -146,6 +157,7 @@
+     <MESSAGE value="Cleaned up directory (removed springboot code)" />
+     <MESSAGE value="Cleaned up directory pt2 (removed eclipse code)" />
+     <MESSAGE value="Created new branch for User Story-22 (Download Scenario Data)" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Created new branch for User Story-22 (Download Scenario Data)" />
++    <MESSAGE value="Created new branch for User Story-22 Task 60 (Scenario Backend)" />
++    <option name="LAST_COMMIT_MESSAGE" value="Created new branch for User Story-22 Task 60 (Scenario Backend)" />
+   </component>
+ </project>
+\ No newline at end of file

@@ -141,13 +141,13 @@ public class SimulationInProgressPage extends JFrame {
 		homeButton.setBounds(608, 22, 70, 50);
 		frame.getContentPane().add(homeButton);
 
-		JProgressBar progressBar = new JProgressBar();
-		progressBar.setBounds(144, 119, 438, 28);
-		progressBar.setForeground(new Color(2, 110, 13));
-		progressBar.setBackground(new Color(255, 255, 255));
-		progressBar.setValue(0);
-		progressBar.setStringPainted(true);
-		frame.getContentPane().add(progressBar);
+//		JProgressBar progressBar = new JProgressBar();
+//		progressBar.setBounds(144, 119, 438, 28);
+//		progressBar.setForeground(new Color(2, 110, 13));
+//		progressBar.setBackground(new Color(255, 255, 255));
+//		progressBar.setValue(0);
+//		progressBar.setStringPainted(true);
+//		frame.getContentPane().add(progressBar);
 
 		JButton playButton = new JButton("");
 		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
