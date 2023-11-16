@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Created new branch for User Story-22 Task 60 (Scenario Backend)">
-      <change afterPath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/DownloadButtonReaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c3b454ad-8acf-45cf-acb5-b83edd223d96" name="Changes" comment="Added Functionality to export Session details to csv">
+      <change beforePath="$PROJECT_DIR$/AgileMentor/src/Helpers/ExportToCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/Helpers/ExportToCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/SimulationSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/AgileMentor/src/scrum_sim_packages/SimulationSession.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,17 +23,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="US-22" />
+        <entry key="$PROJECT_DIR$" value="US29_Task55" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;kkartik12&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -48,12 +45,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
-  </component>
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 3
-    }</component>
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2XgXqgOcsm08nDJbK2pIAimh3Sk" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -68,8 +62,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "US29__Task69",
+    "WebServerToolWindowFactoryState": "false",\
+    "git-widget-placeholder": "US22__Task68",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/code/515/SER515-phase2",
     "node.js.detected.package.eslint": "true",
@@ -79,7 +73,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -114,13 +108,7 @@
       <updated>1699051888767</updated>
       <workItem from="1699051890524" duration="10718000" />
       <workItem from="1699223617979" duration="306000" />
-      <workItem from="1699306005334" duration="2199000" />
-      <workItem from="1699399019362" duration="360000" />
-      <workItem from="1699400119830" duration="55000" />
-      <workItem from="1699400227590" duration="76000" />
-      <workItem from="1699400326522" duration="25000" />
-      <workItem from="1699400695647" duration="112000" />
-      <workItem from="1699400844258" duration="144000" />
+      <workItem from="1699306005334" duration="1222000" />
     </task>
     <task id="LOCAL-00003" summary="Started working on Sprint logic">
       <option name="closed" value="true" />
@@ -138,38 +126,27 @@
       <option name="project" value="LOCAL" />
       <updated>1699225552671</updated>
     </task>
-    <task id="LOCAL-00005" summary="Created new branch for User Story-22 (Download Scenario Data)">
+    <task id="LOCAL-00005" summary="Initialized branch for User Story 22 Task #68 (Export Scenario Data to CSV)">
       <option name="closed" value="true" />
-      <created>1699307553949</created>
+      <created>1699398353343</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1699307553949</updated>
+      <updated>1699398353343</updated>
     </task>
-    <task id="LOCAL-00006" summary="Created new branch for User Story-22 Task 60 (Scenario Backend)">
+    <task id="LOCAL-00006" summary="Added Functionality to export Session details to csv">
       <option name="closed" value="true" />
-      <created>1699307759522</created>
+      <created>1699401819655</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1699307759522</updated>
+      <updated>1699401819655</updated>
     </task>
     <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -178,9 +155,8 @@
     <MESSAGE value="Added product backlog class" />
     <MESSAGE value="Started working on Sprint logic" />
     <MESSAGE value="Cleaned up directory (removed springboot code)" />
-    <MESSAGE value="Cleaned up directory pt2 (removed eclipse code)" />
-    <MESSAGE value="Created new branch for User Story-22 (Download Scenario Data)" />
-    <MESSAGE value="Created new branch for User Story-22 Task 60 (Scenario Backend)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new branch for User Story-22 Task 60 (Scenario Backend)" />
+    <MESSAGE value="Initialized branch for User Story 22 Task #68 (Export Scenario Data to CSV)" />
+    <MESSAGE value="Added Functionality to export Session details to csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Functionality to export Session details to csv" />
   </component>
 </project>
