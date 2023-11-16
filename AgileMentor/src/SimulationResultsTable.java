@@ -24,29 +24,29 @@ public class SimulationResultsTable extends JFrame {
         lblNewLabel.setBounds(600, 24, 305, 60);
         frame.getContentPane().add(lblNewLabel);
 
-        Object[][] data = {{"", "", ""}};
+        Object[][] productBacklogData = {{"", "", ""}};
         String[] columnNames = {"Product Backlog"};
 
-        Object[][] data2 = {{"", "", ""}};
+        Object[][] sprintBacklogData = {{"", "", ""}};
         String[] columnNames2 = {"Sprint Backlog"};
 
-        Object[][] data3 = {{"1", "US17", "Progress", "10.0", "8.0"}, {"1", "US18", "Progress", "8.0", "7.0"}, {"1", "US19", "Blocker", "8.0", "7.0"}};
+        Object[][] rightTabledata = {{"1", "US17", "Progress", "10.0", "8.0"}, {"1", "US18", "Progress", "8.0", "7.0"}, {"1", "US19", "Blocker", "8.0", "7.0"}};
         String[] columnNames3 = {"Day", "Stories Selected", "Progress/Blocker", "Remaining Storypoints", "Remaining Business Value"};
 
-        DefaultTableModel model = new DefaultTableModel(data, columnNames) {
+        DefaultTableModel model = new DefaultTableModel(productBacklogData, columnNames) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
-        DefaultTableModel model2 = new DefaultTableModel(data2, columnNames2) {
+        DefaultTableModel model2 = new DefaultTableModel(sprintBacklogData, columnNames2) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
 
-        DefaultTableModel model3 = new DefaultTableModel(data3, columnNames3) {
+        DefaultTableModel model3 = new DefaultTableModel(rightTabledata, columnNames3) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
