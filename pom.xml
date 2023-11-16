@@ -48,14 +48,24 @@
             <version>1.1</version>
         </dependency>
     </dependencies>
-
 	<build>
 		<plugins>
+			<!-- Other plugins may already be present here -->
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>AgileMentor.src.scrum_sim_packages.LoginPage</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
