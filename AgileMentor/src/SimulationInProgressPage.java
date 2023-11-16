@@ -1,8 +1,7 @@
 package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
-import AgileMentor.src.scrum_sim_packages.scrum_display1;
-import AgileMentor.src.SimulationInProgressBackEnd;
+import AgileMentor.src.scrum_sim_packages.LoginPage;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -16,7 +15,7 @@ import javax.swing.*;
 import java.awt.Dimension;
 
 public class SimulationInProgressPage extends JFrame {
-	
+
 	private static final long serialVersionUID = 1L;
 	public JFrame frame;
 	public static String sessionName;
@@ -93,7 +92,7 @@ public class SimulationInProgressPage extends JFrame {
 			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 				frame.dispose();
 
-				scrum_display1 LoginPage = new scrum_display1(); // New Frame (NewScreen)
+				LoginPage LoginPage = new LoginPage(); // New Frame (NewScreen)
 				LoginPage.setVisible(true);
 
 			}
@@ -102,7 +101,7 @@ public class SimulationInProgressPage extends JFrame {
 		signOutButton.setBounds(40, 22, 120, 40);
 		frame.getContentPane().add(signOutButton);
 
-		JLabel lblNewLabel = new JLabel("Simulation in Progress");
+		JLabel lblNewLabel = new JLabel("Simulation Results");
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
