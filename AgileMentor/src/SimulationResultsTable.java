@@ -30,8 +30,8 @@ public class SimulationResultsTable extends JFrame {
         Object[][] sprintBacklogData = {{"", "", ""}};
         String[] columnNames2 = {"Sprint Backlog"};
 
-        Object[][] rightTabledata = {{"1", "US17", "Progress", "10.0", "8.0"}, {"1", "US18", "Progress", "8.0", "7.0"}, {"1", "US19", "Blocker", "8.0", "7.0"}};
-        String[] columnNames3 = {"Day", "Stories Selected", "Progress/Blocker", "Remaining Storypoints", "Remaining Business Value"};
+        Object[][] rightTabledata = {{"1", "US17", "Progress", "Good job", "10.0", "8.0"}, {"1", "US18", "Progress", "Good job", "8.0", "7.0"}, {"1", "US19", "Blocker", "Blocked", "8.0", "7.0"}};
+        String[] columnNames3 = {"Day", "Stories Selected", "Progress/Blocker", "Response", "Remaining Storypoints", "Remaining Business Value"};
 
         DefaultTableModel model = new DefaultTableModel(productBacklogData, columnNames) {
             @Override
@@ -78,6 +78,7 @@ public class SimulationResultsTable extends JFrame {
         scrollPane2.setPreferredSize(new Dimension(200, 600));
 
         table = new JTable(model3);
+        table.getColumnModel().getColumn(0).setPreferredWidth(20);
         setLayout(new GridLayout(3, 6));
 
         JPanel containerPanel3 = new JPanel();
