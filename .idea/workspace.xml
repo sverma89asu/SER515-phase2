@@ -83,7 +83,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\515\SER515-phase2" />
@@ -115,15 +115,6 @@
       <updated>1699051888767</updated>
       <workItem from="1699051890524" duration="10718000" />
       <workItem from="1699223617979" duration="306000" />
-      <workItem from="1699306005334" duration="2199000" />
-
-      <workItem from="1699399019362" duration="360000" />
-      <workItem from="1699400119830" duration="55000" />
-      <workItem from="1699400227590" duration="76000" />
-      <workItem from="1699400326522" duration="25000" />
-      <workItem from="1699400695647" duration="112000" />
-      <workItem from="1699400844258" duration="144000" />
-
     </task>
     <task id="LOCAL-00003" summary="Started working on Sprint logic">
       <option name="closed" value="true" />
