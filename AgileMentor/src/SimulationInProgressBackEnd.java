@@ -44,7 +44,7 @@ public class SimulationInProgressBackEnd
 	}
 	// Prints the items which are put
 	// in a knapsack of capacity W
-	static ArrayList<UserStory> printknapSack(int W, ArrayList<UserStory> pb, int n, Sprint currentSprint)
+	static ArrayList<UserStory> printknapSack(int W, ArrayList<UserStory> productBacklog, int n, Sprint currentSprint)
 	{
 		int i, w;
 		int K[][] = new int[n + 1][W + 1];
@@ -54,9 +54,9 @@ public class SimulationInProgressBackEnd
 			for (w = 0; w <= W; w++) {
 				if (i == 0 || w == 0)
 					K[i][w] = 0;
-				else if (pb.get(i-1).getStoryPoints() <= w)
-					K[i][w] = (int) Math.max(pb.get(i-1).getBusinessValue() +
-							K[i - 1][w - (int)pb.get(i-1).getStoryPoints()], K[i - 1][w]);
+				else if (productBacklog.get(i-1).getStoryPoints() <= w)
+					K[i][w] = (int) Math.max(productBacklog.get(i-1).getBusinessValue() +
+							K[i - 1][w - (int)productBacklog.get(i-1).getStoryPoints()], K[i - 1][w]);
 				else
 					K[i][w] = K[i - 1][w];
 			}
@@ -73,13 +73,14 @@ public class SimulationInProgressBackEnd
 			else {
 
 				// This item is included.
-				sprintBacklog.add(pb.get(i-1));
-				currentSprint.setExpectedSP(currentSprint.getExpectedSP()+pb.get(i-1).getStoryPoints());
+				System.out.println(productBacklog.get(i-1).getDescription());
+				sprintBacklog.add(productBacklog.get(i-1));
+
 
 				// Since this weight is included its
 				// value is deducted
-				res = (int) (res - pb.get(i-1).getBusinessValue());
-				w = (int) (w - pb.get(i-1).getStoryPoints());
+				res = (int) (res - productBacklog.get(i-1).getBusinessValue());
+				w = (int) (w - productBacklog.get(i-1).getStoryPoints());
 			}
 		}
 		return sprintBacklog;
