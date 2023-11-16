@@ -41,7 +41,7 @@ public class CreateSimulation
 	public static String noOfteamMembers;
 	public static String sprintVelocity;
 	public static String sprintDuration;
-  
+
 	public static void main(String[] args)
 	{
 		EventQueue.invokeLater(new Runnable()
@@ -94,7 +94,6 @@ public class CreateSimulation
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-
 
 				LoginPage display1 = new LoginPage();
 				display1.frame.setVisible(true);
@@ -390,55 +389,55 @@ public class CreateSimulation
 	}
 }
 
-	class RoundButton extends JButton {
-		public RoundButton(String label) {
-			super(label);
-			setContentAreaFilled(false);
-			setFocusPainted(false);
-			setBorderPainted(false);
-		}
-
-		@Override
-		protected void paintComponent(Graphics g) {
-			if (getModel().isArmed()) {
-				g.setColor(Color.gray);
-			} else {
-				g.setColor(getBackground());
-			}
-			g.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
-			super.paintComponent(g);
-		}
-
-		@Override
-		protected void paintBorder(Graphics g) {
-			g.setColor(getForeground());
-			g.drawRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
-		}
-
-		protected Shape getShape() {
-			RoundRectangle2D shape = new RoundRectangle2D.Float(0, 0, getWidth(), getHeight(), 10, 10);
-			return shape;
-		}
-
-		@Override
-		public boolean contains(int x, int y) {
-			if (getShape() == null || !getShape().contains(x, y)) {
-				return false;
-			}
-			return super.contains(x, y);
-		}
+class RoundButton extends JButton {
+	public RoundButton(String label) {
+		super(label);
+		setContentAreaFilled(false);
+		setFocusPainted(false);
+		setBorderPainted(false);
 	}
 
-	class NoBorderComboBoxUI extends BasicComboBoxUI {
-		@Override
-		protected ComboPopup createPopup() {
-			BasicComboPopup popup = new BasicComboPopup(comboBox) {
-				@Override
-				protected JScrollPane createScroller() {
-					return new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-				}
-			};
-			popup.getAccessibleContext().setAccessibleParent(comboBox);
-			return popup;
+	@Override
+	protected void paintComponent(Graphics g) {
+		if (getModel().isArmed()) {
+			g.setColor(Color.gray);
+		} else {
+			g.setColor(getBackground());
 		}
+		g.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
+		super.paintComponent(g);
 	}
+
+	@Override
+	protected void paintBorder(Graphics g) {
+		g.setColor(getForeground());
+		g.drawRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
+	}
+
+	protected Shape getShape() {
+		RoundRectangle2D shape = new RoundRectangle2D.Float(0, 0, getWidth(), getHeight(), 10, 10);
+		return shape;
+	}
+
+	@Override
+	public boolean contains(int x, int y) {
+		if (getShape() == null || !getShape().contains(x, y)) {
+			return false;
+		}
+		return super.contains(x, y);
+	}
+}
+
+class NoBorderComboBoxUI extends BasicComboBoxUI {
+	@Override
+	protected ComboPopup createPopup() {
+		BasicComboPopup popup = new BasicComboPopup(comboBox) {
+			@Override
+			protected JScrollPane createScroller() {
+				return new JScrollPane(list, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+			}
+		};
+		popup.getAccessibleContext().setAccessibleParent(comboBox);
+		return popup;
+	}
+}
