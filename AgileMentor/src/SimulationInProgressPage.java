@@ -2,6 +2,7 @@ package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
 import AgileMentor.src.scrum_sim_packages.LoginPage;
+import AgileMentor.src.scrum_sim_packages.SimulationSession;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -11,11 +12,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 
 import java.awt.Dimension;
 
 public class SimulationInProgressPage extends JFrame {
-	
+
 	private static final long serialVersionUID = 1L;
 	public JFrame frame;
 	public static String sessionName;
@@ -28,6 +30,7 @@ public class SimulationInProgressPage extends JFrame {
 	public static String noOfteamMembersBE;
 	public static String sprintVelocityBE;
 	public static String sprintDurationBE;
+	public SimulationSession simulationSession;
 
 	/**
 	 * Launch the application.
@@ -51,26 +54,21 @@ public class SimulationInProgressPage extends JFrame {
 	public SimulationInProgressPage() {
 		initialize();
 	}
-	
+
 	private void initialize()
 	{
 		CreateSimulation frontendcalltoCAS = new CreateSimulation();
-		System.out.println("In SIP");
-		String sessionName = frontendcalltoCAS.sessionName;
-		System.out.println(sessionName);
-		String noOfsprints = frontendcalltoCAS.noOfsprints;
-		System.out.println(noOfsprints);
-		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
-		System.out.println(noOfteamMembers);
-		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
-		System.out.println(sprintVelocity);
-		String sprintDuration = frontendcalltoCAS.sprintDuration;
-		System.out.println(sprintDuration);
 
-		System.out.println("From backend");
+		String sessionName = frontendcalltoCAS.sessionName;
+		String noOfsprints = frontendcalltoCAS.noOfsprints;
+		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
+		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
+		String sprintDuration = frontendcalltoCAS.sprintDuration;
+
+
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-		ArrayList<String> arr = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
-		System.out.println(arr);
+		simulationSession = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
+
 
 		frame = new JFrame();
 		frame.setVisible(true);
@@ -82,106 +80,121 @@ public class SimulationInProgressPage extends JFrame {
 		frame.setLocationRelativeTo(null);
 
 		JButton signOutButton = new JButton("Sign Out");
-		signOutButton.setForeground(Color.RED);
-		signOutButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		signOutButton.setOpaque(false); // Transparent color
-		signOutButton.setContentAreaFilled(false);
-		signOutButton.setBorderPainted(false); // Hide border
-		signOutButton.setFocusPainted(false);
+		signOutButton.setBounds(115, 22, 90, 30);
+		signOutButton.setBackground(Color.decode("#3e5c76"));
+		signOutButton.setForeground(Color.WHITE);
+		frame.getContentPane().add(signOutButton);
+		signOutButton.setMinimumSize(new Dimension(100, 21));
+		signOutButton.setMaximumSize(new Dimension(100, 21));
+		signOutButton.setPreferredSize(new Dimension(100, 21));
 		signOutButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-
 				LoginPage LoginPage = new LoginPage(); // New Frame (NewScreen)
 				LoginPage.setVisible(true);
 
 			}
 		});
 		frame.getContentPane().setLayout(null);
-		signOutButton.setBounds(40, 22, 120, 40);
 		frame.getContentPane().add(signOutButton);
 
-		JLabel lblNewLabel = new JLabel("Simulation in Progress");
+		JButton goBack = new JButton("Go to Create A Simulation");
+		goBack.setBounds(510, 22, 200, 30);
+		goBack.setBackground(Color.decode("#3e5c76"));
+		goBack.setForeground(Color.WHITE);
+		frame.getContentPane().add(goBack);
+		goBack.setMinimumSize(new Dimension(100, 21));
+		goBack.setMaximumSize(new Dimension(100, 21));
+		goBack.setPreferredSize(new Dimension(100, 21));
+		goBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CreateSimulation createSimulation = new CreateSimulation();
+				createSimulation.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
+
+		JLabel lblNewLabel = new JLabel("Simulation Results");
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
 		frame.getContentPane().add(lblNewLabel);
 
-		JButton saveButton = new JButton("");
-		saveButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-save-material-rounded\\icons8-save-48.png"));
-		saveButton.setForeground(Color.RED);
-		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		saveButton.setOpaque(true); // Transparent color
-		saveButton.setContentAreaFilled(false);
-		saveButton.setBorderPainted(false); // Hide border
-		saveButton.setFocusPainted(false);
-		saveButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//		JButton saveButton = new JButton("");
+//		saveButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-save-material-rounded\\icons8-save-48.png"));
+//		saveButton.setForeground(Color.RED);
+//		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		saveButton.setOpaque(true); // Transparent color
+//		saveButton.setContentAreaFilled(false);
+//		saveButton.setBorderPainted(false); // Hide border
+//		saveButton.setFocusPainted(false);
+//		saveButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		saveButton.setBounds(536, 22, 76, 50);
+//		frame.getContentPane().add(saveButton);
 
+//		JButton homeButton = new JButton("");
+//		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
+//		homeButton.setForeground(Color.RED);
+//		homeButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		homeButton.setOpaque(true); // Transparent color
+//		homeButton.setContentAreaFilled(false);
+//		homeButton.setBorderPainted(false); // Hide border
+//		homeButton.setFocusPainted(false);
+//		homeButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		homeButton.setBounds(608, 22, 70, 50);
+//		frame.getContentPane().add(homeButton);
 
-			}
-		});
-		saveButton.setBounds(536, 22, 76, 50);
-		frame.getContentPane().add(saveButton);
+//		JProgressBar progressBar = new JProgressBar();
+//		progressBar.setBounds(144, 119, 438, 28);
+//		progressBar.setForeground(new Color(2, 110, 13));
+//		progressBar.setBackground(new Color(255, 255, 255));
+//		progressBar.setValue(0);
+//		progressBar.setStringPainted(true);
+//		frame.getContentPane().add(progressBar);
 
-		JButton homeButton = new JButton("");
-		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
-		homeButton.setForeground(Color.RED);
-		homeButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		homeButton.setOpaque(true); // Transparent color
-		homeButton.setContentAreaFilled(false);
-		homeButton.setBorderPainted(false); // Hide border
-		homeButton.setFocusPainted(false);
-		homeButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//		JButton playButton = new JButton("");
+//		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
+//		playButton.setForeground(Color.RED);
+//		playButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		playButton.setOpaque(true); // Transparent color
+//		playButton.setContentAreaFilled(false);
+//		playButton.setBorderPainted(false); // Hide border
+//		playButton.setFocusPainted(false);
+//		playButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		playButton.setBounds(279, 158, 70, 50);
+//		frame.getContentPane().add(playButton);
 
-
-			}
-		});
-		homeButton.setBounds(608, 22, 70, 50);
-		frame.getContentPane().add(homeButton);
-
-		JProgressBar progressBar = new JProgressBar();
-		progressBar.setBounds(144, 119, 438, 28);
-		progressBar.setForeground(new Color(2, 110, 13));
-		progressBar.setBackground(new Color(255, 255, 255));
-		progressBar.setValue(0);
-		progressBar.setStringPainted(true);
-		frame.getContentPane().add(progressBar);
-
-		JButton playButton = new JButton("");
-		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
-		playButton.setForeground(Color.RED);
-		playButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		playButton.setOpaque(true); // Transparent color
-		playButton.setContentAreaFilled(false);
-		playButton.setBorderPainted(false); // Hide border
-		playButton.setFocusPainted(false);
-		playButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-
-
-			}
-		});
-		playButton.setBounds(279, 158, 70, 50);
-		frame.getContentPane().add(playButton);
-
-		JButton rewindButton = new JButton("");
-		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
-		rewindButton.setForeground(Color.RED);
-		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		rewindButton.setOpaque(true); // Transparent color
-		rewindButton.setContentAreaFilled(false);
-		rewindButton.setBorderPainted(false); // Hide border
-		rewindButton.setFocusPainted(false);
-		rewindButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-
-
-			}
-		});
-		rewindButton.setBounds(359, 158, 70, 50);
-		frame.getContentPane().add(rewindButton);
+//		JButton rewindButton = new JButton("");
+//		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
+//		rewindButton.setForeground(Color.RED);
+//		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+//		rewindButton.setOpaque(true); // Transparent color
+//		rewindButton.setContentAreaFilled(false);
+//		rewindButton.setBorderPainted(false); // Hide border
+//		rewindButton.setFocusPainted(false);
+//		rewindButton.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
+//
+//
+//			}
+//		});
+//		rewindButton.setBounds(359, 158, 70, 50);
+//		frame.getContentPane().add(rewindButton);
 
 //		JButton randomEventsButton = new JButton("Add Random Event");
 //		randomEventsButton.setBackground(new Color(62, 92, 118));
@@ -218,7 +231,7 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setPreferredSize(new Dimension(438, 200 * numberOfPanels));
 
 		for (int i=1; i < numberOfPanels + 1; i++) {
-			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels);
+			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels, simulationSession, i-1);
 			sprintPanel.addTextField(130, 0,30,37, i);
 			containerPanel.add(sprintPanel);
 			sprintPanel.setBackground(Color.decode("#f0ebd8"));
