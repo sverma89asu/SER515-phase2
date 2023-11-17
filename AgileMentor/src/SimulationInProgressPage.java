@@ -2,6 +2,7 @@ package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
 import AgileMentor.src.scrum_sim_packages.LoginPage;
+import AgileMentor.src.scrum_sim_packages.SimulationSession;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -55,22 +56,15 @@ public class SimulationInProgressPage extends JFrame {
 	private void initialize()
 	{
 		CreateSimulation frontendcalltoCAS = new CreateSimulation();
-		System.out.println("In SIP");
 		String sessionName = frontendcalltoCAS.sessionName;
-		System.out.println(sessionName);
 		String noOfsprints = frontendcalltoCAS.noOfsprints;
-		System.out.println(noOfsprints);
 		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
-		System.out.println(noOfteamMembers);
 		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
-		System.out.println(sprintVelocity);
 		String sprintDuration = frontendcalltoCAS.sprintDuration;
-		System.out.println(sprintDuration);
 
-		System.out.println("From backend");
+
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-		ArrayList<String> arr = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
-		System.out.println(arr);
+		SimulationSession simulationSession = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
 
 		frame = new JFrame();
 		frame.setVisible(true);
@@ -218,7 +212,7 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setPreferredSize(new Dimension(438, 200 * numberOfPanels));
 
 		for (int i=1; i < numberOfPanels + 1; i++) {
-			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels);
+			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels, simulationSession.getSprints().get(i-1).getExpectedSP(), simulationSession.getSprints().get(i-1).getActualSP(), simulationSession.getSprints().get(i-1).getExpectedBV(), simulationSession.getSprints().get(i-1).getActualBV());
 			sprintPanel.addTextField(130, 0,30,37, i);
 			containerPanel.add(sprintPanel);
 			sprintPanel.setBackground(Color.decode("#f0ebd8"));
