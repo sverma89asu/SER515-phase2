@@ -71,9 +71,6 @@ public class SimulationInProgressBackEnd
 			if (res == K[i - 1][w])
 				continue;
 			else {
-
-				// This item is included.
-				System.out.println(productBacklog.get(i-1).getDescription());
 				sprintBacklog.add(productBacklog.get(i-1));
 
 
@@ -87,6 +84,7 @@ public class SimulationInProgressBackEnd
 	}
 	public SimulationSession calcSimulationParameters(String sessionName,String noOfsprints,String noOfteamMembers,String sprintVelocity,String sprintDuration)
 	{
+		System.out.println("New simulation!");
 		Random rndm = new Random();
 		ArrayList<Sprint> sprints = new ArrayList<>();
 		ArrayList<UserStory> productBacklog = UserStoryModel.getUserStories();
@@ -96,12 +94,16 @@ public class SimulationInProgressBackEnd
 			Sprint currentSprint = new Sprint(0,parseLong(sprintVelocity),0,0,null, null, null);
 			ArrayList<UserStory> sprintBacklog = printknapSack((int) simulationSession.getVelocity(), productBacklog, productBacklog.size(), currentSprint);
 			removeSprintStoriesFromProductBacklog(productBacklog, sprintBacklog);
-			currentSprint.setProductBacklog(new Backlog(productBacklog));
-			currentSprint.setSprintBacklog(new Backlog(sprintBacklog));
+			ArrayList<UserStory> currentProductBacklog = new ArrayList<>(productBacklog);
+			ArrayList<UserStory> currentSprintBacklog = new ArrayList<>(sprintBacklog);
+			currentSprint.setProductBacklog(new Backlog(currentProductBacklog));
+			currentSprint.setSprintBacklog(new Backlog(currentSprintBacklog));
 			long numStories = sprintBacklog.size();
 			long numEmployees = simulationSession.getTeamSize();
 			long freeEmployees = numEmployees - min(numEmployees, numStories);
 			long currentNumberOfStories = min(numEmployees, numStories);
+			long remainingBV = currentSprint.getExpectedBV();
+			double remainingSP = currentSprint.getExpectedSP();
 			ArrayList<StandupDay> standupDays = new ArrayList<>();
 			for (int j = 0; j < simulationSession.getSprintDuration(); j++){
 				StandupDay standupDay = new StandupDay(j+1, null);
@@ -111,18 +113,16 @@ public class SimulationInProgressBackEnd
 					InformationCard currentCard = informationCards.get(rndm.nextInt(informationCards.size()));
 					StandupStoryProgress currentStandupStoryProgress = new StandupStoryProgress(sprintBacklog.get(k), currentCard, "Good Job", sprintBacklog.get(k).getStoryPoints(), sprintBacklog.get(k).getBusinessValue());
 					if(currentCard.getType().equals("Progress")){
-						currentSprint.setActualSP(currentSprint.getActualSP()+sprintBacklog.get(k).getStoryPoints()*currentCard.getProgress()/100.00);
+						remainingSP -= (sprintBacklog.get(k).getStoryPoints()*currentCard.getProgress())/100.00;
 						sprintBacklog.get(k).setStoryPoints(sprintBacklog.get(k).getStoryPoints()*(1-currentCard.getProgress()/100.00));
 						if(currentCard.getProgress() == 100.0){
+							remainingBV -= sprintBacklog.get(k).getBusinessValue();
 							currentSprint.setActualBV(currentSprint.getActualBV()+sprintBacklog.get(k).getBusinessValue());
 							sprintBacklog.get(k).setBusinessValue(0);
-							currentStandupStoryProgress.setRemainingBusinessValue(0);
-							currentStandupStoryProgress.setRemainingStoryPoints(sprintBacklog.get(k).getStoryPoints());
 							sprintBacklog.remove(k);
 							freeEmployees++;
 						}
 						else{
-							currentStandupStoryProgress.setRemainingStoryPoints(sprintBacklog.get(k).getStoryPoints());
 							k++;
 						}
 					}
@@ -138,14 +138,15 @@ public class SimulationInProgressBackEnd
 							sprintBacklog.remove(k);
 						}
 					}
+					currentStandupStoryProgress.setRemainingStoryPoints(remainingSP);
+					currentStandupStoryProgress.setRemainingBusinessValue(remainingBV);
 					standupStoryProgresses.add(currentStandupStoryProgress);
-					System.out.println(currentStandupStoryProgress.getUserStory().getName());
-					System.out.println(currentStandupStoryProgress.getRemainingStoryPoints());
 				}
 				standupDay.setStandupStoryProgresses(standupStoryProgresses);
 				standupDays.add(standupDay);
 			}
 			currentSprint.setStandupDays(standupDays);
+			currentSprint.setActualSP(currentSprint.getExpectedSP()-remainingSP);
 			sprints.add(currentSprint);
 			ArrayList<UserStory> userStories = UserStoryModel.getUserStories();
 			for (UserStory us: sprintBacklog){

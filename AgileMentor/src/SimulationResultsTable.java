@@ -1,14 +1,24 @@
 package AgileMentor.src;
 
+import AgileMentor.src.scrum_sim_packages.SimulationSession;
+import AgileMentor.src.scrum_sim_packages.StandupDay;
+import AgileMentor.src.scrum_sim_packages.StandupStoryProgress;
+import AgileMentor.src.scrum_sim_packages.UserStory;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class SimulationResultsTable extends JFrame {
-
+    private SimulationSession simulationSession;
+    private int sprintID;
     JTable table;
 
-    SimulationResultsTable() {
+    SimulationResultsTable(int sprintID, SimulationSession simulationSession) {
+        this.sprintID = sprintID;
+        this.simulationSession = simulationSession;
 
         JFrame frame = new JFrame();
         frame.setBounds(350, 120, 1500, 800);
@@ -24,13 +34,42 @@ public class SimulationResultsTable extends JFrame {
         lblNewLabel.setBounds(600, 24, 305, 60);
         frame.getContentPane().add(lblNewLabel);
 
-        Object[][] productBacklogData = {{"", "", ""}};
+        ArrayList<UserStory> productBacklog = simulationSession.getSprints().get(sprintID).getProductBacklog().getUserStories();
+        Object[][] productBacklogData = new Object[productBacklog.size()][1];
+        for(int i = 0; i < productBacklog.size(); i++){
+            productBacklogData[i][0] = productBacklog.get(i).getName();
+        }
         String[] columnNames = {"Product Backlog"};
 
-        Object[][] sprintBacklogData = {{"", "", ""}};
+        ArrayList<UserStory> sprintBacklog = simulationSession.getSprints().get(sprintID).getSprintBacklog().getUserStories();
+        Object[][] sprintBacklogData = new Object[sprintBacklog.size()][1];
+        for(int i = 0; i < sprintBacklog.size(); i++){
+            sprintBacklogData[i][0] = sprintBacklog.get(i).getName();
+        }
         String[] columnNames2 = {"Sprint Backlog"};
+        int size = 0;
+        for(StandupDay standupDay: simulationSession.getSprints().get(sprintID).getStandupDays()){
+            for(StandupStoryProgress standupStoryProgress: standupDay.getStandupStoryProgresses()){
+                size++;
+            }
+        }
+        Object[][] rightTabledata = new Object[size][6];
+        int index = 0;
+        for(StandupDay standupDay: simulationSession.getSprints().get(sprintID).getStandupDays()){
+            for(StandupStoryProgress standupStoryProgress: standupDay.getStandupStoryProgresses()){
+                rightTabledata[index][0] = standupDay.getDay();
+                rightTabledata[index][1] = standupStoryProgress.getUserStory().getName();
+                rightTabledata[index][2] = standupStoryProgress.getInformationCard().getType();
+                rightTabledata[index][3] = standupStoryProgress.getResponse();
+                DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
-        Object[][] rightTabledata = {{"1", "US17", "Progress", "Good job", "10.0", "8.0"}, {"1", "US18", "Progress", "Good job", "8.0", "7.0"}, {"1", "US19", "Blocker", "Blocked", "8.0", "7.0"}};
+                // Format the double using the DecimalFormat
+                String formattedSPValue = decimalFormat.format(standupStoryProgress.getRemainingStoryPoints() > 0 ? standupStoryProgress.getRemainingStoryPoints() : 0);
+                rightTabledata[index][4] = formattedSPValue;
+                rightTabledata[index][5] = standupStoryProgress.getRemainingBusinessValue();
+                index++;
+            }
+        }
         String[] columnNames3 = {"Day", "Stories Selected", "Progress/Blocker", "Response", "Remaining Storypoints", "Remaining Business Value"};
 
         DefaultTableModel model = new DefaultTableModel(productBacklogData, columnNames) {

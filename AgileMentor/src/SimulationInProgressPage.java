@@ -29,6 +29,7 @@ public class SimulationInProgressPage extends JFrame {
 	public static String noOfteamMembersBE;
 	public static String sprintVelocityBE;
 	public static String sprintDurationBE;
+	public SimulationSession simulationSession;
 
 	/**
 	 * Launch the application.
@@ -64,7 +65,7 @@ public class SimulationInProgressPage extends JFrame {
 
 
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-		SimulationSession simulationSession = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
+		simulationSession = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
 
 		frame = new JFrame();
 		frame.setVisible(true);
@@ -212,7 +213,7 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setPreferredSize(new Dimension(438, 200 * numberOfPanels));
 
 		for (int i=1; i < numberOfPanels + 1; i++) {
-			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels, simulationSession.getSprints().get(i-1).getExpectedSP(), simulationSession.getSprints().get(i-1).getActualSP(), simulationSession.getSprints().get(i-1).getExpectedBV(), simulationSession.getSprints().get(i-1).getActualBV());
+			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels, simulationSession, i-1);
 			sprintPanel.addTextField(130, 0,30,37, i);
 			containerPanel.add(sprintPanel);
 			sprintPanel.setBackground(Color.decode("#f0ebd8"));
