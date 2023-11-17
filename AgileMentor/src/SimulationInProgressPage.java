@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 import static AgileMentor.src.Helpers.ExportToJSON.SaveSessionFunction;
@@ -136,7 +137,19 @@ public class SimulationInProgressPage extends JFrame {
 		SimulationSession testSession = mockExporter.CreateSample();
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SaveSessionFunction(LoginPage.loggedInUser, testSession );// Need to make link between LoginPage
+				String filePath = "AgileMentor/src/Database/"+LoginPage.loggedInUser+".json";
+				File saveJson = new File(filePath);
+				String fileSaveName = LoginPage.loggedInUser;
+				int saveCounter = 1;
+				boolean ifExisting = saveJson.exists() && !saveJson.isDirectory();
+				while (ifExisting == true){
+					String filePathExtend=Integer.toString(saveCounter);
+					filePath = "AgileMentor/src/Database/"+LoginPage.loggedInUser+"_"+filePathExtend+".json";
+					saveJson = new File(filePath);
+					ifExisting = saveJson.exists() && !saveJson.isDirectory();
+					fileSaveName = LoginPage.loggedInUser +"_"+filePathExtend;
+				}
+				SaveSessionFunction(fileSaveName, simulationSession );// Need to make link between LoginPage
 			}
 		});
 		saveButton.setBounds(536, 75, 76, 50);
