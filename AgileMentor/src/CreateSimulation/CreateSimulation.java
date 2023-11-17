@@ -128,13 +128,13 @@ public class CreateSimulation
 			@Override
 			public void insertUpdate(DocumentEvent e) {
 				sessionName = textField1.getText();
-				System.out.println(sessionName);
+
 			}
 
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				sessionName = textField1.getText();
-				System.out.println(sessionName);
+
 			}
 
 			@Override
@@ -167,13 +167,13 @@ public class CreateSimulation
 		textField2.getDocument().addDocumentListener(new DocumentListener() {
 			public void insertUpdate(DocumentEvent e) {
 				noOfsprints = textField2.getText();
-				System.out.println(noOfsprints);
+
 			}
 
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				noOfsprints = textField2.getText();
-				System.out.println(noOfsprints);
+
 			}
 
 			@Override
@@ -202,13 +202,14 @@ public class CreateSimulation
 			@Override
 			public void insertUpdate(DocumentEvent e) {
 				noOfteamMembers = textField3.getText();
-				System.out.println(noOfteamMembers);
+
 			}
 
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				noOfteamMembers = textField3.getText();
-				System.out.println(noOfteamMembers);
+
+
 			}
 
 			@Override
@@ -237,13 +238,13 @@ public class CreateSimulation
 			@Override
 			public void insertUpdate(DocumentEvent e) {
 				sprintVelocity = textField4.getText();
-				System.out.println(sprintVelocity);
+
 			}
 
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				sprintVelocity = textField4.getText();
-				System.out.println(sprintVelocity);
+
 			}
 
 			@Override
@@ -272,13 +273,13 @@ public class CreateSimulation
 			@Override
 			public void insertUpdate(DocumentEvent e) {
 				sprintDuration = textField5.getText();
-				System.out.println(sprintDuration);
+
 			}
 
 			@Override
 			public void removeUpdate(DocumentEvent e) {
 				sprintDuration = textField5.getText();
-				System.out.println(sprintDuration);
+
 			}
 
 			@Override
