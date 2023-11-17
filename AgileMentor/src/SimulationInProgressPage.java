@@ -1,16 +1,20 @@
 package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
-import AgileMentor.src.scrum_sim_packages.scrum_display1;
+import AgileMentor.src.scrum_sim_packages.*;
+import AgileMentor.src.tests.ExportTOJSONTests;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Random;
+
+import static AgileMentor.src.Helpers.ExportToJSON.SaveSessionFunction;
 
 public class SimulationInProgressPage extends JFrame {
-	
+
 	private static final long serialVersionUID = 1L;
 	public JFrame frame;
 	public static String sessionName;
@@ -46,7 +50,7 @@ public class SimulationInProgressPage extends JFrame {
 	public SimulationInProgressPage() {
 		initialize();
 	}
-	
+
 	private void initialize()
 	{
 		CreateSimulation frontendcalltoCAS = new CreateSimulation();
@@ -109,37 +113,18 @@ public class SimulationInProgressPage extends JFrame {
 		saveButton.setContentAreaFilled(false);
 		saveButton.setBorderPainted(false); // Hide border
 		saveButton.setFocusPainted(false);
-		saveButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 
+		//Sample creation for test
+
+		ExportTOJSONTests mockExporter= new ExportTOJSONTests();
+		SimulationSession testSession = mockExporter.CreateSample();
+		saveButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				SaveSessionFunction(scrum_display1.loggedInUser, testSession );// Need to make link between LoginPage
 			}
 		});
 		saveButton.setBounds(536, 75, 76, 50);
 		frame.getContentPane().add(saveButton);
-
-
-
-			}
-		});
-		playButton.setBounds(279, 158, 70, 50);
-		frame.getContentPane().add(playButton);
-
-		JButton rewindButton = new JButton("");
-		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
-		rewindButton.setForeground(Color.RED);
-		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		rewindButton.setOpaque(true); // Transparent color
-		rewindButton.setContentAreaFilled(false);
-		rewindButton.setBorderPainted(false); // Hide border
-		rewindButton.setFocusPainted(false);
-		rewindButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-
-
-			}
-		});
-		rewindButton.setBounds(359, 158, 70, 50);
-		frame.getContentPane().add(rewindButton);
 
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
@@ -158,7 +143,6 @@ public class SimulationInProgressPage extends JFrame {
 //		homeButton.setBounds(608, 22, 70, 50);
 //		frame.getContentPane().add(homeButton);
 
-
 //		JProgressBar progressBar = new JProgressBar();
 //		progressBar.setBounds(144, 119, 438, 28);
 //		progressBar.setForeground(new Color(2, 110, 13));
@@ -166,7 +150,6 @@ public class SimulationInProgressPage extends JFrame {
 //		progressBar.setValue(0);
 //		progressBar.setStringPainted(true);
 //		frame.getContentPane().add(progressBar);
-
 
 //		JButton playButton = new JButton("");
 //		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
@@ -201,8 +184,6 @@ public class SimulationInProgressPage extends JFrame {
 //		});
 //		rewindButton.setBounds(359, 158, 70, 50);
 //		frame.getContentPane().add(rewindButton);
-
-
 
 //		JButton randomEventsButton = new JButton("Add Random Event");
 //		randomEventsButton.setBackground(new Color(62, 92, 118));
@@ -249,4 +230,3 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setVisible(true);
 	}
 }
-

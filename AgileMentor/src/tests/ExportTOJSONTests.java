@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ExportTOJSONTests {
+    public ExportTOJSONTests(){
+
+    }
     public SimulationSession CreateSample(){
         //Sample creation for test
         UserStory userStory1 = new UserStory(1, "Sample Story 1", "This is a sample user story 1", 3.5, 1000);
