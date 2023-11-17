@@ -3,6 +3,7 @@ package AgileMentor.src;
 import AgileMentor.src.CreateSimulation.CreateSimulation;
 import AgileMentor.src.scrum_sim_packages.*;
 import AgileMentor.src.tests.ExportTOJSONTests;
+import AgileMentor.src.scrum_sim_packages.LoginPage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -91,7 +92,7 @@ public class SimulationInProgressPage extends JFrame {
 			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
 				frame.dispose();
 
-				scrum_display1 LoginPage = new scrum_display1(); // New Frame (NewScreen)
+				LoginPage LoginPage = new LoginPage(); // New Frame (NewScreen)
 				LoginPage.setVisible(true);
 
 			}
@@ -120,7 +121,7 @@ public class SimulationInProgressPage extends JFrame {
 		SimulationSession testSession = mockExporter.CreateSample();
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				SaveSessionFunction(scrum_display1.loggedInUser, testSession );// Need to make link between LoginPage
+				SaveSessionFunction(LoginPage.loggedInUser, testSession );// Need to make link between LoginPage
 			}
 		});
 		saveButton.setBounds(536, 75, 76, 50);
