@@ -3,9 +3,15 @@
 /target/
 *.class
 <<<<<<< HEAD
+<<<<<<< HEAD
 .idea
 workspace.xml
 =======
 workspace.xml
 .idea
+>>>>>>> feature/sprint-2
+=======
+.idea
+workspace.xml
+
 >>>>>>> feature/sprint-2
