@@ -59,19 +59,14 @@ public class SimulationInProgressPage extends JFrame {
 		CreateSimulation frontendcalltoCAS = new CreateSimulation();
 
 		String sessionName = frontendcalltoCAS.sessionName;
-
 		String noOfsprints = frontendcalltoCAS.noOfsprints;
-
 		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
-
 		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
-
 		String sprintDuration = frontendcalltoCAS.sprintDuration;
 
 
-
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-		SimulationSession arr = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
+		SimulationSession simulationSession = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
 
 
 		frame = new JFrame();
@@ -235,7 +230,7 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setPreferredSize(new Dimension(438, 200 * numberOfPanels));
 
 		for (int i=1; i < numberOfPanels + 1; i++) {
-			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels);
+			SprintDetailsPage sprintPanel = new SprintDetailsPage(0, panelY, 509, 200, numberOfPanels, simulationSession.getSprints().get(i-1).getExpectedSP(), simulationSession.getSprints().get(i-1).getActualSP(), simulationSession.getSprints().get(i-1).getExpectedBV(), simulationSession.getSprints().get(i-1).getActualBV());
 			sprintPanel.addTextField(130, 0,30,37, i);
 			containerPanel.add(sprintPanel);
 			sprintPanel.setBackground(Color.decode("#f0ebd8"));

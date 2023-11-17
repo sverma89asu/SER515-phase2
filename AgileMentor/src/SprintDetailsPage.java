@@ -15,7 +15,7 @@ public class SprintDetailsPage extends JPanel {
     /**
      * Create the panel.
      */
-    public SprintDetailsPage(int x, int y, int width, int height, int j) {
+    public SprintDetailsPage(int x, int y, int width, int height, int j, double expectedSP, double actualSP, long expectedBV, long actualBV) {
         this.numberOfSprints = j;
         setBounds(x, y, width, height);
         setLayout(null);
@@ -29,14 +29,14 @@ public class SprintDetailsPage extends JPanel {
 
         // Sprint
         addbtnNewButton(30,0,100,37);
-        addTextField2("Total Number of User Stories", 30, 37, 300, 37);
-        addTextField2("0", 330, 37, 30, 37);
-        addTextField2("User Stories Completed", 30, 74, 300, 37);
-        addTextField2("0", 330, 74, 30, 37);
-        addTextField2("Total Business Values", 30, 111, 300, 37);
-        addTextField2("0", 330, 111, 30, 37);
-        addTextField2("Business Values Completed", 30, 148, 300, 37);
-        addTextField2("0", 330, 148, 30, 37);
+        addTextField2("Expected Velocity", 30, 37, 300, 37);
+        addTextField2(Double.toString(expectedSP), 330, 37, 30, 37);
+        addTextField2("Actual Velocity", 30, 74, 300, 37);
+        addTextField2(Double.toString(actualSP), 330, 74, 30, 37);
+        addTextField2("Expected Business Value", 30, 111, 300, 37);
+        addTextField2(String.valueOf(expectedBV), 330, 111, 30, 37);
+        addTextField2("Actual Business Value", 30, 148, 300, 37);
+        addTextField2(String.valueOf(actualBV), 330, 148, 30, 37);
     }
 
     public void addbtnNewButton(int x, int y, int width, int height) {
