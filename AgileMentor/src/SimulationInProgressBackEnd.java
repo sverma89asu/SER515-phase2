@@ -93,7 +93,7 @@ public class SimulationInProgressBackEnd
 		ArrayList<InformationCard> informationCards = InformationCardModel.getInformationCards();
 		SimulationSession simulationSession = new SimulationSession(sessionName, parseLong(sprintVelocity), parseLong(sprintDuration), parseLong(noOfsprints), parseLong(noOfteamMembers), sprints, "user1");
 		for(int i = 0; i < parseLong(noOfsprints); i++){
-			Sprint currentSprint = new Sprint(0,0,0,0,null, null, null);
+			Sprint currentSprint = new Sprint(0,parseLong(sprintVelocity),0,0,null, null, null);
 			ArrayList<UserStory> sprintBacklog = printknapSack((int) simulationSession.getVelocity(), productBacklog, productBacklog.size(), currentSprint);
 			removeSprintStoriesFromProductBacklog(productBacklog, sprintBacklog);
 			currentSprint.setProductBacklog(new Backlog(productBacklog));
