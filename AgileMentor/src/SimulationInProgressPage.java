@@ -2,6 +2,7 @@ package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
 import AgileMentor.src.scrum_sim_packages.LoginPage;
+import AgileMentor.src.scrum_sim_packages.SimulationSession;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -56,22 +57,22 @@ public class SimulationInProgressPage extends JFrame {
 	private void initialize()
 	{
 		CreateSimulation frontendcalltoCAS = new CreateSimulation();
-//		System.out.println("In SIP");
-		String sessionName = frontendcalltoCAS.sessionName;
-//		System.out.println(sessionName);
-		String noOfsprints = frontendcalltoCAS.noOfsprints;
-//		System.out.println(noOfsprints);
-		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
-//		System.out.println(noOfteamMembers);
-		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
-//		System.out.println(sprintVelocity);
-		String sprintDuration = frontendcalltoCAS.sprintDuration;
-//		System.out.println(sprintDuration);
 
-//		System.out.println("From backend");
+		String sessionName = frontendcalltoCAS.sessionName;
+
+		String noOfsprints = frontendcalltoCAS.noOfsprints;
+
+		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
+
+		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
+
+		String sprintDuration = frontendcalltoCAS.sprintDuration;
+
+
+
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
-		ArrayList<String> arr = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
-//		System.out.println(arr);
+		SimulationSession arr = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
+
 
 		frame = new JFrame();
 		frame.setVisible(true);
