@@ -1,16 +1,19 @@
 package AgileMentor.src;
 
 import AgileMentor.src.CreateSimulation.CreateSimulation;
+import AgileMentor.src.scrum_sim_packages.*;
+import AgileMentor.src.tests.ExportTOJSONTests;
 import AgileMentor.src.scrum_sim_packages.LoginPage;
 import AgileMentor.src.scrum_sim_packages.SimulationSession;
 
-import java.awt.Color;
-import java.awt.EventQueue;
-import java.awt.Font;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
-
+import java.util.Random;
+import static AgileMentor.src.Helpers.ExportToJSON.SaveSessionFunction;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
@@ -120,23 +123,37 @@ public class SimulationInProgressPage extends JFrame {
 		lblNewLabel.setBounds(221, 16, 305, 43);
 		frame.getContentPane().add(lblNewLabel);
 
-//		JButton saveButton = new JButton("");
-//		saveButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-save-material-rounded\\icons8-save-48.png"));
-//		saveButton.setForeground(Color.RED);
-//		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-//		saveButton.setOpaque(true); // Transparent color
-//		saveButton.setContentAreaFilled(false);
-//		saveButton.setBorderPainted(false); // Hide border
-//		saveButton.setFocusPainted(false);
-//		saveButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-//
-//
-//			}
-//		});
-//		saveButton.setBounds(536, 22, 76, 50);
-//		frame.getContentPane().add(saveButton);
+		Icon icon = new ImageIcon(getClass().getResource("..//src//Assets//icons8-save-48.png"));
+		JButton saveButton = new JButton(icon);
+		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		saveButton.setOpaque(true); // Transparent color
+		saveButton.setContentAreaFilled(false);
+		saveButton.setBorderPainted(false); // Hide border
+		saveButton.setFocusPainted(false);
 
+		//Sample creation for test
+
+		ExportTOJSONTests mockExporter= new ExportTOJSONTests();
+		SimulationSession testSession = mockExporter.CreateSample();
+		saveButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String filePath = "AgileMentor/src/Database/"+LoginPage.loggedInUser+".json";
+				File saveJson = new File(filePath);
+				String fileSaveName = LoginPage.loggedInUser;
+				int saveCounter = 1;
+				boolean ifExisting = saveJson.exists() && !saveJson.isDirectory();
+				while (ifExisting == true){
+					String filePathExtend=Integer.toString(saveCounter);
+					filePath = "AgileMentor/src/Database/"+LoginPage.loggedInUser+"_"+filePathExtend+".json";
+					saveJson = new File(filePath);
+					ifExisting = saveJson.exists() && !saveJson.isDirectory();
+					fileSaveName = LoginPage.loggedInUser +"_"+filePathExtend;
+				}
+				SaveSessionFunction(fileSaveName, simulationSession );// Need to make link between LoginPage
+			}
+		});
+		saveButton.setBounds(536, 75, 76, 50);
+		frame.getContentPane().add(saveButton);
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
 //		homeButton.setForeground(Color.RED);
@@ -241,4 +258,3 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setVisible(true);
 	}
 }
-
