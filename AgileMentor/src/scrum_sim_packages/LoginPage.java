@@ -29,6 +29,8 @@ public class LoginPage extends JFrame {
 
 	public JFrame frame;
 
+	public static String loggedInUser;
+
 	/**
 	 * Launch the application.
 	 */
@@ -153,6 +155,7 @@ public class LoginPage extends JFrame {
 					SwingUtilities.invokeLater(new Runnable() {
 						@Override
 						public void run() {
+							loggedInUser=username;
 							CreateSimulation frame = new CreateSimulation();
 							frame.frame.setVisible(true);
 						}

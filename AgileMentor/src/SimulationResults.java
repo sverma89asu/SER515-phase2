@@ -15,7 +15,7 @@ public class SimulationResults extends JFrame {
 
     public static void main(String[] args){
 
-        new SimulationResultsTable();
+        new SimulationResultsTable(0, null);
 
     }
 }
