@@ -1,0 +1,86 @@
+[
+  {
+    "id":1,
+    "name":"story 1",
+    "description":"sample description",
+    "story_points":5.0,
+    "business_value":3
+  },
+  {
+    "id":2,
+    "name":"story 2",
+    "description":"sample description",
+    "story_points":5.0,
+    "business_value":4
+  },
+  {
+    "id":3,
+    "name":"story 3",
+    "description":"sample description",
+    "story_points":2.0,
+    "business_value":5
+  },
+  {
+    "id":4,
+    "name":"story 4",
+    "description":"sample description",
+    "story_points":3.0,
+    "business_value":4
+  },
+  {
+    "id":5,
+    "name":"story 5",
+    "description":"sample description",
+    "story_points":2.0,
+    "business_value":2
+  },
+  {
+    "id":6,
+    "name":"story 6",
+    "description":"sample description",
+    "story_points":1.0,
+    "business_value":2
+  },
+  {
+    "id":7,
+    "name":"story 7",
+    "description":"sample description",
+    "story_points":4.0,
+    "business_value":6
+  },
+  {
+    "id":8,
+    "name":"story 8",
+    "description":"sample description",
+    "story_points":4.0,
+    "business_value":3
+  },
+  {
+    "id":9,
+    "name":"story 9",
+    "description":"sample description",
+    "story_points":2.0,
+    "business_value":2
+  },
+  {
+    "id":10,
+    "name":"story 10",
+    "description":"sample description",
+    "story_points":3.0,
+    "business_value":1
+  },
+  {
+    "id":11,
+    "name":"story 11",
+    "description":"sample description",
+    "story_points":2.0,
+    "business_value":4
+  },
+  {
+    "id":12,
+    "name":"story 12",
+    "description":"sample description",
+    "story_points":2.0,
+    "business_value":4
+  }
+]
