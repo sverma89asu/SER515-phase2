@@ -1,0 +1,1389 @@
+{
+  "name" : "test",
+  "velocity" : 6,
+  "sprintDuration" : 6,
+  "numberOfSprints" : 4,
+  "teamSize" : 5,
+  "sprints" : [ {
+    "expectedBV" : 13,
+    "expectedSP" : 6.0,
+    "actualBV" : 8,
+    "actualSP" : 5.936,
+    "productBacklog" : {
+      "userStories" : [ {
+        "id" : 1,
+        "name" : "story 1",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 3
+      }, {
+        "id" : 2,
+        "name" : "story 2",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 4
+      }, {
+        "id" : 4,
+        "name" : "story 4",
+        "description" : "sample description",
+        "storyPoints" : 0.07199999999999997,
+        "businessValue" : 4
+      }, {
+        "id" : 5,
+        "name" : "story 5",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 6,
+        "name" : "story 6",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 7,
+        "name" : "story 7",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 8,
+        "name" : "story 8",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 3
+      }, {
+        "id" : 9,
+        "name" : "story 9",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 10,
+        "name" : "story 10",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 1
+      } ]
+    },
+    "sprintBacklog" : {
+      "userStories" : [ {
+        "id" : 12,
+        "name" : "story 12",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 11,
+        "name" : "story 11",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 3,
+        "name" : "story 3",
+        "description" : "sample description",
+        "storyPoints" : 0.06399999999999997,
+        "businessValue" : 5
+      } ]
+    },
+    "standupDays" : [ {
+      "day" : 1,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 12,
+          "name" : "story 12",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 4.4,
+        "remainingBusinessValue" : 13
+      }, {
+        "userStory" : {
+          "id" : 11,
+          "name" : "story 11",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 6,
+          "name" : "Blocker 1",
+          "type" : "Blocker",
+          "description" : "I'm not feeling well",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 4.4,
+        "remainingBusinessValue" : 13
+      }, {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.06399999999999997,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 4.4,
+        "remainingBusinessValue" : 13
+      } ]
+    }, {
+      "day" : 2,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 12,
+          "name" : "story 12",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.4,
+        "remainingBusinessValue" : 13
+      }, {
+        "userStory" : {
+          "id" : 11,
+          "name" : "story 11",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 2.8000000000000003,
+        "remainingBusinessValue" : 13
+      }, {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.06399999999999997,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.2000000000000002,
+        "remainingBusinessValue" : 13
+      }, {
+        "userStory" : {
+          "id" : 12,
+          "name" : "story 12",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 1.2000000000000002,
+        "remainingBusinessValue" : 13
+      }, {
+        "userStory" : {
+          "id" : 12,
+          "name" : "story 12",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.8000000000000003,
+        "remainingBusinessValue" : 9
+      } ]
+    }, {
+      "day" : 3,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 11,
+          "name" : "story 11",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 3,
+          "name" : "Progress 3",
+          "type" : "Progress",
+          "description" : "I've made 60% progress",
+          "progress" : 60.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.5600000000000003,
+        "remainingBusinessValue" : 9
+      }, {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.06399999999999997,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 0.5600000000000003,
+        "remainingBusinessValue" : 9
+      } ]
+    }, {
+      "day" : 4,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 11,
+          "name" : "story 11",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 0.5600000000000003,
+        "remainingBusinessValue" : 9
+      }, {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.06399999999999997,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 1,
+          "name" : "Progress 1",
+          "type" : "Progress",
+          "description" : "I've made 20% progress",
+          "progress" : 20.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.4800000000000003,
+        "remainingBusinessValue" : 9
+      }, {
+        "userStory" : {
+          "id" : 11,
+          "name" : "story 11",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.32000000000000034,
+        "remainingBusinessValue" : 5
+      } ]
+    }, {
+      "day" : 5,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.06399999999999997,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.06400000000000039,
+        "remainingBusinessValue" : 5
+      } ]
+    }, {
+      "day" : 6,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.06399999999999997,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 0.06400000000000039,
+        "remainingBusinessValue" : 5
+      } ]
+    } ]
+  }, {
+    "expectedBV" : 11,
+    "expectedSP" : 6.0,
+    "actualBV" : 7,
+    "actualSP" : 5.928,
+    "productBacklog" : {
+      "userStories" : [ {
+        "id" : 1,
+        "name" : "story 1",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 3
+      }, {
+        "id" : 2,
+        "name" : "story 2",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 4
+      }, {
+        "id" : 5,
+        "name" : "story 5",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 7,
+        "name" : "story 7",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 8,
+        "name" : "story 8",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 3
+      }, {
+        "id" : 9,
+        "name" : "story 9",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 10,
+        "name" : "story 10",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 1
+      } ]
+    },
+    "sprintBacklog" : {
+      "userStories" : [ {
+        "id" : 3,
+        "name" : "story 3",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 6,
+        "name" : "story 6",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 4,
+        "name" : "story 4",
+        "description" : "sample description",
+        "storyPoints" : 0.07199999999999997,
+        "businessValue" : 4
+      } ]
+    },
+    "standupDays" : [ {
+      "day" : 1,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 3,
+          "name" : "Progress 3",
+          "type" : "Progress",
+          "description" : "I've made 60% progress",
+          "progress" : 60.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 4.8,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 6,
+          "name" : "story 6",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 4.8,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 4.8,
+        "remainingBusinessValue" : 11
+      } ]
+    }, {
+      "day" : 2,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.8,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 6,
+          "name" : "story 6",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.8,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.8,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 1,
+          "name" : "Progress 1",
+          "type" : "Progress",
+          "description" : "I've made 20% progress",
+          "progress" : 20.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 6,
+          "name" : "story 6",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 6,
+          "name" : "story 6",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 6,
+          "name" : "Blocker 1",
+          "type" : "Blocker",
+          "description" : "I'm not feeling well",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 6,
+          "name" : "story 6",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 6,
+          "name" : "Blocker 1",
+          "type" : "Blocker",
+          "description" : "I'm not feeling well",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 4.64,
+        "remainingBusinessValue" : 11
+      }, {
+        "userStory" : {
+          "id" : 6,
+          "name" : "story 6",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 3.6399999999999997,
+        "remainingBusinessValue" : 9
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.2399999999999998,
+        "remainingBusinessValue" : 9
+      } ]
+    }, {
+      "day" : 3,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 2,
+          "name" : "Progress 2",
+          "type" : "Progress",
+          "description" : "I've made 40% progress",
+          "progress" : 40.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.9839999999999998,
+        "remainingBusinessValue" : 9
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 0.9839999999999998,
+        "remainingBusinessValue" : 9
+      } ]
+    }, {
+      "day" : 4,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.5999999999999996,
+        "remainingBusinessValue" : 4
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 0.5999999999999996,
+        "remainingBusinessValue" : 4
+      } ]
+    }, {
+      "day" : 5,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 8,
+          "name" : "Blocker 3",
+          "type" : "Blocker",
+          "description" : "I'm not equipped with the knowledge to finish this story",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 0.5999999999999996,
+        "remainingBusinessValue" : 4
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.11999999999999977,
+        "remainingBusinessValue" : 4
+      } ]
+    }, {
+      "day" : 6,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 8,
+          "name" : "Blocker 3",
+          "type" : "Blocker",
+          "description" : "I'm not equipped with the knowledge to finish this story",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 0.11999999999999977,
+        "remainingBusinessValue" : 4
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.07199999999999997,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 2,
+          "name" : "Progress 2",
+          "type" : "Progress",
+          "description" : "I've made 40% progress",
+          "progress" : 40.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.0719999999999998,
+        "remainingBusinessValue" : 4
+      } ]
+    } ]
+  }, {
+    "expectedBV" : 8,
+    "expectedSP" : 6.0,
+    "actualBV" : 8,
+    "actualSP" : 6.0,
+    "productBacklog" : {
+      "userStories" : [ {
+        "id" : 1,
+        "name" : "story 1",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 3
+      }, {
+        "id" : 2,
+        "name" : "story 2",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 4
+      }, {
+        "id" : 8,
+        "name" : "story 8",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 3
+      }, {
+        "id" : 9,
+        "name" : "story 9",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 10,
+        "name" : "story 10",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 1
+      }, {
+        "id" : 4,
+        "name" : "story 4",
+        "description" : "sample description",
+        "storyPoints" : 0.019199999999999988,
+        "businessValue" : 4
+      } ]
+    },
+    "sprintBacklog" : {
+      "userStories" : [ {
+        "id" : 7,
+        "name" : "story 7",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      }, {
+        "id" : 5,
+        "name" : "story 5",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      } ]
+    },
+    "standupDays" : [ {
+      "day" : 1,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 7,
+          "name" : "story 7",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 2
+      }, {
+        "userStory" : {
+          "id" : 5,
+          "name" : "story 5",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 2
+      } ]
+    }, {
+      "day" : 2,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 5,
+          "name" : "story 5",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 2,
+          "name" : "Progress 2",
+          "type" : "Progress",
+          "description" : "I've made 40% progress",
+          "progress" : 40.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.2,
+        "remainingBusinessValue" : 2
+      } ]
+    }, {
+      "day" : 3,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 5,
+          "name" : "story 5",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 0.0,
+        "remainingBusinessValue" : 0
+      } ]
+    }, {
+      "day" : 4,
+      "standupStoryProgresses" : [ ]
+    }, {
+      "day" : 5,
+      "standupStoryProgresses" : [ ]
+    }, {
+      "day" : 6,
+      "standupStoryProgresses" : [ ]
+    } ]
+  }, {
+    "expectedBV" : 6,
+    "expectedSP" : 6.0,
+    "actualBV" : 2,
+    "actualSP" : 4.9807999999999995,
+    "productBacklog" : {
+      "userStories" : [ {
+        "id" : 1,
+        "name" : "story 1",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 3
+      }, {
+        "id" : 2,
+        "name" : "story 2",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 4
+      }, {
+        "id" : 8,
+        "name" : "story 8",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 3
+      }, {
+        "id" : 10,
+        "name" : "story 10",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 1
+      } ]
+    },
+    "sprintBacklog" : {
+      "userStories" : [ {
+        "id" : 4,
+        "name" : "story 4",
+        "description" : "sample description",
+        "storyPoints" : 0.019199999999999988,
+        "businessValue" : 4
+      }, {
+        "id" : 9,
+        "name" : "story 9",
+        "description" : "sample description",
+        "storyPoints" : 0.0,
+        "businessValue" : 0
+      } ]
+    },
+    "standupDays" : [ {
+      "day" : 1,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 3.6,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 6
+      } ]
+    }, {
+      "day" : 2,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 6
+      } ]
+    }, {
+      "day" : 3,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 10,
+          "name" : "Blocker 5",
+          "type" : "Blocker",
+          "description" : "I'm leaving the company",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 2,
+          "name" : "Progress 2",
+          "type" : "Progress",
+          "description" : "I've made 40% progress",
+          "progress" : 40.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.84,
+        "remainingBusinessValue" : 6
+      } ]
+    }, {
+      "day" : 4,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 9,
+          "name" : "Blocker 4",
+          "type" : "Blocker",
+          "description" : "I'm going on a vacation",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 1.84,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 1,
+          "name" : "Progress 1",
+          "type" : "Progress",
+          "description" : "I've made 20% progress",
+          "progress" : 20.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.792,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 1,
+          "name" : "Progress 1",
+          "type" : "Progress",
+          "description" : "I've made 20% progress",
+          "progress" : 20.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.6720000000000002,
+        "remainingBusinessValue" : 6
+      } ]
+    }, {
+      "day" : 5,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 1.6720000000000002,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 8,
+          "name" : "Blocker 3",
+          "type" : "Blocker",
+          "description" : "I'm not equipped with the knowledge to finish this story",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 1.6720000000000002,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.5184000000000002,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.1344000000000003,
+        "remainingBusinessValue" : 6
+      } ]
+    }, {
+      "day" : 6,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 8,
+          "name" : "Blocker 3",
+          "type" : "Blocker",
+          "description" : "I'm not equipped with the knowledge to finish this story",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 1.1344000000000003,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 4,
+          "name" : "story 4",
+          "description" : "sample description",
+          "storyPoints" : 0.019199999999999988,
+          "businessValue" : 4
+        },
+        "informationCard" : {
+          "id" : 4,
+          "name" : "Progress 4",
+          "type" : "Progress",
+          "description" : "I've made 80% progress",
+          "progress" : 80.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.0576000000000003,
+        "remainingBusinessValue" : 6
+      }, {
+        "userStory" : {
+          "id" : 9,
+          "name" : "story 9",
+          "description" : "sample description",
+          "storyPoints" : 0.0,
+          "businessValue" : 0
+        },
+        "informationCard" : {
+          "id" : 5,
+          "name" : "Progress 5",
+          "type" : "Progress",
+          "description" : "I've finished the story",
+          "progress" : 100.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.0192000000000003,
+        "remainingBusinessValue" : 4
+      } ]
+    } ]
+  } ],
+  "username" : "user1"
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name":"Progress 1",
+    "type": "Progress",
+    "description":"I've made 20% progress",
+    "progress":20.0
+  },
+  {
+    "id": 2,
+    "name":"Progress 2",
+    "type": "Progress",
+    "description":"I've made 40% progress",
+    "progress": 40.0
+  },
+  {
+    "id": 3,
+    "name":"Progress 3",
+    "type": "Progress",
+    "description":"I've made 60% progress",
+    "progress": 60.0
+  },
+  {
+    "id": 4,
+    "name":"Progress 4",
+    "type": "Progress",
+    "description":"I've made 80% progress",
+    "progress": 80.0
+  },
+  {
+    "id": 5,
+    "name":"Progress 5",
+    "type": "Progress",
+    "description":"I've finished the story",
+    "progress": 100.0
+  },
+  {
+    "id": 6,
+    "name":"Blocker 1",
+    "type": "Blocker",
+    "description":"I'm not feeling well",
+    "progress": 0.0
+  },
+  {
+    "id": 7,
+    "name":"Blocker 2",
+    "type": "Blocker",
+    "description":"I have a family emergency",
+    "progress": 0.0
+  },
+  {
+    "id": 8,
+    "name":"Blocker 3",
+    "type": "Blocker",
+    "description":"I'm not equipped with the knowledge to finish this story",
+    "progress": 0.0
+  },
+  {
+    "id": 9,
+    "name":"Blocker 4",
+    "type": "Blocker",
+    "description":"I'm going on a vacation",
+    "progress": 0.0
+  },
+  {
+    "id": 10,
+    "name":"Blocker 5",
+    "type": "Blocker",
+    "description":"I'm leaving the company",
+    "progress": 0.0
+  }
+]
