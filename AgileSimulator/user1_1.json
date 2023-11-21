@@ -1,0 +1,279 @@
+{
+  "name" : "test",
+  "velocity" : 2,
+  "sprintDuration" : 2,
+  "numberOfSprints" : 2,
+  "teamSize" : 2,
+  "sprints" : [ {
+    "expectedBV" : 5,
+    "expectedSP" : 2.0,
+    "actualBV" : 0,
+    "actualSP" : 0.3999999999999999,
+    "productBacklog" : {
+      "userStories" : [ {
+        "id" : 1,
+        "name" : "story 1",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 3
+      }, {
+        "id" : 2,
+        "name" : "story 2",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 4
+      }, {
+        "id" : 4,
+        "name" : "story 4",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 4
+      }, {
+        "id" : 5,
+        "name" : "story 5",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 2
+      }, {
+        "id" : 6,
+        "name" : "story 6",
+        "description" : "sample description",
+        "storyPoints" : 1.0,
+        "businessValue" : 2
+      }, {
+        "id" : 7,
+        "name" : "story 7",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 6
+      }, {
+        "id" : 8,
+        "name" : "story 8",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 3
+      }, {
+        "id" : 9,
+        "name" : "story 9",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 2
+      }, {
+        "id" : 10,
+        "name" : "story 10",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 1
+      }, {
+        "id" : 11,
+        "name" : "story 11",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 4
+      }, {
+        "id" : 12,
+        "name" : "story 12",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 4
+      } ]
+    },
+    "sprintBacklog" : {
+      "userStories" : [ {
+        "id" : 3,
+        "name" : "story 3",
+        "description" : "sample description",
+        "storyPoints" : 1.6,
+        "businessValue" : 5
+      } ]
+    },
+    "standupDays" : [ {
+      "day" : 1,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 1.6,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 8,
+          "name" : "Blocker 3",
+          "type" : "Blocker",
+          "description" : "I'm not equipped with the knowledge to finish this story",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 5
+      } ]
+    }, {
+      "day" : 2,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 1.6,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 1,
+          "name" : "Progress 1",
+          "type" : "Progress",
+          "description" : "I've made 20% progress",
+          "progress" : 20.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.6,
+        "remainingBusinessValue" : 5
+      } ]
+    } ]
+  }, {
+    "expectedBV" : 5,
+    "expectedSP" : 2.0,
+    "actualBV" : 0,
+    "actualSP" : 0.3999999999999999,
+    "productBacklog" : {
+      "userStories" : [ {
+        "id" : 1,
+        "name" : "story 1",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 3
+      }, {
+        "id" : 2,
+        "name" : "story 2",
+        "description" : "sample description",
+        "storyPoints" : 5.0,
+        "businessValue" : 4
+      }, {
+        "id" : 4,
+        "name" : "story 4",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 4
+      }, {
+        "id" : 5,
+        "name" : "story 5",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 2
+      }, {
+        "id" : 6,
+        "name" : "story 6",
+        "description" : "sample description",
+        "storyPoints" : 1.0,
+        "businessValue" : 2
+      }, {
+        "id" : 7,
+        "name" : "story 7",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 6
+      }, {
+        "id" : 8,
+        "name" : "story 8",
+        "description" : "sample description",
+        "storyPoints" : 4.0,
+        "businessValue" : 3
+      }, {
+        "id" : 9,
+        "name" : "story 9",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 2
+      }, {
+        "id" : 10,
+        "name" : "story 10",
+        "description" : "sample description",
+        "storyPoints" : 3.0,
+        "businessValue" : 1
+      }, {
+        "id" : 11,
+        "name" : "story 11",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 4
+      }, {
+        "id" : 12,
+        "name" : "story 12",
+        "description" : "sample description",
+        "storyPoints" : 2.0,
+        "businessValue" : 4
+      } ]
+    },
+    "sprintBacklog" : {
+      "userStories" : [ {
+        "id" : 3,
+        "name" : "story 3",
+        "description" : "sample description",
+        "storyPoints" : 1.6,
+        "businessValue" : 5
+      } ]
+    },
+    "standupDays" : [ {
+      "day" : 1,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 1.6,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Resolved",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 5
+      } ]
+    }, {
+      "day" : 2,
+      "standupStoryProgresses" : [ {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 1.6,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 7,
+          "name" : "Blocker 2",
+          "type" : "Blocker",
+          "description" : "I have a family emergency",
+          "progress" : 0.0
+        },
+        "response" : "Blocked",
+        "remainingStoryPoints" : 2.0,
+        "remainingBusinessValue" : 5
+      }, {
+        "userStory" : {
+          "id" : 3,
+          "name" : "story 3",
+          "description" : "sample description",
+          "storyPoints" : 1.6,
+          "businessValue" : 5
+        },
+        "informationCard" : {
+          "id" : 1,
+          "name" : "Progress 1",
+          "type" : "Progress",
+          "description" : "I've made 20% progress",
+          "progress" : 20.0
+        },
+        "response" : "Good Job",
+        "remainingStoryPoints" : 1.6,
+        "remainingBusinessValue" : 5
+      } ]
+    } ]
+  } ],
+  "username" : "user1"
+}
