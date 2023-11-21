@@ -125,12 +125,10 @@ public class SimulationInProgressPage extends JFrame {
 		//Icon icon = new ImageIcon("//src//Assets//icons8-save-48.png"));
 		JButton saveButton = new JButton("Save");
 		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-//		saveButton.setOpaque(true); // Transparent color
-//		saveButton.setContentAreaFilled(false);
-//		saveButton.setBorderPainted(false); // Hide border
-//		saveButton.setFocusPainted(false);
 		saveButton.setBackground(Color.decode("#3e5c76"));
-		//saveButton.setForeground(Color.WHITE);
+		saveButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		saveButton.setForeground(Color.WHITE);
+		saveButton.setOpaque(true);
 		saveButton.setMinimumSize(new Dimension(100, 21));
 		saveButton.setMaximumSize(new Dimension(100, 21));
 		saveButton.setPreferredSize(new Dimension(100, 21));
