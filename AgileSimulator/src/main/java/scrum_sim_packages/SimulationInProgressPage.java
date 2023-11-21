@@ -6,6 +6,7 @@ import tests.ExportTOJSONTests;
 import tests.ExportTOJSONTests;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -80,8 +81,10 @@ public class SimulationInProgressPage extends JFrame {
 
 		JButton signOutButton = new JButton("Sign Out");
 		signOutButton.setBounds(115, 22, 90, 30);
+		signOutButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		signOutButton.setBackground(Color.decode("#3e5c76"));
-		//signOutButton.setForeground(Color.WHITE);
+		signOutButton.setForeground(Color.WHITE);
+		signOutButton.setOpaque(true);
 		frame.getContentPane().add(signOutButton);
 		signOutButton.setMinimumSize(new Dimension(100, 21));
 		signOutButton.setMaximumSize(new Dimension(100, 21));
