@@ -100,10 +100,12 @@ public class SimulationInProgressPage extends JFrame {
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(signOutButton);
 
-		JButton goBack = new JButton("Go to Create A Simulation");
+		JButton goBack = new JButton("Create A Simulation");
 		goBack.setBounds(510, 22, 200, 30);
+		goBack.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		goBack.setBackground(Color.decode("#3e5c76"));
-		//goBack.setForeground(Color.WHITE);
+		goBack.setForeground(Color.WHITE);
+		goBack.setOpaque(true);
 		frame.getContentPane().add(goBack);
 		goBack.setMinimumSize(new Dimension(100, 21));
 		goBack.setMaximumSize(new Dimension(100, 21));
