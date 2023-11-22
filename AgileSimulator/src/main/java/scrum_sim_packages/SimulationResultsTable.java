@@ -19,7 +19,7 @@ public class SimulationResultsTable extends JFrame {
 
         JFrame frame = new JFrame();
         frame.setBounds(350, 120, 1500, 800);
-        frame.getContentPane().setLayout(new SpringLayout());
+        //frame.getContentPane().setLayout(new SpringLayout());  수정
         frame.getContentPane().setLayout(null);
         frame.getContentPane().setBackground(Color.decode("#f0ebd8"));
         frame.setResizable(false);
@@ -95,7 +95,7 @@ public class SimulationResultsTable extends JFrame {
         JPanel containerPanel = new JPanel();
         containerPanel.setBackground(Color.decode("#f0ebd8"));
         containerPanel.setBorder(null);
-        containerPanel.setBounds(40, 100, 200, 600);
+        containerPanel.setBounds(40, 100, 150, 600);
         containerPanel.setOpaque(false);
 
         JScrollPane scrollPane = new JScrollPane(table);
@@ -107,7 +107,7 @@ public class SimulationResultsTable extends JFrame {
         JPanel containerPanel2 = new JPanel();
         containerPanel2.setBackground(Color.decode("#f0ebd8"));
         containerPanel2.setBorder(null);
-        containerPanel2.setBounds(250, 100, 200, 600);
+        containerPanel2.setBounds(250, 100, 150, 600);
         containerPanel2.setOpaque(false);
 
         JScrollPane scrollPane2 = new JScrollPane(table);
@@ -120,12 +120,11 @@ public class SimulationResultsTable extends JFrame {
         JPanel containerPanel3 = new JPanel();
         containerPanel3.setBackground(Color.decode("#f0ebd8"));
         containerPanel3.setBorder(null);
-        containerPanel3.setBounds(500, 100, 800, 600);
+        containerPanel3.setBounds(450, 100, 800, 600);
         containerPanel3.setOpaque(false);
 
         JScrollPane scrollPane3 = new JScrollPane(table);
         scrollPane3.setPreferredSize(new Dimension(750, 600));
-        scrollPane3.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 
         containerPanel.add(scrollPane);
         containerPanel.add(new JPanel());
