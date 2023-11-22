@@ -152,6 +152,19 @@ public class SimulationInProgressPage extends JFrame {
 		});
 		saveButton.setBounds(536, 75, 76, 50);
 		frame.getContentPane().add(saveButton);
+
+		JButton DownloadButton = new JButton("Download");
+		DownloadButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		DownloadButton.setBackground(Color.decode("#3e5c76"));
+		DownloadButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		DownloadButton.setForeground(Color.WHITE);
+		DownloadButton.setOpaque(true);
+		DownloadButton.setMinimumSize(new Dimension(100, 21));
+		DownloadButton.setMaximumSize(new Dimension(100, 21));
+		DownloadButton.setPreferredSize(new Dimension(100, 21));
+		DownloadButton.setBounds(640, 75, 76, 50);
+		frame.getContentPane().add(DownloadButton);
+
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
 //		homeButton.setForeground(Color.RED);
