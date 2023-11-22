@@ -1,4 +1,4 @@
-package scrum_sim_packages;
+package AgileSimulator.src.main.java.scrum_sim_packages;
 
 import CreateSimulation.CreateSimulation;
 

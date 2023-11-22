@@ -1,15 +1,8 @@
-package tests;
-import org.junit.jupiter.api.Assertions;
+package AgileSimulator.src.main.java.tests;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-import scrum_sim_packages.*;
-
-import java.util.Random;
+import AgileSimulator.src.main.java.scrum_sim_packages.*;
 import java.util.ArrayList;
-
-import static Helpers.ExportToJSON.SaveSession;
-import static Helpers.ExportToJSON.SaveSession;
+import static AgileSimulator.src.main.java.Helpers.ExportToJSON.SaveSession;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

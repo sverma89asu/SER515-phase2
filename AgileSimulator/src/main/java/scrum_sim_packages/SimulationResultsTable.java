@@ -1,6 +1,4 @@
-package scrum_sim_packages;
-
-import scrum_sim_packages.*;
+package AgileSimulator.src.main.java.scrum_sim_packages;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

@@ -1,6 +1,4 @@
-package scrum_sim_packages;
-
-import scrum_sim_packages.SimulationSession;
+package AgileSimulator.src.main.java.scrum_sim_packages;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

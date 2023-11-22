@@ -1,7 +1,4 @@
-package scrum_sim_packages;
-
-
-import scrum_sim_packages.*;
+package AgileSimulator.src.main.java.scrum_sim_packages;
 
 import java.util.ArrayList;
 import java.util.Random;

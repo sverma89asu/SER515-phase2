@@ -1,19 +1,13 @@
-package scrum_sim_packages;
-
+package AgileSimulator.src.main.java.scrum_sim_packages;
 import CreateSimulation.CreateSimulation;
-import scrum_sim_packages.*;
-import tests.ExportTOJSONTests;
-import tests.ExportTOJSONTests;
-
+import AgileSimulator.src.main.java.tests.ExportTOJSONTests;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-
-import static Helpers.ExportToJSON.SaveSessionFunction;
-
+import static AgileSimulator.src.main.java.Helpers.ExportToJSON.SaveSessionFunction;
 import java.awt.Dimension;
 
 public class SimulationInProgressPage extends JFrame {

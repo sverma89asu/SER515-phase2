@@ -1,4 +1,4 @@
-package scrum_sim_packages;
+package AgileSimulator.src.main.java.scrum_sim_packages;
 public class InformationCard {
 
     private long id;

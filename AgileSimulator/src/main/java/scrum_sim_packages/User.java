@@ -1,4 +1,4 @@
-package scrum_sim_packages;
+package AgileSimulator.src.main.java.scrum_sim_packages;
 
 import org.json.simple.JSONObject;
 
@@ -13,6 +13,7 @@ public class User {
   private String password;
   
   private String role;
+
 
   public User(String username, String email, String password, String role) {
       this.username = username;
@@ -48,11 +49,11 @@ public class User {
     this.email = email;
   }
   
-  public String getTime() {
+  public String getRole() {
 	    return role;
 	  }
 
-  public void setTime(String role) {
+  public void setRole(String role) {
 	    this.role = role;
 	  }
 
@@ -62,6 +63,5 @@ public class User {
 
   public void setPassword(String password) {
 		    this.password = password;
-		  }
-
+  }
 }
