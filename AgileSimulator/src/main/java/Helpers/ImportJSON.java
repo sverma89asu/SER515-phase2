@@ -15,7 +15,6 @@ public class ImportJSON {
         ObjectMapper objectMapper = new ObjectMapper();
         SimulationSession sim = null;
         try {
-            // Replace "path/to/your/file.json" with the actual path to your JSON file
             File file = new File(fileName);
 
             // Read JSON file and convert to Java object
