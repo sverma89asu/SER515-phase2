@@ -58,6 +58,10 @@ public class Database {
 
     public boolean addUser(User user) {
         if (getUserByUsername(user.getName()) == null) {
+            String name = user.getName();
+            if (!name.matches("[a-zA-Z0-9]+")) {
+                throw new IllegalArgumentException("Username can only have alphanumeric characters");
+            }
             users.add(user);
             saveDB();
             return true;
