@@ -1,5 +1,7 @@
 package scrum_sim_packages;
 
+import CreateSimulation.CreateSimulation;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -82,6 +84,13 @@ public class LandingPage extends JFrame {
         frame.getContentPane().add(createASimButton);
         frame.getContentPane().setLayout(null);
         frame.getContentPane().add(createASimButton);
+        createASimButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CreateSimulation createSimulation = new CreateSimulation();
+                createSimulation.frame.setVisible(true);
+                frame.dispose();
+            }
+        });
 
         JButton ViewsimLibraryButton = new JButton("View Simulation Library");
         ViewsimLibraryButton.setBounds(150, 220, 450, 43);
