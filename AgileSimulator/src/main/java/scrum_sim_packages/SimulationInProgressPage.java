@@ -150,9 +150,9 @@ public class SimulationInProgressPage extends JFrame {
 				boolean success = folder.mkdir();
 
 				if (success) {
-					System.out.println("Folder created successfully!");
+					//File is created
 				} else {
-					System.err.println("Failed to create the folder.");
+					//File already exists
 				}
 				String filePath = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+".json";
 				File saveJson = new File(filePath);
