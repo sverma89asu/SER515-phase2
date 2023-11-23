@@ -1,4 +1,4 @@
-package AgileSimulator.src.main.java.scrum_sim_packages;
+package scrum_sim_packages;
 
 public class StandupStoryProgress {
     private UserStory userStory;

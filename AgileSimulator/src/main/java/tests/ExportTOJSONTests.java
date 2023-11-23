@@ -1,8 +1,8 @@
-package AgileSimulator.src.main.java.tests;
+package tests;
 import org.junit.jupiter.api.Test;
-import AgileSimulator.src.main.java.scrum_sim_packages.*;
+import scrum_sim_packages.*;
 import java.util.ArrayList;
-import static AgileSimulator.src.main.java.Helpers.ExportToJSON.SaveSession;
+import static Helpers.ExportToJSON.SaveSession;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
