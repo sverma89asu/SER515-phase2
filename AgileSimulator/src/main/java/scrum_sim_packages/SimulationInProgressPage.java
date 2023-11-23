@@ -6,6 +6,7 @@ import tests.ExportTOJSONTests;
 import tests.ExportTOJSONTests;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -80,8 +81,10 @@ public class SimulationInProgressPage extends JFrame {
 
 		JButton signOutButton = new JButton("Sign Out");
 		signOutButton.setBounds(115, 22, 90, 30);
+		signOutButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		signOutButton.setBackground(Color.decode("#3e5c76"));
-		//signOutButton.setForeground(Color.WHITE);
+		signOutButton.setForeground(Color.WHITE);
+		signOutButton.setOpaque(true);
 		frame.getContentPane().add(signOutButton);
 		signOutButton.setMinimumSize(new Dimension(100, 21));
 		signOutButton.setMaximumSize(new Dimension(100, 21));
@@ -97,10 +100,12 @@ public class SimulationInProgressPage extends JFrame {
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(signOutButton);
 
-		JButton goBack = new JButton("Go to Create A Simulation");
+		JButton goBack = new JButton("Create A Simulation");
 		goBack.setBounds(510, 22, 200, 30);
+		goBack.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		goBack.setBackground(Color.decode("#3e5c76"));
-		//goBack.setForeground(Color.WHITE);
+		goBack.setForeground(Color.WHITE);
+		goBack.setOpaque(true);
 		frame.getContentPane().add(goBack);
 		goBack.setMinimumSize(new Dimension(100, 21));
 		goBack.setMaximumSize(new Dimension(100, 21));
@@ -122,12 +127,10 @@ public class SimulationInProgressPage extends JFrame {
 		//Icon icon = new ImageIcon("//src//Assets//icons8-save-48.png"));
 		JButton saveButton = new JButton("Save");
 		saveButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-//		saveButton.setOpaque(true); // Transparent color
-//		saveButton.setContentAreaFilled(false);
-//		saveButton.setBorderPainted(false); // Hide border
-//		saveButton.setFocusPainted(false);
 		saveButton.setBackground(Color.decode("#3e5c76"));
-		//saveButton.setForeground(Color.WHITE);
+		saveButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		saveButton.setForeground(Color.WHITE);
+		saveButton.setOpaque(true);
 		saveButton.setMinimumSize(new Dimension(100, 21));
 		saveButton.setMaximumSize(new Dimension(100, 21));
 		saveButton.setPreferredSize(new Dimension(100, 21));
@@ -155,6 +158,19 @@ public class SimulationInProgressPage extends JFrame {
 		});
 		saveButton.setBounds(536, 75, 76, 50);
 		frame.getContentPane().add(saveButton);
+
+		JButton DownloadButton = new JButton("Download");
+		DownloadButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		DownloadButton.setBackground(Color.decode("#3e5c76"));
+		DownloadButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		DownloadButton.setForeground(Color.WHITE);
+		DownloadButton.setOpaque(true);
+		DownloadButton.setMinimumSize(new Dimension(100, 21));
+		DownloadButton.setMaximumSize(new Dimension(100, 21));
+		DownloadButton.setPreferredSize(new Dimension(100, 21));
+		DownloadButton.setBounds(640, 75, 76, 50);
+		frame.getContentPane().add(DownloadButton);
+
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
 //		homeButton.setForeground(Color.RED);
