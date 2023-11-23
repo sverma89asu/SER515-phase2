@@ -118,7 +118,7 @@ public class SimulationInProgressPage extends JFrame {
 			}
 		});
 
-		JLabel lblNewLabel = new JLabel("Simulation Results");
+		JLabel lblNewLabel = new JLabel(sessionName);
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
