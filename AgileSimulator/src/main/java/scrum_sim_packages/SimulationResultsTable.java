@@ -114,7 +114,11 @@ public class SimulationResultsTable extends JFrame {
         scrollPane2.setPreferredSize(new Dimension(150, 600));
 
         table = new JTable(model3);
-        table.getColumnModel().getColumn(0).setPreferredWidth(20);
+        table.getColumnModel().getColumn(0).setPreferredWidth(15);
+        table.getColumnModel().getColumn(1).setPreferredWidth(30);
+        table.getColumnModel().getColumn(2).setPreferredWidth(30);
+        table.getColumnModel().getColumn(3).setPreferredWidth(40);
+        table.getColumnModel().getColumn(5).setPreferredWidth(90);
         setLayout(new GridLayout(3, 6));
 
         JPanel containerPanel3 = new JPanel();
