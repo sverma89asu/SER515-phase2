@@ -59,8 +59,16 @@ public class Database {
     public boolean addUser(User user) {
         if (getUserByUsername(user.getName()) == null) {
             String name = user.getName();
+            String email = user.getEmail();
+            String password = user.getPassword();
             if (!name.matches("[a-zA-Z0-9]+")) {
                 throw new IllegalArgumentException("Username can only have alphanumeric characters");
+            }
+            else if (!email.contains("@")) {
+                throw new IllegalArgumentException(("Invalid Email"));
+            }
+            else if (password.length() <= 8) {
+                throw new IllegalArgumentException("Password should be greater than 8 characters");
             }
             users.add(user);
             saveDB();
