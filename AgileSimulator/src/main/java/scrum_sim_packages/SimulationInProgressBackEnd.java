@@ -84,7 +84,6 @@ public class SimulationInProgressBackEnd
 	}
 	public SimulationSession calcSimulationParameters(String sessionName,String noOfsprints,String noOfteamMembers,String sprintVelocity,String sprintDuration)
 	{
-		System.out.println("New simulation!");
 		Random rndm = new Random();
 		ArrayList<Sprint> sprints = new ArrayList<>();
 		ArrayList<UserStory> productBacklog = UserStoryModel.getUserStories();
