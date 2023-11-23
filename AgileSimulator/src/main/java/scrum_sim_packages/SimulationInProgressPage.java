@@ -112,7 +112,7 @@ public class SimulationInProgressPage extends JFrame {
 			}
 		});
 
-		JLabel lblNewLabel = new JLabel("Simulation Results");
+		JLabel lblNewLabel = new JLabel(sessionName);
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
@@ -135,17 +135,30 @@ public class SimulationInProgressPage extends JFrame {
 		//SimulationSession testSession = mockExporter.CreateSample();
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String filePath = LoginPage.loggedInUser+".json";
+				String folderPath = LoginPage.loggedInUser;
+
+				// Create a File object representing the folder
+				File folder = new File(folderPath);
+
+				// Use the mkdir() method to create the folder
+				boolean success = folder.mkdir();
+
+				if (success) {
+					//File is created
+				} else {
+					//File already exists
+				}
+				String filePath = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+".json";
 				File saveJson = new File(filePath);
-				String fileSaveName = LoginPage.loggedInUser;
+				String fileSaveName = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser;
 				int saveCounter = 1;
 				boolean ifExisting = saveJson.exists() && !saveJson.isDirectory();
 				while (ifExisting == true){
 					String filePathExtend=Integer.toString(saveCounter);
-					filePath = LoginPage.loggedInUser+"_"+filePathExtend+".json";
+					filePath = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+"_"+filePathExtend+".json";
 					saveJson = new File(filePath);
 					ifExisting = saveJson.exists() && !saveJson.isDirectory();
-					fileSaveName = LoginPage.loggedInUser +"_"+filePathExtend;
+					fileSaveName = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser +"_"+filePathExtend;
 				}
 				SaveSessionFunction(fileSaveName, simulationSession );// Need to make link between LoginPage
 			}
