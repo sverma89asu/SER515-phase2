@@ -1,10 +1,13 @@
-package AgileSimulator.src.main.java.scrum_sim_packages;
+package scrum_sim_packages;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class Backlog {
     private ArrayList<UserStory> userStories;
 
-    public Backlog(ArrayList<UserStory> userStories) {
+    public Backlog(@JsonProperty("userStories") ArrayList<UserStory> userStories) {
         this.userStories = userStories;
     }
 

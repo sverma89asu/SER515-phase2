@@ -83,6 +83,7 @@ public class SaveButtonReaction extends JFrame {
             btnNewButton1.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
             btnNewButton1.setBackground(Color.decode("#3e5c76"));
             btnNewButton1.setForeground(Color.WHITE);
+            btnNewButton1.setOpaque(true);
             btnNewButton1.setMinimumSize(new Dimension(100, 21));
             btnNewButton1.setMaximumSize(new Dimension(100, 21));
             btnNewButton1.setPreferredSize(new Dimension(100, 21));
@@ -112,6 +113,7 @@ public class SaveButtonReaction extends JFrame {
         btnNewButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
         btnNewButton.setBackground(Color.decode("#3e5c76"));
         btnNewButton.setForeground(Color.WHITE);
+        btnNewButton.setOpaque(true);
         btnNewButton.setMinimumSize(new Dimension(100, 21));
         btnNewButton.setMaximumSize(new Dimension(100, 21));
         btnNewButton.setPreferredSize(new Dimension(100, 21));

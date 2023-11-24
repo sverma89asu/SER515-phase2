@@ -1,5 +1,6 @@
 package AgileSimulator.src.main.java.scrum_sim_packages;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.json.simple.JSONObject;
 
 import java.util.HashMap;
@@ -17,7 +18,7 @@ public class UserStory {
 
     private long businessValue;
 
-    public UserStory(long id, String name, String description, double storyPoints, long businessValue) {
+    public UserStory(@JsonProperty("id") long id,@JsonProperty("name") String name,@JsonProperty("description") String description,@JsonProperty("storyPoints") double storyPoints,@JsonProperty("businessValue") long businessValue) {
         this.id = id;
         this.name = name;
         this.description = description;

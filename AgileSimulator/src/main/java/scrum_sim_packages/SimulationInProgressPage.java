@@ -112,7 +112,7 @@ public class SimulationInProgressPage extends JFrame {
 			}
 		});
 
-		JLabel lblNewLabel = new JLabel("Simulation Results");
+		JLabel lblNewLabel = new JLabel(sessionName);
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
@@ -135,23 +135,24 @@ public class SimulationInProgressPage extends JFrame {
 		//SimulationSession testSession = mockExporter.CreateSample();
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String filePath = LoginPage.loggedInUser+".json";
-				File saveJson = new File(filePath);
-				String fileSaveName = LoginPage.loggedInUser;
-				int saveCounter = 1;
-				boolean ifExisting = saveJson.exists() && !saveJson.isDirectory();
-				while (ifExisting == true){
-					String filePathExtend=Integer.toString(saveCounter);
-					filePath = LoginPage.loggedInUser+"_"+filePathExtend+".json";
-					saveJson = new File(filePath);
-					ifExisting = saveJson.exists() && !saveJson.isDirectory();
-					fileSaveName = LoginPage.loggedInUser +"_"+filePathExtend;
-				}
-				SaveSessionFunction(fileSaveName, simulationSession );// Need to make link between LoginPage
+				SaveSessionFunction(LoginPage.loggedInUser, simulationSession );// Need to make link between LoginPage
 			}
 		});
 		saveButton.setBounds(536, 75, 76, 50);
 		frame.getContentPane().add(saveButton);
+
+		JButton DownloadButton = new JButton("Download");
+		DownloadButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
+		DownloadButton.setBackground(Color.decode("#3e5c76"));
+		DownloadButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		DownloadButton.setForeground(Color.WHITE);
+		DownloadButton.setOpaque(true);
+		DownloadButton.setMinimumSize(new Dimension(100, 21));
+		DownloadButton.setMaximumSize(new Dimension(100, 21));
+		DownloadButton.setPreferredSize(new Dimension(100, 21));
+		DownloadButton.setBounds(640, 75, 76, 50);
+		frame.getContentPane().add(DownloadButton);
+
 //		JButton homeButton = new JButton("");
 //		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
 //		homeButton.setForeground(Color.RED);

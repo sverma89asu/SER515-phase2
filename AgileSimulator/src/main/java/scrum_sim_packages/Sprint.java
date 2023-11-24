@@ -1,5 +1,7 @@
 package AgileSimulator.src.main.java.scrum_sim_packages;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class Sprint {
@@ -44,7 +46,7 @@ public class Sprint {
     private Backlog sprintBacklog;
     private ArrayList<StandupDay> standupDays;
 
-    public Sprint(long expectedBV, double expectedSP, long actualBV, double actualSP, Backlog productBacklog, Backlog sprintBacklog, ArrayList<StandupDay> standupDays) {
+    public Sprint(@JsonProperty("expectedBV") long expectedBV,@JsonProperty("expectedSP") double expectedSP,@JsonProperty("actualBV") long actualBV,@JsonProperty("actualSP") double actualSP,@JsonProperty("productBacklog") Backlog productBacklog,@JsonProperty("sprintBacklog") Backlog sprintBacklog,@JsonProperty("standupDays") ArrayList<StandupDay> standupDays) {
         this.expectedBV = expectedBV;
         this.expectedSP = expectedSP;
         this.actualBV = actualBV;

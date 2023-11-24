@@ -1,12 +1,14 @@
 package AgileSimulator.src.main.java.scrum_sim_packages;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class StandupDay {
     private long day;
     private ArrayList<StandupStoryProgress> standupStoryProgresses;
 
-    public StandupDay(long day, ArrayList<StandupStoryProgress> standupStoryProgresses) {
+    public StandupDay(@JsonProperty("day") long day,@JsonProperty("standupStoryProgresses") ArrayList<StandupStoryProgress> standupStoryProgresses) {
         this.day = day;
         this.standupStoryProgresses = standupStoryProgresses;
     }

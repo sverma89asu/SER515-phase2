@@ -156,7 +156,7 @@ public class LoginPage extends JFrame {
 						@Override
 						public void run() {
 							loggedInUser=username;
-							CreateSimulation frame = new CreateSimulation();
+							LandingPage frame = new LandingPage();
 							frame.frame.setVisible(true);
 						}
 					});
