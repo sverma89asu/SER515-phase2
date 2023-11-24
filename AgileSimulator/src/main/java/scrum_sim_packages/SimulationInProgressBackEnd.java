@@ -1,5 +1,6 @@
 package scrum_sim_packages;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
+import scrum_sim_packages.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -20,7 +21,7 @@ public class SimulationInProgressBackEnd
 		
 	}
 
-	static void removeSprintStoriesFromProductBacklog(ArrayList<UserStory>productBacklog, ArrayList<UserStory>sprintBacklog){
+	static void removeSprintStoriesFromProductBacklog(@JsonProperty("productBacklog") ArrayList<UserStory>productBacklog,@JsonProperty("sprintBacklog") ArrayList<UserStory>sprintBacklog){
 		int itr = 0;
 		boolean isChanged = false;
 		while(itr < productBacklog.size()){
