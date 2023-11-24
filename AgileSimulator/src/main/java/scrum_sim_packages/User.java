@@ -14,6 +14,7 @@ public class User {
   
   private String role;
 
+
   public User(String username, String email, String password, String role) {
       this.username = username;
       this.email = email;
@@ -48,11 +49,11 @@ public class User {
     this.email = email;
   }
   
-  public String getTime() {
+  public String getRole() {
 	    return role;
 	  }
 
-  public void setTime(String role) {
+  public void setRole(String role) {
 	    this.role = role;
 	  }
 
@@ -62,6 +63,5 @@ public class User {
 
   public void setPassword(String password) {
 		    this.password = password;
-		  }
-
+  }
 }

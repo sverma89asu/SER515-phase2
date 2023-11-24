@@ -1,7 +1,5 @@
 package scrum_sim_packages;
 
-import scrum_sim_packages.SimulationSession;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,9 +1,6 @@
 package scrum_sim_packages;
-
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import scrum_sim_packages.*;
-
 import java.util.ArrayList;
 import java.util.Random;
 
