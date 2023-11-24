@@ -1,7 +1,7 @@
-package AgileSimulator.src.main.java.Helpers;
+package Helpers;
 
-import AgileSimulator.src.main.java.scrum_sim_packages.SaveButtonReaction;
-import AgileSimulator.src.main.java.scrum_sim_packages.SimulationSession;
+import scrum_sim_packages.SaveButtonReaction;
+import scrum_sim_packages.SimulationSession;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;

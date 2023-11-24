@@ -1,6 +1,6 @@
 package scrum_sim_packages;
 
-import AgileSimulator.src.main.java.CreateSimulation.CreateSimulation;
+import CreateSimulation.CreateSimulation;
 
 import java.awt.Color;
 import java.awt.EventQueue;

@@ -1,6 +1,6 @@
-package AgileSimulator.src.main.java.CreateSimulation;
+package CreateSimulation;
 
-import AgileSimulator.src.main.java.scrum_sim_packages.*;
+import scrum_sim_packages.*;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;

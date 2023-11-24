@@ -1,6 +1,6 @@
-package AgileSimulator.src.main.java.scrum_sim_packages;
+package scrum_sim_packages;
 
-import AgileSimulator.src.main.java.CreateSimulation.*;
+import CreateSimulation.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;

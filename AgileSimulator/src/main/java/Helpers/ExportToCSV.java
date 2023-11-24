@@ -1,4 +1,4 @@
-package AgileSimulator.src.main.java.Helpers;
+package Helpers;
 
 public class ExportToCSV {
 }

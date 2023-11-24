@@ -1,4 +1,4 @@
-package AgileSimulator.src.main.java.scrum_sim_packages;
+package scrum_sim_packages;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.json.simple.JSONObject;
