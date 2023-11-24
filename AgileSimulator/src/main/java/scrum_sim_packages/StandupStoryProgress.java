@@ -1,5 +1,7 @@
 package scrum_sim_packages;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class StandupStoryProgress {
     private UserStory userStory;
     private InformationCard informationCard;
@@ -7,7 +9,7 @@ public class StandupStoryProgress {
     private double remainingStoryPoints;
     private long remainingBusinessValue;
 
-    public StandupStoryProgress(UserStory userStory, InformationCard informationCard, String response, double remainingStoryPoints, long remainingBusinessValue) {
+    public StandupStoryProgress(@JsonProperty("userStory") UserStory userStory,@JsonProperty("informationCard") InformationCard informationCard,@JsonProperty("response") String response,@JsonProperty("remainingStoryPoints") double remainingStoryPoints,@JsonProperty("remainingBusinessValue") long remainingBusinessValue) {
         this.userStory = userStory;
         this.informationCard = informationCard;
         this.response = response;

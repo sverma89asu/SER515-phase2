@@ -141,32 +141,7 @@ public class SimulationInProgressPage extends JFrame {
 		//SimulationSession testSession = mockExporter.CreateSample();
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String folderPath = LoginPage.loggedInUser;
-
-				// Create a File object representing the folder
-				File folder = new File(folderPath);
-
-				// Use the mkdir() method to create the folder
-				boolean success = folder.mkdir();
-
-				if (success) {
-					//File is created
-				} else {
-					//File already exists
-				}
-				String filePath = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+".json";
-				File saveJson = new File(filePath);
-				String fileSaveName = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser;
-				int saveCounter = 1;
-				boolean ifExisting = saveJson.exists() && !saveJson.isDirectory();
-				while (ifExisting == true){
-					String filePathExtend=Integer.toString(saveCounter);
-					filePath = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+"_"+filePathExtend+".json";
-					saveJson = new File(filePath);
-					ifExisting = saveJson.exists() && !saveJson.isDirectory();
-					fileSaveName = LoginPage.loggedInUser+"/"+LoginPage.loggedInUser +"_"+filePathExtend;
-				}
-				SaveSessionFunction(fileSaveName, simulationSession );// Need to make link between LoginPage
+				SaveSessionFunction(LoginPage.loggedInUser, simulationSession );// Need to make link between LoginPage
 			}
 		});
 		saveButton.setBounds(536, 75, 76, 50);
