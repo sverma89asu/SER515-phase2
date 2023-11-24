@@ -1,5 +1,4 @@
 package scrum_sim_packages;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class InformationCard {
