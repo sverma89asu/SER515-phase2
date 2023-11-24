@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 import java.awt.Dimension;
 
-public class AccountCreate extends JFrame {
+public class CreateAccount extends JFrame {
     public JFrame frame;
     private JTextField username_textField;
     private JPasswordField passwordField;
@@ -18,7 +18,7 @@ public class AccountCreate extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    AccountCreate frame = new AccountCreate();
+                    CreateAccount frame = new CreateAccount();
                     frame.setVisible(false);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -30,7 +30,7 @@ public class AccountCreate extends JFrame {
     /**
      * Create the frame.
      */
-    public AccountCreate() {
+    public CreateAccount() {
         initialize();
     }
 
@@ -65,26 +65,36 @@ public class AccountCreate extends JFrame {
 
         JLabel password = new JLabel("Password");
         password.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        password.setBounds(150, 280, 200, 40);
+        password.setBounds(150, 270, 200, 40);
         frame.getContentPane().add(password);
 
         passwordField = new JPasswordField();
-        passwordField.setBounds(150, 330, 450, 40);
+        passwordField.setBounds(150, 320, 450, 40);
         passwordField.setBorder(new LineBorder(new Color(171, 173, 179), 1, true));
         frame.getContentPane().add(passwordField);
 
         JLabel passwordVerification = new JLabel("Password Verification");
         passwordVerification.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        passwordVerification.setBounds(150, 400, 200, 60);
+        passwordVerification.setBounds(150, 380, 200, 40);
         frame.getContentPane().add(passwordVerification);
 
         passwordVerificationField = new JPasswordField();
-        passwordVerificationField.setBounds(150, 450, 450, 40);
+        passwordVerificationField.setBounds(150, 430, 450, 40);
         passwordVerificationField.setBorder(new LineBorder(new Color(171, 173, 179), 1, true));
         frame.getContentPane().add(passwordVerificationField);
 
+        JLabel selectRole = new JLabel("Select Role");
+        selectRole.setFont(new Font("SansSerif", Font.PLAIN, 20));
+        selectRole.setBounds(150, 490, 200, 40);
+        frame.getContentPane().add(selectRole);
+
+        JComboBox<String> roleComboBox = new JComboBox<>(new String[]{"Trainee", "Trainer", "Sim User"});
+        roleComboBox.setFont(new Font("SansSerif", Font.PLAIN, 20));
+        roleComboBox.setBounds(150, 540, 450, 40);
+        frame.getContentPane().add(roleComboBox);
+
         JButton create = new JButton("Create");
-        create.setBounds(300, 550, 150, 43);
+        create.setBounds(300, 600, 150, 43);
         create.setFont(new Font("SansSerif", Font.BOLD, 20));
         create.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
         create.setBackground(Color.decode("#3e5c76"));
@@ -96,13 +106,16 @@ public class AccountCreate extends JFrame {
         create.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String username = username_textField.getText();
                 String password = String.valueOf(passwordField.getPassword());
                 String passwordVerification = String.valueOf(passwordVerificationField.getPassword());
 
-                if (!password.equals(passwordVerification)) {
+                if (username.isEmpty() || password.isEmpty() || passwordVerification.isEmpty()) {
+                    JOptionPane.showMessageDialog(frame, "Check Your Input");
+                } else if (!password.equals(passwordVerification)) {
                     JOptionPane.showMessageDialog(frame, "Check Password Verification");
                 } else {
-                    // 비밀번호가 일치하는 경우의 로직을 구현
+                    // If password is identical, the account should be created
                 }
             }
         });
