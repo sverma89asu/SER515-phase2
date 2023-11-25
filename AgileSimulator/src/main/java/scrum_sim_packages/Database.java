@@ -79,6 +79,7 @@ public class Database {
 
     public boolean authenticate(String username, String password) {
         User user = getUserByUsername(username);
+        LoginPage.loggedInUserRole = user.getRole();
         return user != null && user.getPassword().equals(password);
     }
 
