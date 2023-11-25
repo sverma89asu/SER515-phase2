@@ -31,6 +31,8 @@ public class LoginPage extends JFrame {
 
 	public static String loggedInUser;
 
+	public static String loggedInUserRole;
+
 	/**
 	 * Launch the application.
 	 */
@@ -160,7 +162,6 @@ public class LoginPage extends JFrame {
 							frame.frame.setVisible(true);
 						}
 					});
-					System.out.println("success!");
 					frame.dispose();
 				}
 			}
