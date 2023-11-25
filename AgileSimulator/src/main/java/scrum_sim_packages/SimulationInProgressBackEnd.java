@@ -1,8 +1,6 @@
 package scrum_sim_packages;
-
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import scrum_sim_packages.*;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -23,7 +21,7 @@ public class SimulationInProgressBackEnd
 		
 	}
 
-	static void removeSprintStoriesFromProductBacklog(ArrayList<UserStory>productBacklog, ArrayList<UserStory>sprintBacklog){
+	static void removeSprintStoriesFromProductBacklog(@JsonProperty("productBacklog") ArrayList<UserStory>productBacklog,@JsonProperty("sprintBacklog") ArrayList<UserStory>sprintBacklog){
 		int itr = 0;
 		boolean isChanged = false;
 		while(itr < productBacklog.size()){
@@ -84,12 +82,11 @@ public class SimulationInProgressBackEnd
 	}
 	public SimulationSession calcSimulationParameters(String sessionName,String noOfsprints,String noOfteamMembers,String sprintVelocity,String sprintDuration)
 	{
-		System.out.println("New simulation!");
 		Random rndm = new Random();
 		ArrayList<Sprint> sprints = new ArrayList<>();
 		ArrayList<UserStory> productBacklog = UserStoryModel.getUserStories();
 		ArrayList<InformationCard> informationCards = InformationCardModel.getInformationCards();
-		SimulationSession simulationSession = new SimulationSession(sessionName, parseLong(sprintVelocity), parseLong(sprintDuration), parseLong(noOfsprints), parseLong(noOfteamMembers), sprints, "user1");
+		SimulationSession simulationSession = new SimulationSession(sessionName, parseLong(sprintVelocity), parseLong(sprintDuration), parseLong(noOfsprints), parseLong(noOfteamMembers), sprints, LoginPage.loggedInUser);
 		for(int i = 0; i < parseLong(noOfsprints); i++){
 			Sprint currentSprint = new Sprint(0,parseLong(sprintVelocity),0,0,null, null, null);
 			ArrayList<UserStory> sprintBacklog = printknapSack((int) simulationSession.getVelocity(), productBacklog, productBacklog.size(), currentSprint);

@@ -1,7 +1,6 @@
 package CreateSimulation;
 
-import scrum_sim_packages.SimulationInProgressPage;
-import scrum_sim_packages.LoginPage;
+import scrum_sim_packages.*;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;

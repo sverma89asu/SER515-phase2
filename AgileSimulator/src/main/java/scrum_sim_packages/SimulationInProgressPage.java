@@ -1,19 +1,13 @@
 package scrum_sim_packages;
-
-import CreateSimulation.CreateSimulation;
-import scrum_sim_packages.*;
+import CreateSimulation.*;
 import tests.ExportTOJSONTests;
-import tests.ExportTOJSONTests;
-
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-
 import static Helpers.ExportToJSON.SaveSessionFunction;
-
 import java.awt.Dimension;
 
 public class SimulationInProgressPage extends JFrame {
@@ -118,7 +112,7 @@ public class SimulationInProgressPage extends JFrame {
 			}
 		});
 
-		JLabel lblNewLabel = new JLabel("Simulation Results");
+		JLabel lblNewLabel = new JLabel(sessionName);
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
@@ -141,19 +135,7 @@ public class SimulationInProgressPage extends JFrame {
 		//SimulationSession testSession = mockExporter.CreateSample();
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String filePath = LoginPage.loggedInUser+".json";
-				File saveJson = new File(filePath);
-				String fileSaveName = LoginPage.loggedInUser;
-				int saveCounter = 1;
-				boolean ifExisting = saveJson.exists() && !saveJson.isDirectory();
-				while (ifExisting == true){
-					String filePathExtend=Integer.toString(saveCounter);
-					filePath = LoginPage.loggedInUser+"_"+filePathExtend+".json";
-					saveJson = new File(filePath);
-					ifExisting = saveJson.exists() && !saveJson.isDirectory();
-					fileSaveName = LoginPage.loggedInUser +"_"+filePathExtend;
-				}
-				SaveSessionFunction(fileSaveName, simulationSession );// Need to make link between LoginPage
+				SaveSessionFunction(LoginPage.loggedInUser, simulationSession );// Need to make link between LoginPage
 			}
 		});
 		saveButton.setBounds(536, 75, 76, 50);
