@@ -314,6 +314,10 @@ public class CreateSimulation
 						}
 					});
 				}
+				else{
+					CreateSimulationReaction reaction = new CreateSimulationReaction();
+					reaction.frame.setVisible(true);
+				}
 			}
 		});
 
