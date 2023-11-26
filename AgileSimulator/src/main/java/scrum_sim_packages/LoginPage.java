@@ -167,29 +167,6 @@ public class LoginPage extends JFrame {
 			}
 		});
 
-		/*
-		JButton createAccountButton = new JButton("Create Account");
-		createAccountButton.setBounds(550, 20, 100, 21);
-		createAccountButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-		createAccountButton.setBackground(Color.decode("#3e5c76"));
-		createAccountButton.setForeground(Color.WHITE);
-		createAccountButton.setMinimumSize(new Dimension(100, 21));
-		createAccountButton.setMaximumSize(new Dimension(100, 21));
-		createAccountButton.setPreferredSize(new Dimension(100, 21));
-		createAccountButton.setOpaque(true);
-		frame.add(createAccountButton);
-		createAccountButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
-
-				CreateAccount display1 = new CreateAccount();
-				display1.frame.setVisible(true);
-
-			}
-		});
-		 */
-
 // Set up KeyBinding on the frame itself
 		frame.getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0), "enter");
 		frame.getRootPane().getActionMap().put("enter", new AbstractAction() {
