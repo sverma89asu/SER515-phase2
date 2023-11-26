@@ -1,14 +1,9 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import scrum_sim_packages.UserStory;
-import scrum_sim_packages.UserStoryModel;
+import scrum_sim_packages.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import scrum_sim_packages.UserStory;
-import scrum_sim_packages.UserStoryModel;
-
 import java.util.ArrayList;
 
 public class UserStoryModelTest {

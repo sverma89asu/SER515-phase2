@@ -1,5 +1,7 @@
 package scrum_sim_packages;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class SimulationSession {
@@ -12,7 +14,7 @@ public class SimulationSession {
 
     private String username;
 
-    public SimulationSession(String name, long velocity, long sprintDuration, long numberOfSprints, long teamSize, ArrayList<Sprint> sprints, String username) {
+    public SimulationSession(@JsonProperty("name") String name,@JsonProperty("velocity") long velocity,@JsonProperty("sprintDuration") long sprintDuration,@JsonProperty("numberOfSprints") long numberOfSprints,@JsonProperty("teamSize") long teamSize,@JsonProperty("sprints") ArrayList<Sprint> sprints,@JsonProperty("username") String username) {
         this.name = name;
         this.velocity = velocity;
         this.sprintDuration = sprintDuration;

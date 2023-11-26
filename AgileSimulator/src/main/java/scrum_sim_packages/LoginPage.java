@@ -31,6 +31,8 @@ public class LoginPage extends JFrame {
 
 	public static String loggedInUser;
 
+	public static String loggedInUserRole;
+
 	/**
 	 * Launch the application.
 	 */
@@ -156,11 +158,10 @@ public class LoginPage extends JFrame {
 						@Override
 						public void run() {
 							loggedInUser=username;
-							CreateSimulation frame = new CreateSimulation();
+							LandingPage frame = new LandingPage();
 							frame.frame.setVisible(true);
 						}
 					});
-					System.out.println("success!");
 					frame.dispose();
 				}
 			}
