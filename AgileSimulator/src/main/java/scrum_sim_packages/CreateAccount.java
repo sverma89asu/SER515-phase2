@@ -45,7 +45,7 @@ public class CreateAccount extends JFrame {
     {
         frame = new JFrame();
         frame.setVisible(true);
-        frame.setBounds(350, 120, 754, 750);
+        frame.setBounds(350, 120, 754, 550);
         frame.getContentPane().setLayout(null);
         frame.getContentPane().setBackground(Color.decode("#f0ebd8"));
         frame.setResizable(false);
@@ -54,17 +54,17 @@ public class CreateAccount extends JFrame {
         JLabel createAccount = new JLabel("Create Account");
         createAccount.setFont(new Font("SansSerif", Font.BOLD, 32));
         createAccount.setHorizontalAlignment(SwingConstants.CENTER);
-        createAccount.setBounds(150, 25, 450, 50);
+        createAccount.setBounds(150, 25, 450, 30);
         frame.getContentPane().add(createAccount);
 
         JLabel username = new JLabel("Username");
         username.setFont(new Font("SansSerif", Font.PLAIN, 20));
         //lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        username.setBounds(150, 100, 200, 40);
+        username.setBounds(150, 80, 200, 20);
         frame.getContentPane().add(username);
 
         username_textField = new JTextField();
-        username_textField.setBounds(150, 150, 450, 40);
+        username_textField.setBounds(150, 110, 450, 30);
         username_textField.setBorder(new LineBorder(new Color(171, 173, 179), 1, true));
         username_textField.setMaximumSize(new Dimension(7, 19));
         frame.getContentPane().add(username_textField);
@@ -72,48 +72,48 @@ public class CreateAccount extends JFrame {
 
         JLabel password = new JLabel("Password");
         password.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        password.setBounds(150, 210, 200, 40);
+        password.setBounds(150, 150, 200, 20);
         frame.getContentPane().add(password);
 
         passwordField = new JPasswordField();
-        passwordField.setBounds(150, 260, 450, 40);
+        passwordField.setBounds(150, 180, 450, 30);
         passwordField.setBorder(new LineBorder(new Color(171, 173, 179), 1, true));
         frame.getContentPane().add(passwordField);
 
         JLabel passwordVerification = new JLabel("Password Verification");
         passwordVerification.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        passwordVerification.setBounds(150, 320, 200, 40);
+        passwordVerification.setBounds(150, 220, 200, 20);
         frame.getContentPane().add(passwordVerification);
 
         passwordVerificationField = new JPasswordField();
-        passwordVerificationField.setBounds(150, 370, 450, 40);
+        passwordVerificationField.setBounds(150, 250, 450, 30);
         passwordVerificationField.setBorder(new LineBorder(new Color(171, 173, 179), 1, true));
         frame.getContentPane().add(passwordVerificationField);
 
         JLabel selectRole = new JLabel("Select Role");
         selectRole.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        selectRole.setBounds(150, 430, 200, 40);
+        selectRole.setBounds(150, 290, 200, 30);
         frame.getContentPane().add(selectRole);
 
         JComboBox<String> roleComboBox = new JComboBox<>(new String[]{"Trainee", "Trainer", "Sim User", "Admin"});
         roleComboBox.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        roleComboBox.setBounds(150, 480, 450, 40);
+        roleComboBox.setBounds(150, 330, 450, 30);
         frame.getContentPane().add(roleComboBox);
 
         JLabel email = new JLabel("E-mail");
         email.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        email.setBounds(150, 540, 200, 40);
+        email.setBounds(150, 370, 200, 30);
         frame.getContentPane().add(email);
 
         email_textField = new JTextField();
-        email_textField.setBounds(150, 590, 450, 40);
+        email_textField.setBounds(150, 410, 450, 30);
         email_textField.setBorder(new LineBorder(new Color(171, 173, 179), 1, true));
         email_textField.setMaximumSize(new Dimension(7, 19));
         frame.getContentPane().add(email_textField);
         email_textField.setColumns(10);
 
         JButton create = new JButton("Create");
-        create.setBounds(300, 650, 150, 43);
+        create.setBounds(300, 460, 150, 30);
         create.setFont(new Font("SansSerif", Font.BOLD, 20));
         create.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
         create.setBackground(Color.decode("#3e5c76"));
