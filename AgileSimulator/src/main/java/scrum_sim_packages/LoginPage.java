@@ -177,5 +177,4 @@ public class LoginPage extends JFrame {
 		frame.setVisible(true);
 
 	}
-
 }
