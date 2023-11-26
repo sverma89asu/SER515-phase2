@@ -95,7 +95,7 @@ public class CreateAccount extends JFrame {
         selectRole.setBounds(150, 450, 200, 40);
         frame.getContentPane().add(selectRole);
 
-        JComboBox<String> roleComboBox = new JComboBox<>(new String[]{"Trainee", "Trainer", "Sim User"});
+        JComboBox<String> roleComboBox = new JComboBox<>(new String[]{"Trainee", "Trainer", "Sim User", "Admin"});
         roleComboBox.setFont(new Font("SansSerif", Font.PLAIN, 20));
         roleComboBox.setBounds(150, 500, 450, 40);
         frame.getContentPane().add(roleComboBox);
