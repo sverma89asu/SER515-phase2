@@ -23,7 +23,7 @@ public class SimulationResultsTable extends JFrame {
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        JLabel lblNewLabel = new JLabel("Simulation Results");
+        JLabel lblNewLabel = new JLabel("Sprint " + Integer.toString(sprintID+1));
         lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 32));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setBounds(600, 24, 305, 60);
