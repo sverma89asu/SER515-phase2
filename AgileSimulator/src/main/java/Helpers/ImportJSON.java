@@ -28,22 +28,23 @@ public class ImportJSON {
 
         return sim;
     }
-    public static List<String> LoadSessions(String username){
-        List<String> sessions = new ArrayList<>();
+    public static ArrayList<SimulationSession> LoadSessions(String username){
         String folderPath = username;
         File folder = new File(folderPath);
         if (!folder.exists()){
-            sessions.add("0");
+            return new ArrayList<SimulationSession>();
         }
         File[] files = folder.listFiles();
-
+        ArrayList<SimulationSession> simulationSessions = new ArrayList<>();
         if (files != null) {
             for (File file : files) {
                 if (file.isFile()) {
-                    sessions.add(file.getName());
+                    simulationSessions.add(LoadSession(file.getName()));
                 }
             }
         }
-        return sessions;
+
+        return simulationSessions;
     }
+
 }
