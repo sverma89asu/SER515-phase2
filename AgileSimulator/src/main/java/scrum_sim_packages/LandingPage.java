@@ -15,6 +15,11 @@ import java.awt.Dimension;
 
 public class LandingPage extends JFrame {
     public JFrame frame;
+    private static JButton createAccountButton;
+
+    public static void setCreateAccountVisible(boolean visible) {
+        createAccountButton.setVisible(visible);
+    }
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -67,6 +72,26 @@ public class LandingPage extends JFrame {
         });
         frame.getContentPane().setLayout(null);
         frame.getContentPane().add(signOutButton);
+
+        createAccountButton = new JButton("Create Account");
+        createAccountButton.setBounds(580, 22, 90, 30);
+        createAccountButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+        createAccountButton.setBackground(Color.decode("#3e5c76"));
+        createAccountButton.setForeground(Color.WHITE);
+        createAccountButton.setOpaque(true);
+        frame.getContentPane().add(createAccountButton);
+        createAccountButton.setMinimumSize(new Dimension(100, 21));
+        createAccountButton.setMaximumSize(new Dimension(100, 21));
+        createAccountButton.setPreferredSize(new Dimension(100, 21));
+        createAccountButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CreateAccount CreateAccount = new CreateAccount();
+                CreateAccount.setVisible(true);
+            }
+        });
+        frame.getContentPane().setLayout(null);
+        frame.getContentPane().add(createAccountButton);
+        createAccountButton.setVisible(false);
 
         JLabel lblNewLabel = new JLabel("Main Menu");
         lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 32));

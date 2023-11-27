@@ -7,6 +7,7 @@ public class UserAuthentication {
        
         database.addUser(new User("user1", "user1@example.com", "password1", "user"));
         database.addUser(new User("user2", "user2@example.com", "password2", "user"));
+        database.addUser(new User("admin", "admin@example.com", "password1", "admin"));
 
         // Add more users as needed...
 
