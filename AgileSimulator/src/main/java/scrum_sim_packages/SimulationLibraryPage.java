@@ -25,7 +25,7 @@ public class SimulationLibraryPage extends JFrame {
     {
        ArrayList<SimulationSession> simulationSessions = new ArrayList<>();
 
-        simulationSessions = ImportJSON.LoadSessions("user1");
+        simulationSessions = ImportJSON.LoadSessions(LoginPage.loggedInUser);
         frame = new JFrame();
         frame.setVisible(true);
         frame.setBounds(350, 120, 754, 800); // Size of frame
