@@ -121,7 +121,6 @@ public class CreateAccount extends JFrame {
                 User user = new User(username,email,password,role);
                 Database user_valid = new Database();
                 boolean validation_flag = user_valid.isValid(user);
-                System.out.println(validation_flag);
 
                 if (!validation_flag && username.isEmpty() || password.isEmpty() || passwordVerification.isEmpty() || email.isEmpty() ) {
                     JOptionPane.showMessageDialog(frame, "Input Empty! Check your Inputs!");
@@ -132,6 +131,9 @@ public class CreateAccount extends JFrame {
                 } else {
                     if(user_valid.addUser(user)){
                         JOptionPane.showMessageDialog(frame, "User Saved Successfully!");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(frame, "User Already Exist!");
                     }
                 }
             }
