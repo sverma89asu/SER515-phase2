@@ -1,5 +1,7 @@
 package scrum_sim_packages;
 import CreateSimulation.*;
+import Helpers.ExportToCSV;
+import com.opencsv.CSVWriter;
 import tests.ExportTOJSONTests;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -7,8 +9,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+
+import static Helpers.ExportToCSV.convertToCSV;
 import static Helpers.ExportToJSON.SaveSessionFunction;
 import java.awt.Dimension;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class SimulationInProgressPage extends JFrame {
 
@@ -151,6 +157,33 @@ public class SimulationInProgressPage extends JFrame {
 		DownloadButton.setMaximumSize(new Dimension(100, 21));
 		DownloadButton.setPreferredSize(new Dimension(100, 21));
 		DownloadButton.setBounds(640, 75, 76, 50);
+		DownloadButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				String fileName = LoginPage.loggedInUser;
+				String folderPath = fileName;
+				File folder = new File(folderPath);
+				boolean success = folder.mkdir();
+
+				if (success) {
+					//File is created
+				} else {
+					//File already exists
+				}
+				String filePath = fileName+"/"+fileName+".csv";
+				File saveCSV = new File(filePath);
+				int saveCounter = 1;
+				boolean ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
+				while (ifExisting == true){
+					String filePathExtend=Integer.toString(saveCounter);
+					filePath = fileName+"/"+fileName+"_"+filePathExtend+".csv";
+					saveCSV = new File(filePath);
+					ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
+					saveCounter=saveCounter+1;
+				}
+				convertToCSV(simulationSession, filePath);
+			}
+		});
 		frame.getContentPane().add(DownloadButton);
 
 //		JButton homeButton = new JButton("");
