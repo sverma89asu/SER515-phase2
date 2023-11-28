@@ -160,7 +160,7 @@ public class SimulationInProgressPage extends JFrame {
 		DownloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				String fileName = LoginPage.loggedInUser;
+				String fileName = "Downloads/"+LoginPage.loggedInUser;
 				String folderPath = fileName;
 				File folder = new File(folderPath);
 				boolean success = folder.mkdir();
@@ -170,13 +170,13 @@ public class SimulationInProgressPage extends JFrame {
 				} else {
 					//File already exists
 				}
-				String filePath = fileName+"/"+fileName+".csv";
+				String filePath = "Downloads/"+LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+".csv";
 				File saveCSV = new File(filePath);
 				int saveCounter = 1;
 				boolean ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
 				while (ifExisting == true){
 					String filePathExtend=Integer.toString(saveCounter);
-					filePath = fileName+"/"+fileName+"_"+filePathExtend+".csv";
+					filePath = "Downloads/"+LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+"_"+filePathExtend+".csv";
 					saveCSV = new File(filePath);
 					ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
 					saveCounter=saveCounter+1;
