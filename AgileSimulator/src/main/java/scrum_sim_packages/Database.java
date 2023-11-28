@@ -47,6 +47,12 @@ public class Database {
             e.printStackTrace(System.out);
         }
     }
+    private boolean validate (User user) {
+        String username = user.getName();
+        String password = user.getPassword();
+        String email = user.getEmail();
+        return username.matches("[a-zA-Z0-9]+") && email.contains("@") && password.length() > 8;
+    }
     public User getUserByUsername(String username) {
         for (User user : users) {
             if (user.getName().equals(username)) {
