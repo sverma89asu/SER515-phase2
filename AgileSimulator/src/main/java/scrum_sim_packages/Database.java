@@ -47,6 +47,12 @@ public class Database {
             e.printStackTrace(System.out);
         }
     }
+    private boolean validate (User user) {
+        String username = user.getName();
+        String password = user.getPassword();
+        String email = user.getEmail();
+        return username.matches("[a-zA-Z0-9]+") && email.contains("@") && password.length() > 8;
+    }
     public User getUserByUsername(String username) {
         for (User user : users) {
             if (user.getName().equals(username)) {
@@ -58,18 +64,6 @@ public class Database {
 
     public boolean addUser(User user) {
         if (getUserByUsername(user.getName()) == null) {
-            String name = user.getName();
-            String email = user.getEmail();
-            String password = user.getPassword();
-            if (!name.matches("[a-zA-Z0-9]+")) {
-                throw new IllegalArgumentException("Username can only have alphanumeric characters");
-            }
-            else if (!email.contains("@")) {
-                throw new IllegalArgumentException(("Invalid Email"));
-            }
-            else if (password.length() <= 8) {
-                throw new IllegalArgumentException("Password should be greater than 8 characters");
-            }
             users.add(user);
             saveDB();
             return true;
@@ -79,7 +73,6 @@ public class Database {
 
     public boolean authenticate(String username, String password) {
         User user = getUserByUsername(username);
-        LoginPage.loggedInUserRole = user.getRole();
         return user != null && user.getPassword().equals(password);
     }
 
