@@ -154,11 +154,12 @@ public class LoginPage extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Database db = new Database();
 				if(db.authenticate(username, password)) {
+					loggedInUser=username;
 					SwingUtilities.invokeLater(new Runnable() {
 						@Override
 						public void run() {
-							loggedInUser=username;
 							LandingPage frame = new LandingPage();
+							LandingPage.setCreateAccountVisible(loggedInUser.equals("admin"));
 							frame.frame.setVisible(true);
 						}
 					});
