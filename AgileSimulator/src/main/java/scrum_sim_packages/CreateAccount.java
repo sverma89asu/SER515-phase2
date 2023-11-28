@@ -116,15 +116,25 @@ public class CreateAccount extends JFrame {
                 String password = String.valueOf(passwordField.getPassword());
                 String passwordVerification = String.valueOf(passwordVerificationField.getPassword());
                 String email = email_textField.getText();
+                String role = ((String) roleComboBox.getSelectedItem()).toLowerCase();
 
-                if (username.isEmpty() || password.isEmpty() || passwordVerification.isEmpty() || email.isEmpty() ) {
-                    JOptionPane.showMessageDialog(frame, "Check Your Input");
+                User user = new User(username,email,password,role);
+                Database user_valid = new Database();
+                boolean validation_flag = user_valid.isValid(user);
+
+                if (!validation_flag && username.isEmpty() || password.isEmpty() || passwordVerification.isEmpty() || email.isEmpty() ) {
+                    JOptionPane.showMessageDialog(frame, "Input Empty! Check your Inputs!");
                 } else if (!password.equals(passwordVerification)) {
-                    JOptionPane.showMessageDialog(frame, "Check Password Verification");
-                } else if (!isValidEmail(email)) {  // Email validation check
-                    JOptionPane.showMessageDialog(frame, "Check Your Email Address");
+                    JOptionPane.showMessageDialog(frame, "Password Verification Failed!");
+                } else if (!validation_flag && !isValidEmail(email)) {  // Email validation check
+                    JOptionPane.showMessageDialog(frame, "Invalid Email Address!");
                 } else {
-                    // If password is identical, the account should be created
+                    if(user_valid.addUser(user)){
+                        JOptionPane.showMessageDialog(frame, "User Saved Successfully!");
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(frame, "User Already Exist! Please choose another username.");
+                    }
                 }
             }
         });

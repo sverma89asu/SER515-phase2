@@ -40,7 +40,6 @@ public class Database {
         for (User user : users){
             userArray.add(user.toJSON());
         }
-
         try (FileWriter writer = new FileWriter(DB_FILE)) {
             writer.write(userArray.toJSONString());
         } catch (IOException e) {
@@ -51,7 +50,11 @@ public class Database {
         String username = user.getName();
         String password = user.getPassword();
         String email = user.getEmail();
-        return username.matches("[a-zA-Z0-9]+") && email.contains("@") && password.length() > 8;
+        return username.matches("[a-zA-Z0-9]+") && email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$") && password.length() > 8;
+    }
+
+    public boolean isValid(User user) {
+        return validate(user);
     }
     public User getUserByUsername(String username) {
         for (User user : users) {
@@ -73,6 +76,7 @@ public class Database {
 
     public boolean authenticate(String username, String password) {
         User user = getUserByUsername(username);
+        LoginPage.loggedInUserRole = user.getRole();
         return user != null && user.getPassword().equals(password);
     }
 
