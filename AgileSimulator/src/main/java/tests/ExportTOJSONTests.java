@@ -1,14 +1,7 @@
 package tests;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 import scrum_sim_packages.*;
-
-import java.util.Random;
 import java.util.ArrayList;
-
-import static Helpers.ExportToJSON.SaveSession;
 import static Helpers.ExportToJSON.SaveSession;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;

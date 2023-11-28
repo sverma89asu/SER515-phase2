@@ -1,6 +1,6 @@
 package scrum_sim_packages;
 
-import CreateSimulation.CreateSimulation;
+import CreateSimulation.*;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;

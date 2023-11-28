@@ -1,7 +1,6 @@
 package CreateSimulation;
 
-import scrum_sim_packages.SimulationInProgressPage;
-import scrum_sim_packages.LoginPage;
+import scrum_sim_packages.*;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -30,6 +29,9 @@ import javax.swing.ScrollPaneConstants;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import javax.swing.SpringLayout;
+
+import static CreateSimulation.CreateSimulation.RoundButton.ErrorInputs;
+
 
 public class CreateSimulation
 {
@@ -296,17 +298,26 @@ public class CreateSimulation
 		btnNewButton4.setFocusPainted(false);
 		btnNewButton4.setBorderPainted(false);
 		btnNewButton4.addActionListener(new ActionListener() {
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				frame.dispose();
+				boolean inputCheck = ErrorInputs(sessionName, noOfsprints, noOfteamMembers, sprintVelocity, sprintDuration);
 
-				SwingUtilities.invokeLater(new Runnable() {
-					@Override
-					public void run() {
-						SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
-						simulationInProgressPage.frame.setVisible(true);
-					}
-				});
+				if(inputCheck == true){
+					frame.dispose();
+
+					SwingUtilities.invokeLater(new Runnable() {
+						@Override
+						public void run() {
+							SimulationInProgressPage simulationInProgressPage = new SimulationInProgressPage();
+							simulationInProgressPage.frame.setVisible(true);
+						}
+					});
+				}
+				else{
+					CreateSimulationReaction reaction = new CreateSimulationReaction();
+					reaction.frame.setVisible(true);
+				}
 			}
 		});
 
@@ -371,6 +382,29 @@ public class CreateSimulation
 				return false;
 			}
 			return super.contains(x, y);
+		}
+		public static boolean ErrorInputs(String sessionName,String noOfsprints, String noOfteamMembers, String sprintVelocity, String sprintDuration){
+			try {
+				int number = Integer.parseInt(noOfsprints);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+			try {
+				int checkMembers = Integer.parseInt(noOfteamMembers);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+			try {
+				int checkVelocity = Integer.parseInt(sprintVelocity);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+			try {
+				int checkDuration = Integer.parseInt(sprintDuration);
+			} catch (NumberFormatException e) {
+				return false;
+			}
+			return true;
 		}
 	}
 
@@ -441,3 +475,4 @@ class NoBorderComboBoxUI extends BasicComboBoxUI {
 		return popup;
 	}
 }
+

@@ -10,6 +10,9 @@ import scrum_sim_packages.SimulationSession;
 import java.io.File;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class ImportJSON {
     public static SimulationSession LoadSession(String fileName){
         ObjectMapper objectMapper = new ObjectMapper();
@@ -24,5 +27,23 @@ public class ImportJSON {
         }
 
         return sim;
+    }
+    public static List<String> LoadSessions(String username){
+        List<String> sessions = new ArrayList<>();
+        String folderPath = username;
+        File folder = new File(folderPath);
+        if (!folder.exists()){
+            sessions.add("0");
+        }
+        File[] files = folder.listFiles();
+
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile()) {
+                    sessions.add(file.getName());
+                }
+            }
+        }
+        return sessions;
     }
 }

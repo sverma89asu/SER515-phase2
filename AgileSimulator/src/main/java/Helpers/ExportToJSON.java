@@ -1,24 +1,13 @@
 package Helpers;
 
-import scrum_sim_packages.*;
-import tests.ExportTOJSONTests;
+import scrum_sim_packages.SaveButtonReaction;
+import scrum_sim_packages.SimulationSession;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import scrum_sim_packages.SaveButtonReaction;
-import scrum_sim_packages.SimulationSession;
+
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 public class ExportToJSON {
     // The function will take the file name and save a json file in
     public static void SaveSessionFunction(String fileName, SimulationSession session){

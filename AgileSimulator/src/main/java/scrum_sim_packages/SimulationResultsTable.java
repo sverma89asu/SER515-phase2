@@ -1,7 +1,5 @@
 package scrum_sim_packages;
 
-import scrum_sim_packages.*;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -25,7 +23,7 @@ public class SimulationResultsTable extends JFrame {
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        JLabel lblNewLabel = new JLabel("Simulation Results");
+        JLabel lblNewLabel = new JLabel("Sprint " + Integer.toString(sprintID+1));
         lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 32));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setBounds(600, 24, 305, 60);
