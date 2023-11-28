@@ -53,6 +53,12 @@ public class SimulationSessionSummaryPage extends JPanel {
         btnNewButton.setBounds(x, y, width, height);
         btnNewButton.setPreferredSize(new Dimension(width, height));
         simulationSessionSummary.add(btnNewButton);
+        btnNewButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                new SimulationInProgressPage(simulationSession);
+            }
+        });
     }
 
     public void addTextField(int x, int y, int width, int height, int j) {
