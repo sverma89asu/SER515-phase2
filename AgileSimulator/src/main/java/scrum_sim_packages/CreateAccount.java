@@ -133,7 +133,7 @@ public class CreateAccount extends JFrame {
                         JOptionPane.showMessageDialog(frame, "User Saved Successfully!");
                     }
                     else{
-                        JOptionPane.showMessageDialog(frame, "User Already Exist!");
+                        JOptionPane.showMessageDialog(frame, "User Already Exist! Please choose another username.");
                     }
                 }
             }
