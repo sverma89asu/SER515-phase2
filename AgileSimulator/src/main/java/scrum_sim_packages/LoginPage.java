@@ -159,7 +159,7 @@ public class LoginPage extends JFrame {
 						@Override
 						public void run() {
 							LandingPage frame = new LandingPage();
-							LandingPage.setCreateAccountVisible(loggedInUser.equals("admin"));
+							LandingPage.setCreateAccountVisible(loggedInUserRole.equals("admin"));
 							frame.frame.setVisible(true);
 						}
 					});
