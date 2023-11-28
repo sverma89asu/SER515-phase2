@@ -107,6 +107,14 @@ public class LandingPage extends JFrame {
         frame.getContentPane().add(ViewsimLibraryButton);
         frame.getContentPane().setLayout(null);
         frame.getContentPane().add(ViewsimLibraryButton);
+        ViewsimLibraryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SimulationLibraryPage simulationLibraryPage = new SimulationLibraryPage();
+                simulationLibraryPage.frame.setVisible(true);
+                frame.dispose();
+            }
+        });
 
         createAccountButton = new JButton("Create Account");
         createAccountButton.setBounds(150, 280, 450, 43);

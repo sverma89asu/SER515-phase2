@@ -25,45 +25,39 @@ public class SimulationInProgressPage extends JFrame {
 	public static String sprintVelocityBE;
 	public static String sprintDurationBE;
 	public SimulationSession simulationSession;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					SimulationInProgressPage frame = new SimulationInProgressPage();
-					frame.setVisible(false);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private boolean isSaved;
 
 	/**
 	 * Create the frame.
 	 */
 	public SimulationInProgressPage() {
+		isSaved = false;
+		runSimulation();
 		initialize();
 	}
 
-	private void initialize()
-	{
+	public SimulationInProgressPage(SimulationSession simulationSession){
+		isSaved = true;
+		this.simulationSession = simulationSession;
+		initialize();
+	}
+
+	private void runSimulation(){
 		CreateSimulation frontendcalltoCAS = new CreateSimulation();
 
-		String sessionName = frontendcalltoCAS.sessionName;
-		String noOfsprints = frontendcalltoCAS.noOfsprints;
-		String noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
-		String sprintVelocity = frontendcalltoCAS.sprintVelocity;
-		String sprintDuration = frontendcalltoCAS.sprintDuration;
+		sessionName = frontendcalltoCAS.sessionName;
+		noOfsprints = frontendcalltoCAS.noOfsprints;
+		noOfteamMembers = frontendcalltoCAS.noOfteamMembers;
+		sprintVelocity = frontendcalltoCAS.sprintVelocity;
+		sprintDuration = frontendcalltoCAS.sprintDuration;
 
 
 		SimulationInProgressBackEnd backendcalltoSIPBE = new SimulationInProgressBackEnd();
 		simulationSession = backendcalltoSIPBE.calcSimulationParameters(sessionName,noOfsprints,noOfteamMembers,sprintVelocity,sprintDuration);
+	}
 
-
+	private void initialize()
+	{
 		frame = new JFrame();
 		frame.setVisible(true);
 		frame.setBounds(350, 120, 754, 800); // Size of frame
@@ -112,7 +106,7 @@ public class SimulationInProgressPage extends JFrame {
 			}
 		});
 
-		JLabel lblNewLabel = new JLabel(sessionName);
+		JLabel lblNewLabel = new JLabel(simulationSession.getName());
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(221, 16, 305, 43);
@@ -239,7 +233,7 @@ public class SimulationInProgressPage extends JFrame {
 		containerPanel.setOpaque(false);
 		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-		int numberOfPanels = Integer.parseInt(noOfsprints);
+		int numberOfPanels = (int)simulationSession.getNumberOfSprints();
 		int panelY = 0;
 
 		containerPanel.setLayout(new BoxLayout(containerPanel, BoxLayout.Y_AXIS));
