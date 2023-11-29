@@ -159,17 +159,13 @@ public class SimulationInProgressPage extends JFrame {
 		DownloadButton.setBounds(640, 75, 76, 50);
 		DownloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				String sourcePath = "Downloads";
+				File sourceFolder = new File(sourcePath);
+				boolean successFolder = sourceFolder.mkdir();
 				String fileName = "Downloads/"+LoginPage.loggedInUser;
 				String folderPath = fileName;
 				File folder = new File(folderPath);
 				boolean success = folder.mkdir();
-
-				if (success) {
-					//File is created
-				} else {
-					//File already exists
-				}
 				String filePath = "Downloads/"+LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+".csv";
 				File saveCSV = new File(filePath);
 				int saveCounter = 1;
