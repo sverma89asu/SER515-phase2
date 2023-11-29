@@ -122,6 +122,9 @@ public class SimulationInProgressPage extends JFrame {
 		saveButton.setMinimumSize(new Dimension(100, 21));
 		saveButton.setMaximumSize(new Dimension(100, 21));
 		saveButton.setPreferredSize(new Dimension(100, 21));
+		if(isSaved){
+			saveButton.setEnabled(false);
+		}
 
 		//Sample creation for test
 

@@ -14,12 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImportJSON {
-    public static SimulationSession LoadSession(String fileName){
+    public static SimulationSession LoadSession(File file){
         ObjectMapper objectMapper = new ObjectMapper();
         SimulationSession sim = null;
         try {
-            File file = new File(fileName);
-
             // Read JSON file and convert to Java object
             sim = objectMapper.readValue(file, SimulationSession.class);
         } catch (IOException e) {
@@ -39,7 +37,7 @@ public class ImportJSON {
         if (files != null) {
             for (File file : files) {
                 if (file.isFile()) {
-                    simulationSessions.add(LoadSession(file.getName()));
+                    simulationSessions.add(LoadSession(file));
                 }
             }
         }
