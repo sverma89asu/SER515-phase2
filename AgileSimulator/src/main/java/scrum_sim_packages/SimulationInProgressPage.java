@@ -159,8 +159,7 @@ public class SimulationInProgressPage extends JFrame {
 		DownloadButton.setBounds(640, 75, 76, 50);
 		DownloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sourceName = "Downloads";
-				String sourcePath = sourceName;
+				String sourcePath = "Downloads";
 				File sourceFolder = new File(sourcePath);
 				boolean successFolder = sourceFolder.mkdir();
 				String fileName = "Downloads/"+LoginPage.loggedInUser;
