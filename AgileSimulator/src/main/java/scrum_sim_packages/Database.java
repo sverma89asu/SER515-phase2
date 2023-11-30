@@ -47,7 +47,7 @@ public class Database {
             e.printStackTrace(System.out);
         }
     }
-    private boolean validate (User user) {
+    public boolean validate (User user) {
         String username = user.getName();
         String password = user.getPassword();
         String email = user.getEmail();
