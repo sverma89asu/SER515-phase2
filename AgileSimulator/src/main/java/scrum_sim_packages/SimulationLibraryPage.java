@@ -80,7 +80,6 @@ public class SimulationLibraryPage extends JFrame {
         lblNewLabel.setBounds(221, 16, 305, 43);
         frame.getContentPane().add(lblNewLabel);
 
-
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.setBounds(144, 245, 438, 400);
         frame.getContentPane().add(scrollPane);

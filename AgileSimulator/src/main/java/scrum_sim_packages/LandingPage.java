@@ -104,6 +104,13 @@ public class LandingPage extends JFrame {
         ViewsimLibraryButton.setBackground(Color.decode("#3e5c76"));
         ViewsimLibraryButton.setForeground(Color.WHITE);
         ViewsimLibraryButton.setOpaque(true);
+        ViewsimLibraryButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                SimulationLibraryPage SimulationLibraryPage = new SimulationLibraryPage();
+                SimulationLibraryPage.setVisible(true);
+                frame.dispose();
+            }
+        });
         frame.getContentPane().add(ViewsimLibraryButton);
         frame.getContentPane().setLayout(null);
         frame.getContentPane().add(ViewsimLibraryButton);
