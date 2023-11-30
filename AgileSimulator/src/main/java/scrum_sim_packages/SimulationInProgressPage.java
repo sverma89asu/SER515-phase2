@@ -180,7 +180,7 @@ public class SimulationInProgressPage extends JFrame {
 					messageWindow.frame.setVisible(true);
 				}catch (Exception downloadExecption){
 					downloadExecption.printStackTrace();
-					DownloadButtonReaction messageWindow = new DownloadButtonReaction(true,0,"");
+					DownloadButtonReaction messageWindow = new DownloadButtonReaction(false,0,"");
 					messageWindow.frame.setVisible(true);
 				}
 			}
