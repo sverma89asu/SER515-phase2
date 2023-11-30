@@ -384,6 +384,10 @@ public class CreateSimulation
 			return super.contains(x, y);
 		}
 		public static boolean ErrorInputs(String sessionName,String noOfsprints, String noOfteamMembers, String sprintVelocity, String sprintDuration){
+			if(sessionName.isEmpty() || sessionName.isBlank())
+			{
+				return false;
+			}
 			try {
 				int number = Integer.parseInt(noOfsprints);
 			} catch (NumberFormatException e) {
