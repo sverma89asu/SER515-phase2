@@ -2,9 +2,10 @@ package CreateSimulation;
 
 import scrum_sim_packages.*;
 
-import java.awt.EventQueue;
+import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.BorderFactory;
+import javax.swing.border.LineBorder;
 import javax.swing.border.MatteBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -15,10 +16,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.geom.RoundRectangle2D;
 import java.awt.event.ActionEvent;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Shape;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -26,8 +23,6 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
-import java.awt.BasicStroke;
-import java.awt.Color;
 import javax.swing.SpringLayout;
 
 import static CreateSimulation.CreateSimulation.RoundButton.ErrorInputs;
@@ -84,25 +79,44 @@ public class CreateSimulation
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 
-		JButton btnNewButton1 = new JButton("Sign Out");
-		btnNewButton1.setForeground(Color.RED);
-		btnNewButton1.setFont(new Font("SansSerif", Font.PLAIN, 13));
-		btnNewButton1.setOpaque(false); // Transparent color
-		btnNewButton1.setContentAreaFilled(false);
-		btnNewButton1.setBorderPainted(false); // Hide border
-		btnNewButton1.setFocusPainted(false);
-		btnNewButton1.addActionListener(new ActionListener() {
-			@Override
+		JButton signOutButton = new JButton("Sign Out");
+		signOutButton.setBounds(115, 22, 90, 30);
+		signOutButton.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		signOutButton.setBackground(Color.decode("#3e5c76"));
+		signOutButton.setForeground(Color.WHITE);
+		signOutButton.setOpaque(true);
+		frame.getContentPane().add(signOutButton);
+		signOutButton.setMinimumSize(new Dimension(100, 21));
+		signOutButton.setMaximumSize(new Dimension(100, 21));
+		signOutButton.setPreferredSize(new Dimension(100, 21));
+		signOutButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-
-				LoginPage display1 = new LoginPage();
-				display1.frame.setVisible(true);
+				LoginPage LoginPage = new LoginPage(); // New Frame (NewScreen)
+				LoginPage.setVisible(true);
 
 			}
 		});
-		btnNewButton1.setBounds(115, 22, 120, 40);
-		frame.getContentPane().add(btnNewButton1);
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(signOutButton);
+
+		JButton goBack = new JButton("Home Page");
+		goBack.setBounds(650, 24, 150, 30);
+		goBack.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		goBack.setBackground(Color.decode("#3e5c76"));
+		goBack.setForeground(Color.WHITE);
+		goBack.setOpaque(true);
+		frame.getContentPane().add(goBack);
+		goBack.setMinimumSize(new Dimension(100, 21));
+		goBack.setMaximumSize(new Dimension(100, 21));
+		goBack.setPreferredSize(new Dimension(100, 21));
+		goBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LandingPage landing_Page = new LandingPage();
+				landing_Page.frame.setVisible(true);
+				frame.dispose();
+			}
+		});
 
 		JLabel lblNewLabel = new JLabel("Create A Simulation");
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 32));
