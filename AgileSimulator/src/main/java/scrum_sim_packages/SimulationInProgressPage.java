@@ -156,25 +156,33 @@ public class SimulationInProgressPage extends JFrame {
 		DownloadButton.setBounds(640, 75, 76, 50);
 		DownloadButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sourcePath = "Downloads";
-				File sourceFolder = new File(sourcePath);
-				boolean successFolder = sourceFolder.mkdir();
-				String fileName = "Downloads/"+LoginPage.loggedInUser;
-				String folderPath = fileName;
-				File folder = new File(folderPath);
-				boolean success = folder.mkdir();
-				String filePath = "Downloads/"+LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+".csv";
-				File saveCSV = new File(filePath);
-				int saveCounter = 1;
-				boolean ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
-				while (ifExisting == true){
-					String filePathExtend=Integer.toString(saveCounter);
-					filePath = "Downloads/"+LoginPage.loggedInUser+"/"+LoginPage.loggedInUser+"_"+filePathExtend+".csv";
-					saveCSV = new File(filePath);
-					ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
-					saveCounter=saveCounter+1;
+				try {
+					String sourcePath = "Downloads";
+					File sourceFolder = new File(sourcePath);
+					boolean successFolder = sourceFolder.mkdir();
+					String fileName = "Downloads/" + LoginPage.loggedInUser;
+					String folderPath = fileName;
+					File folder = new File(folderPath);
+					boolean success = folder.mkdir();
+					String filePath = "Downloads/" + LoginPage.loggedInUser + "/" + LoginPage.loggedInUser + ".csv";
+					File saveCSV = new File(filePath);
+					int saveCounter = 1;
+					boolean ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
+					while (ifExisting == true) {
+						String filePathExtend = Integer.toString(saveCounter);
+						filePath = "Downloads/" + LoginPage.loggedInUser + "/" + LoginPage.loggedInUser + "_" + filePathExtend + ".csv";
+						saveCSV = new File(filePath);
+						ifExisting = saveCSV.exists() && !saveCSV.isDirectory();
+						saveCounter = saveCounter + 1;
+					}
+					convertToCSV(simulationSession, filePath);
+					DownloadButtonReaction messageWindow = new DownloadButtonReaction(true,0,filePath);
+					messageWindow.frame.setVisible(true);
+				}catch (Exception downloadExecption){
+					downloadExecption.printStackTrace();
+					DownloadButtonReaction messageWindow = new DownloadButtonReaction(true,0,"");
+					messageWindow.frame.setVisible(true);
 				}
-				convertToCSV(simulationSession, filePath);
 			}
 		});
 		frame.getContentPane().add(DownloadButton);
