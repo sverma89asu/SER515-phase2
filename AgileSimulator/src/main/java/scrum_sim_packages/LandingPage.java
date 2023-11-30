@@ -108,6 +108,7 @@ public class LandingPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 SimulationLibraryPage SimulationLibraryPage = new SimulationLibraryPage();
                 SimulationLibraryPage.setVisible(true);
+                frame.dispose();
             }
         });
         frame.getContentPane().add(ViewsimLibraryButton);
