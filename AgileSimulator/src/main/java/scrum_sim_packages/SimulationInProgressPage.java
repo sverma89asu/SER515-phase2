@@ -94,7 +94,7 @@ public class SimulationInProgressPage extends JFrame {
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(signOutButton);
 
-		JButton goBack = new JButton("Create A Simulation");
+		JButton goBack = new JButton("Home Page");
 		goBack.setBounds(510, 22, 200, 30);
 		goBack.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
 		goBack.setBackground(Color.decode("#3e5c76"));
@@ -106,8 +106,8 @@ public class SimulationInProgressPage extends JFrame {
 		goBack.setPreferredSize(new Dimension(100, 21));
 		goBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CreateSimulation createSimulation = new CreateSimulation();
-				createSimulation.frame.setVisible(true);
+				LandingPage landingPage = new LandingPage();
+				landingPage.frame.setVisible(true);
 				frame.dispose();
 			}
 		});
