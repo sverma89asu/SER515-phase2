@@ -35,6 +35,7 @@ public class ExportToJSON {
             saveJson = new File(filePath);
             ifExisting = saveJson.exists() && !saveJson.isDirectory();
             fileSaveName = fileName+"/"+fileName +"_"+filePathExtend;
+            saveCounter += 1;
         }
         new SaveButtonReaction(SaveSession(fileSaveName, session),0);
     }
