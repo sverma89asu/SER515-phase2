@@ -27,25 +27,25 @@ public class ExportToCSV {
                 String sprintName = "Sprint #" + sprintNumber;
 
                 // Write the header line for Sprint to the CSV file
-                writeHeader(writer, Sprint.class);
+                writeHeader(writer, Sprint.class, "");
 
                 // Write the data for each Sprint to the CSV file
                 writeData(writer, sprint, sprintName);
 
                 // Write a blank line to separate Sprint tables
                 writer.writeNext(new String[0]);
-
+                writer.writeNext(new String[]{"Product Backlog"});
                 // Write the header line for Product Backlog
-                writeHeader(writer, UserStory.class, "Product Backlog - " + sprintName);
+                writeHeader(writer, UserStory.class, "");
 
                 // Write the data for Product Backlog
                 writeData(writer, sprint.getProductBacklog());
 
                 // Write a blank line to separate Product Backlog tables
                 writer.writeNext(new String[0]);
-
+                writer.writeNext(new String[]{"Sprint Backlog"});
                 // Write the header line for Sprint Backlog
-                writeHeader(writer, UserStory.class, "Sprint Backlog - " + sprintName);
+                writeHeader(writer, UserStory.class, "");
 
                 // Write the data for Sprint Backlog
                 writeData(writer, sprint.getSprintBacklog());
@@ -54,6 +54,17 @@ public class ExportToCSV {
                 writer.writeNext(new String[0]);
 
                 sprintNumber++;
+                writer.writeNext(new String[]{"Sprint Days"});
+                writeHeader(writer, StandupDay.class);
+                for(StandupDay standupDay : sprint.getStandupDays()) {
+                    writeData(writer, standupDay);
+                    writer.writeNext(new String[0]);
+                    writeHeader(writer, StandupStoryProgress.class);
+                    for(StandupStoryProgress progress : standupDay.getStandupStoryProgresses()) {
+                        writeData(writer, progress);
+                        writer.writeNext(new String[0]);
+                    }
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -66,8 +77,19 @@ public class ExportToCSV {
     }
 
     private static void writeData(CSVWriter writer, Object object) {
-        List<String> data = getFieldValues(object);
-        writer.writeNext(data.toArray(new String[0]));
+//        List<String> data = getFieldValues(object);
+//        writer.writeNext(data.toArray(new String[0]));
+        if (object instanceof List<?> list) {
+            // Handle the case where the object is a list (e.g., StandupDay.getStandupStoryProgresses())
+            for (Object item : (List<?>) object) {
+                writeData(writer, item);
+                writer.writeNext(new String[0]);  // Add a blank line to separate list items
+            }
+        } else {
+            // Handle the case where the object is a standalone object (e.g., StandupStoryProgress)
+            List<String> fieldValues = getFieldValues(object);
+            writer.writeNext(fieldValues.toArray(new String[0]));
+        }
     }
 
     private static List<String> getFieldNames(Class<?> clazz) {
@@ -92,7 +114,7 @@ public class ExportToCSV {
         for (Field field : fields) {
             // Exclude fields that are lists
             if (!List.class.isAssignableFrom(field.getType())) {
-                fieldNames.add(headerPrefix + " - " + field.getName());
+                fieldNames.add(field.getName());
             }
         }
         return fieldNames;
@@ -107,7 +129,14 @@ public class ExportToCSV {
                 field.setAccessible(true);
                 try {
                     Object value = field.get(object);
-                    fieldValues.add(value != null ? value.toString() : "");
+                    if (value instanceof UserStory) {
+                        fieldValues.add(((UserStory) value).getName());
+                    } else if (value instanceof InformationCard) {
+                        fieldValues.add(((InformationCard) value).getType());
+                    }
+                    else  {
+                        fieldValues.add(value != null ? value.toString() : "");
+                    }
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
