@@ -45,3 +45,9 @@ password : password1
 3. You can see the saved simulation sessions.
 4. By clicking on the name of the session, you can open the detailed simulation results page.
 
+# To Create a New Account
+1. Login with Admin Account Credentials.
+2. On the home page click on Create Account button.
+3. Put in the username, password, email and user role.
+4. Click on Create button.
+5. If the username was unique, it'll create the account otherwise it'll ask you to choose some other username.
