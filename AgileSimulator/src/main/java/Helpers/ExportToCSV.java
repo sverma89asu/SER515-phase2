@@ -37,16 +37,17 @@ public class ExportToCSV {
                 writer.writeNext(new String[]{"Product Backlog"});
                 // Write the header line for Product Backlog
                 writeHeader(writer, UserStory.class, "");
-
-                // Write the data for Product Backlog
-                writeData(writer, sprint.getProductBacklog());
-
+                for(UserStory productStories : sprint.getProductBacklog().getUserStories()) {
+                    writeData(writer, productStories);
+                }
                 // Write a blank line to separate Product Backlog tables
                 writer.writeNext(new String[0]);
                 writer.writeNext(new String[]{"Sprint Backlog"});
                 // Write the header line for Sprint Backlog
                 writeHeader(writer, UserStory.class, "");
-
+                for(UserStory sprintStories : sprint.getSprintBacklog().getUserStories()) {
+                    writeData(writer, sprintStories);
+                }
                 // Write the data for Sprint Backlog
                 writeData(writer, sprint.getSprintBacklog());
 
