@@ -1,6 +1,8 @@
 /.metadata/
 /bin/
-/target/
+/AgileSimulator/target/
+/AgileSimulator/src/.DS_Store/
 *.class
-.idea
+/.idea/
 workspace.xml
+/.DS_Store
