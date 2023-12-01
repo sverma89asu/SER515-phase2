@@ -78,8 +78,6 @@ public class ExportToCSV {
     }
 
     private static void writeData(CSVWriter writer, Object object) {
-//        List<String> data = getFieldValues(object);
-//        writer.writeNext(data.toArray(new String[0]));
         if (object instanceof List<?> list) {
             // Handle the case where the object is a list (e.g., StandupDay.getStandupStoryProgresses())
             for (Object item : (List<?>) object) {
