@@ -1,3 +1,6 @@
 /.metadata/
 /bin/
 /target/
+*.class
+.idea
+workspace.xml

@@ -1,10 +1,11 @@
 package AgileMentor.src;
 
-import AgileMentor.src.scrum_sim_packages.scrum_display1;
+import AgileMentor.src.scrum_sim_packages.SimulationSession;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -13,11 +14,15 @@ import javax.swing.SwingConstants;
 public class SprintDetailsPage extends JPanel {
     private JPanel sprintDetailsPanel;
     private int numberOfSprints;  // add
+    private SimulationSession simulationSession;
+    private int sprintID;
 
     /**
      * Create the panel.
      */
-    public SprintDetailsPage(int x, int y, int width, int height, int j) {
+    public SprintDetailsPage(int x, int y, int width, int height, int j, SimulationSession simulationSession, int sprintID) {
+        this.simulationSession = simulationSession;
+        this.sprintID = sprintID;
         this.numberOfSprints = j;
         setBounds(x, y, width, height);
         setLayout(null);
@@ -30,15 +35,16 @@ public class SprintDetailsPage extends JPanel {
         add(sprintDetailsPanel);
 
         // Sprint
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         addbtnNewButton(30,0,100,37);
-        addTextField2("Total Number of User Stories", 30, 37, 300, 37);
-        addTextField2("0", 330, 37, 30, 37);
-        addTextField2("User Stories Completed", 30, 74, 300, 37);
-        addTextField2("0", 330, 74, 30, 37);
-        addTextField2("Total Business Values", 30, 111, 300, 37);
-        addTextField2("0", 330, 111, 30, 37);
-        addTextField2("Business Values Completed", 30, 148, 300, 37);
-        addTextField2("0", 330, 148, 30, 37);
+        addTextField2("Expected Velocity", 30, 37, 300, 37);
+        addTextField2(decimalFormat.format(simulationSession.getSprints().get(sprintID).getExpectedSP()), 330, 37, 30, 37);
+        addTextField2("Actual Velocity", 30, 74, 300, 37);
+        addTextField2(decimalFormat.format(simulationSession.getSprints().get(sprintID).getActualSP()), 330, 74, 30, 37);
+        addTextField2("Expected Business Value", 30, 111, 300, 37);
+        addTextField2(String.valueOf(simulationSession.getSprints().get(sprintID).getExpectedBV()), 330, 111, 30, 37);
+        addTextField2("Actual Business Value", 30, 148, 300, 37);
+        addTextField2(String.valueOf(simulationSession.getSprints().get(sprintID).getActualBV()), 330, 148, 30, 37);
     }
 
     public void addbtnNewButton(int x, int y, int width, int height) {
@@ -56,7 +62,7 @@ public class SprintDetailsPage extends JPanel {
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                new SimulationResultsTable();
+                new SimulationResultsTable(sprintID, simulationSession);
             }
         });
     }
