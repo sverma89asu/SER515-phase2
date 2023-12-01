@@ -67,7 +67,6 @@ public class SimulationInProgressPage extends JFrame {
 		frame = new JFrame();
 		frame.setVisible(true);
 		frame.setBounds(350, 120, 754, 800); // Size of frame
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().setBackground(Color.decode("#f0ebd8"));
 		frame.setResizable(false);
@@ -178,83 +177,6 @@ public class SimulationInProgressPage extends JFrame {
 			}
 		});
 		frame.getContentPane().add(DownloadButton);
-
-//		JButton homeButton = new JButton("");
-//		homeButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-home-ios-16-filled\\icons8-home-50.png"));
-//		homeButton.setForeground(Color.RED);
-//		homeButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-//		homeButton.setOpaque(true); // Transparent color
-//		homeButton.setContentAreaFilled(false);
-//		homeButton.setBorderPainted(false); // Hide border
-//		homeButton.setFocusPainted(false);
-//		homeButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-//
-//
-//			}
-//		});
-//		homeButton.setBounds(608, 22, 70, 50);
-//		frame.getContentPane().add(homeButton);
-
-//		JProgressBar progressBar = new JProgressBar();
-//		progressBar.setBounds(144, 119, 438, 28);
-//		progressBar.setForeground(new Color(2, 110, 13));
-//		progressBar.setBackground(new Color(255, 255, 255));
-//		progressBar.setValue(0);
-//		progressBar.setStringPainted(true);
-//		frame.getContentPane().add(progressBar);
-
-//		JButton playButton = new JButton("");
-//		playButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-play-50.png"));
-//		playButton.setForeground(Color.RED);
-//		playButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-//		playButton.setOpaque(true); // Transparent color
-//		playButton.setContentAreaFilled(false);
-//		playButton.setBorderPainted(false); // Hide border
-//		playButton.setFocusPainted(false);
-//		playButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-//
-//
-//			}
-//		});
-//		playButton.setBounds(279, 158, 70, 50);
-//		frame.getContentPane().add(playButton);
-
-//		JButton rewindButton = new JButton("");
-//		rewindButton.setIcon(new ImageIcon("C:\\Users\\Rushabh\\Downloads\\icons8-rewind-material-sharp\\icons8-rewind-48.png"));
-//		rewindButton.setForeground(Color.RED);
-//		rewindButton.setFont(new Font("SansSerif", Font.PLAIN, 13));
-//		rewindButton.setOpaque(true); // Transparent color
-//		rewindButton.setContentAreaFilled(false);
-//		rewindButton.setBorderPainted(false); // Hide border
-//		rewindButton.setFocusPainted(false);
-//		rewindButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-//
-//
-//			}
-//		});
-//		rewindButton.setBounds(359, 158, 70, 50);
-//		frame.getContentPane().add(rewindButton);
-
-//		JButton randomEventsButton = new JButton("Add Random Event");
-//		randomEventsButton.setBackground(new Color(62, 92, 118));
-//		randomEventsButton.setIcon(null);
-//		randomEventsButton.setForeground(Color.decode("#f0ebd8"));
-//		randomEventsButton.setFont(new Font("SansSerif", Font.PLAIN, 15));
-//		randomEventsButton.setOpaque(true); // Transparent color
-//		randomEventsButton.setContentAreaFilled(true);
-//		randomEventsButton.setBorderPainted(false); // Hide border
-//		randomEventsButton.setFocusPainted(false);
-//		randomEventsButton.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) { // Need to make link between LoginPage
-//
-//
-//			}
-//		});
-//		randomEventsButton.setBounds(506, 158, 224, 50);
-//		frame.getContentPane().add(randomEventsButton);
 
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(144, 245, 438, 400);
